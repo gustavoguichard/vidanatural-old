@@ -1,8 +1,9 @@
-import Header from './Header'
+import Menu from './Menu'
+import 'styles/main.scss'
 
 const Layout = props => (
   <div className="app-wrapper">
-    <Header />
+    <Menu />
     {props.children}
   </div>
 )
