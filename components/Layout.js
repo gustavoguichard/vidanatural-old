@@ -8,6 +8,7 @@ const Layout = props => (
       <title>Vida Natural | Cosmética Consciente</title>
       <meta charSet='utf-8' />
       <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+      <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico"/>
     </Head>
     <Menu />
     {props.children}
