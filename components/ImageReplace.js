@@ -8,7 +8,6 @@ class ImageReplace extends Component {
     this.state = { dimensions: null, isClient: false }
     this.onImgLoad = this.onImgLoad.bind(this)
   }
-  static defaultProps = { component: 'p' }
 
   componentDidMount() {
     this.setState({ isClient: true })
@@ -24,7 +23,7 @@ class ImageReplace extends Component {
   }
 
   render() {
-    const { children, component, retina, style } = this.props
+    const { children, retina, style } = this.props
     const { dimensions, isClient } = this.state
     const src = `/static/${this.props.src}`
     const factor = retina ? 2 : 1

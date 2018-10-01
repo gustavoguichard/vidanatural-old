@@ -14,6 +14,19 @@ const nl2Br = content =>
     </Fragment>
   )
 
+
+const PopoverContent = (name, content) => args => (
+  <ArrowContainer {...args} arrowColor="#629f81" arrowSize={20}>
+    <div className="pop-over">
+      <ImageReplace src="slogan-black.png">
+        <h4>Eu uso cosmética consciente</h4>
+      </ImageReplace>
+      <p>{nl2Br(content)}</p>
+      <em>{name}</em>
+    </div>
+  </ArrowContainer>
+)
+
 class Testimonial extends Component {
   state = { columns: 1, isPopoverOpen: false }
   static defaultProps = { ratio: "square" }
@@ -48,15 +61,7 @@ class Testimonial extends Component {
           isOpen={isPopoverOpen}
           onClickOutside={() => this.setState({ isPopoverOpen: false })}
           position="right"
-          content={
-            <div className="pop-over">
-              <ImageReplace src="slogan-black.png">
-                <h4>Eu uso cosmética consciente</h4>
-              </ImageReplace>
-              <p>{nl2Br(content)}</p>
-              <em>{name}</em>
-            </div>
-          }
+          content={PopoverContent(name, content)}
         >
           <div
             className="testimonial-item"
