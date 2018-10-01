@@ -1,16 +1,16 @@
 export default [{
+  name: 'Cristina',
+  role: 'Empresária',
+  location: 'São Paulo / SP',
+  picture: 'cristina.jpg',
+  ratio: '2by3',
+  content: `Há mais de dois anos que uso o desodorante em pasta em não troco por outro. Super eficiente, 100% Natural, e rende muito, uso por pelo menos 2 meses o mesmo tubinho. Super feliz por esse produto existir!`,
+}, {
   name: 'Maia Silva',
   role: 'Psicóloga Social',
   location: 'Argentina',
   picture: 'maia-silva.jpg',
   content: `Eu amo escolher diariamente a Vida Natural para nutrir meu corpo. Falar de cosméticos é falar de prevenção e alimentação também. Além de serem uma escolha de consumo consciente e responsável, eles deixam minha pele cheirosa e nutrida por muito tempo, livre de toxinas que ao longo dos anos possam danificar minha saúde.`,
-}, {
-  name: 'Diuly Venson',
-  role: 'Fotógrafa',
-  location: 'Curitiba / PR',
-  picture: 'diuly-venson.jpg',
-  ratio: '2by3',
-  content: `Fantástico! Segura o dia todo, inclusive durante atividades físicas, e o melhor, sem bloquear a transpiração. Um dos melhores desodorantes naturais que já experimentei. Super recomendo!!!`,
 }, {
   name: 'Juliana Eichenberg',
   role: 'Professora de Yoga',
@@ -29,13 +29,6 @@ export default [{
   picture: 'samira-abdalah.jpg',
   ratio: '2by3',
   content: `Usar os produtos da vida natural é se sentir em harmonia com o corpo e o meio ambiente. São produtos feitos com toda dedicação e carinho e  de muita qualidade. Super ultra recomendado!`,
-}, {
-  name: 'Cristina',
-  role: 'Empresária',
-  location: 'São Paulo / SP',
-  picture: 'cristina.jpg',
-  ratio: '2by3',
-  content: `Há mais de dois anos que uso o desodorante em pasta em não troco por outro. Super eficiente, 100% Natural, e rende muito, uso por pelo menos 2 meses o mesmo tubinho. Super feliz por esse produto existir!`,
 }, {
   name: 'Maurício Frighetto',
   role: 'Jornalista',
@@ -99,6 +92,20 @@ export default [{
   content: `Quando buscamos uma vida mais saudável começamos a olhar de forma mais consciente para as nossas escolhas e quanto isso nos afeta em todos os sentidos. Geralmente a mudança começa na alimentação, mas muitas vezes não percebemos o quanto a nossa pele tem uma grande função nessa parte. O Ayurveda, Medicina Tradicional Indiana fala: passe na sua pele apenas o que você pode comer. Isso caiu como uma chave na minha vida e fazia todo sentido. A pele é o maior órgão do nosso corpo, o que passamos na pele vai para nossa corrente sanguínea. Foi aí que comecei a ser muito mais criteriosa com todo cosmético que eu uso e  que o Vida Natural entrou na minha rotina. Trouxe um novo conceito de cuidado com o corpo, orgânico, saudável e o melhor de tudo livre de todas aquelas substâncias nocivas usadas nos produtos de beleza.
   Amo toda a linha de produtos e recomendo muito!`,
 }, {
+  name: 'Diuly Venson',
+  role: 'Fotógrafa',
+  location: 'Curitiba / PR',
+  picture: 'diuly-venson.jpg',
+  ratio: '2by3',
+  content: `Fantástico! Segura o dia todo, inclusive durante atividades físicas, e o melhor, sem bloquear a transpiração. Um dos melhores desodorantes naturais que já experimentei. Super recomendo!!!`,
+}, {
+  name: 'Gisele de Menezes',
+  role: 'Escritora e terapeuta ayurveda',
+  location: 'Porto Alegre / RS',
+  picture: 'gisele-de-menezes.jpg',
+  content: `Há muito tempo descobri o desodorante de creme em um restaurante de POA e ADOREI. Nunca mais quis comprar outros desodorantes, pois na minha adolescência eu tive que fazer uma pequena cirurgia devido a um entupimento das glândulas sebáceas da axila, causado por desodorantes convencionais. Depois de um tempo descobri o Rollon e não voltei atrás.
+  Claro que é importante manter uma boa assepsia do corpo, ter uma boa alimentação que não produza tanta acidez, mas considero o desodorante suficiente para minhas necessidades. E saber também que é um produto natural e artesanal é tudo! Que bom se os sabonetes, produtos de limpeza e todas as coisas fossem feitas dessa maneira!`,
+}, {
   name: 'Samantha Linsmeyer',
   picture: 'samantha-linsmeyer.jpg',
   ratio: '2by3',
@@ -111,6 +118,13 @@ export default [{
   picture: 'gabriela-de-lucca.jpg',
   content: `Ganhei o desodorante de presente e fiquei encantada com toda proposta da marca. Usar um produto todos os dias sabendo que é feito com total amor, consciente e natural faz meu dia começar muito melhor. Sem contar que funciona super bem e não mancha minhas blusas. Recomendo com todo meu coração.`
 }, {
+  name: 'Fabiula Zimmer',
+  role: 'Empresária',
+  location: 'São Leopoldo / RS',
+  picture: 'fabiula-zimmer.jpg',
+  ratio: '2by3',
+  content: `Os produtos Vida Natural fazem parte do meu dia a dia. Utilizo o desodorante em pasta alternado com o roll one o óleo de girassol com palmarosa e lavanda, que é super hidratante e tem um cheiro maravilhoso.`,
+}, {
   name: 'Carol Carida',
   role: 'Professora socióloga',
   location: 'Florianópolis / SC',
@@ -122,13 +136,6 @@ export default [{
   location: 'Imbituba / SC',
   picture: 'francisco-camolesi.jpg',
   content: `Depois que experimentei nunca mais usei outro. Desodorante mais eficiente que já usei. O produto é simplesmente sensacional. Já estou usando há dois anos e nem penso em experimentar outro!`,
-}, {
-  name: 'Fabiula Zimmer',
-  role: 'Empresária',
-  location: 'São Leopoldo / RS',
-  picture: 'fabiula-zimmer.jpg',
-  ratio: '2by3',
-  content: `Os produtos Vida Natural fazem parte do meu dia a dia. Utilizo o desodorante em pasta alternado com o roll one o óleo de girassol com palmarosa e lavanda, que é super hidratante e tem um cheiro maravilhoso.`,
 }, {
   name: 'Gabriel de Menezes',
   role: 'Empresário',
@@ -153,13 +160,6 @@ export default [{
   location: 'Porto Alegre / RS',
   picture: 'luise-rabelo.jpg',
   content: `Conheci os produtos Vida Natural por acaso há uns 3 anos e nunca mais deixei de usar, principalmente o desodorante em pasta, meu preferido. Os produtos são eficazes, tem um cheiro suave e gostoso e não agridem nosso organismo como os cosméticos convencionais. Obrigada Vida Natural por cuidar da gente com tanto carinho!`,
-}, {
-  name: 'Gisele de Menezes',
-  role: 'Escritora e terapeuta ayurveda',
-  location: 'Porto Alegre / RS',
-  picture: 'gisele-de-menezes.jpg',
-  content: `Há muito tempo descobri o desodorante de creme em um restaurante de POA e ADOREI. Nunca mais quis comprar outros desodorantes, pois na minha adolescência eu tive que fazer uma pequena cirurgia devido a um entupimento das glândulas sebáceas da axila, causado por desodorantes convencionais. Depois de um tempo descobri o Rollon e não voltei atrás.
-  Claro que é importante manter uma boa assepsia do corpo, ter uma boa alimentação que não produza tanta acidez, mas considero o desodorante suficiente para minhas necessidades. E saber também que é um produto natural e artesanal é tudo! Que bom se os sabonetes, produtos de limpeza e todas as coisas fossem feitas dessa maneira!`,
 }, {
   name: 'Camila de Lucca',
   role: 'Professora de Yoga',
