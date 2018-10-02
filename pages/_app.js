@@ -1,9 +1,10 @@
-import React from "react"
-import App, { Container } from "next/app"
-import Head from "next/head"
+import React from 'react'
+import App, { Container } from 'next/app'
+import Router from 'next/router'
+import { initGA, logPageView } from 'utils/analytics'
 
 export default class MyApp extends App {
-  static async getInitialProps({ Component, router, ctx }) {
+  static async getInitialProps ({ Component, router, ctx }) {
     let pageProps = {}
 
     if (Component.getInitialProps) {
@@ -13,13 +14,16 @@ export default class MyApp extends App {
     return { pageProps }
   }
 
-  render() {
+  componentDidMount () {
+    initGA()
+    logPageView()
+    Router.router.events.on('routeChangeComplete', logPageView)
+  }
+
+  render () {
     const { Component, pageProps } = this.props
     return (
       <Container>
-        <Head>
-          <title>Vida Natural | Cosmética Consciente</title>
-        </Head>
         <Component {...pageProps} />
       </Container>
     )
