@@ -1,4 +1,4 @@
-$green: #629f81;
+@import './colors';
 
 .masonry-wrapper {
   max-height: 100vh;
@@ -14,9 +14,16 @@ a {
 }
 
 .side-content {
+  background-color: black;
   color: white;
   display: flex;
   max-height: 100vh;
+
+  @media (max-device-width: 991px) {
+    position: fixed;
+    bottom: 0;
+  }
+
   .section {
     align-items: center;
     display: flex;

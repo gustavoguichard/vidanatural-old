@@ -4,211 +4,236 @@ export default [{
   location: 'São Paulo / SP',
   picture: 'cristina.jpg',
   ratio: '2by3',
-  content: `Há mais de dois anos que uso o desodorante em pasta em não troco por outro. Super eficiente, 100% Natural, e rende muito, uso por pelo menos 2 meses o mesmo tubinho. Super feliz por esse produto existir!`,
+  content: `Há mais de dois anos que uso o desodorante em pasta em **não troco** por outro. **Super eficiente**, **100% Natural**, e rende muito, uso por pelo menos **2 meses o mesmo** tubinho.
+  Super feliz por esse produto existir!`,
 }, {
   name: 'Maia Silva',
   role: 'Psicóloga Social',
   location: 'Argentina',
   picture: 'maia-silva.jpg',
-  content: `Eu amo escolher diariamente a Vida Natural para nutrir meu corpo. Falar de cosméticos é falar de prevenção e alimentação também. Além de serem uma escolha de consumo consciente e responsável, eles deixam minha pele cheirosa e nutrida por muito tempo, livre de toxinas que ao longo dos anos possam danificar minha saúde.`,
+  content: `Eu amo escolher **diariamente** a Vida Natural para **nutrir** meu corpo. Falar de cosméticos é falar de prevenção e alimentação também.
+  Além de serem uma **escolha de consumo consciente e responsável**, eles deixam minha pele cheirosa e nutrida por muito tempo, **livre de toxinas** que ao longo dos anos possam danificar minha **saúde**.`,
 }, {
   name: 'Juliana Eichenberg',
   role: 'Professora de Yoga',
   location: 'Garopaba / SC',
   picture: 'juliana-eichenberg.jpg',
-  content: `A Vida Natural, mais do que uma marca, é a forma de vida da sua querida idealizadora. Não há limites separando a vida da Lila da Vida Natural e a Vida Natural da vida da Lila. Essa fusão, da criadora e da criação, é que torna os produtos que uso tão especiais para mim. Tudo nasce de uma verdade profunda, de um anseio por sustentabilidade, regeneração e saúde. O que é evidente e palpável na postura da Lila  e nos benefícios que sentimos ao nos nutrir através da Vida Natural. Obrigada, Vida Natural! Obrigada, Lila! Muito bom trilhar esse caminho com vocês, um grande privilégio!`,
+  content: `A Vida Natural, mais do que uma marca, é a forma de vida da sua querida idealizadora. Não há limites separando a vida da Lila da Vida Natural e a Vida Natural da vida da Lila.
+  Essa fusão, da criadora e da criação, é que torna os **produtos que uso tão especiais** para mim. Tudo nasce de uma **verdade profunda**, de um anseio por **sustentabilidade, regeneração e saúde**. O que é evidente e palpável na postura da Lila e nos benefícios que sentimos ao nos nutrir através da Vida Natural.
+  Obrigada, Vida Natural! Obrigada, Lila! Muito bom trilhar esse caminho com vocês, um grande privilégio!`,
 }, {
   name: 'Thais e Bruno Padoveze',
   location: 'Goiânia',
   picture: 'thais-e-bruno.jpg',
-  content: `Há 3 anos comprovando a eficácia, a pureza e a riqueza natural de toda a linha de produtos. Muitos, mas muitos amigos hoje em dia também são clientes e fãs dos cosméticos Vida Natural. Ainda bem existem produtos tão seguros e naturais ao alcance de nossas mãos aqui no Brasil. Obrigado Lila!`,
+  content: `Há 3 anos comprovando a **eficácia**, a **pureza** e a riqueza **natural** de toda a linha de produtos. Muitos, mas muitos amigos hoje em dia também são clientes e fãs dos cosméticos Vida Natural.
+  Ainda bem que existem produtos tão **seguros e naturais** ao alcance de nossas mãos aqui no Brasil. Obrigado Lila!`,
 }, {
   name: 'Samira Abdalah',
   role: 'Mestra em Educação',
   location: 'Montenegro / RS',
   picture: 'samira-abdalah.jpg',
   ratio: '2by3',
-  content: `Usar os produtos da vida natural é se sentir em harmonia com o corpo e o meio ambiente. São produtos feitos com toda dedicação e carinho e  de muita qualidade. Super ultra recomendado!`,
+  content: `Usar os produtos da Vida Natural é **se sentir em harmonia com o corpo** e o **meio ambiente**. São produtos feitos com toda **dedicação e carinho** e  de muita qualidade. Super ultra recomendado!`,
 }, {
   name: 'Maurício Frighetto',
   role: 'Jornalista',
   location: 'Florianópolis / SC',
   picture: 'mauricio-frighetto.jpg',
   ratio: '2by3',
-  content: `Todos os produtos que experimentei da Vida Natural foram muito eficientes. O que já é um grande ponto positivo. Mas talvez o mais importante para mim seja saber que eles foram feitos com carinho e, principalmente, sem o uso de nenhum produto de origem animal. É um grande diferencial. Por estes dois motivos, recomendo fortemente`,
+  content: `Todos os produtos que experimentei da Vida Natural foram **muito eficientes**. O que já é um grande ponto positivo. Mas talvez o mais importante para mim seja saber que eles foram feitos com **carinho** e, principalmente, sem o uso de **nenhum produto de origem animal**. É um grande diferencial. Por estes dois motivos, recomendo fortemente`,
 }, {
   name: 'Dircéia',
   role: 'Nutricionista',
   location: 'Garopaba / SC',
   picture: 'dirceia.jpg',
-  content: `Sou nutricionista e há alguns anos vinha procurando por um desodorante que não prejudicasse minha saúde, livre de alumínio, parabenos e outras substâncias tóxicas. Na época que comecei a procurar, em torno de 10 anos atrás, não achava nada aqui no Brasil, então sempre que viajava eu buscava por um diferente, na esperança que fosse ótimo, afinal eram marcas importadas e de ótima qualidade! Fiquei um bom tempo intercalando os desodorantes normais com os livres de alumínio pois não achava um realmente bom. Foi então que um dia estava comprando alguns produtos em uma loja de Garopaba e achei o desodorante da Vida Natural! Olhei os ingredientes, como de costume, e fiquei super empolgada com a composição! Ainda mais que eu tinha feito recentemente um curso de aromaterapia e sabia dos benefícios dos óleos essenciais na sua composição! Quando usei fiquei suuuuper feliz! Enfim achei um produto de qualidade, realmente natural e que funciona! Uso e indico para todos!! Obrigada por criar esse excelente produto! A saúde e a natureza agradecem!`,
+  content: `Sou nutricionista e há alguns anos vinha procurando por um desodorante que **não prejudicasse minha saúde**, **livre de alumínio**, **parabenos** e outras substâncias tóxicas.
+  Na época que comecei a procurar, em torno de 10 anos atrás, não achava nada aqui no Brasil, então sempre que viajava eu buscava por um diferente, na esperança que fosse ótimo, afinal eram marcas importadas e de ótima qualidade! Fiquei um bom tempo intercalando os desodorantes normais com os livres de alumínio pois não achava um realmente bom. Foi então que um dia estava comprando alguns produtos em uma loja de Garopaba e **achei o desodorante da Vida Natural**! **Olhei os ingredientes**, como de costume, e fiquei super **empolgada com a composição**! Ainda mais que eu tinha feito recentemente um curso de aromaterapia e sabia dos **benefícios dos óleos essenciais** na sua composição!
+  Quando usei fiquei **suuuuper feliz**! Enfim achei um **produto de qualidade**, realmente **natural** e que funciona! Uso e indico para todos!! Obrigada por criar esse excelente produto! A **saúde e a natureza** agradecem!`,
 }, {
   name: 'Aline blasius',
   role: 'Dançarina',
   location: 'Florianópolis / SC',
   picture: 'aline-blasius.jpg',
   ratio: '2by3',
-  content: `Faz quase dois anos que uso o desodorante e o pó dental e são muito eficientes! As embalagens são práticas de carregar na bolsa. Sem veneninhos e sem crueldade! Recomendo!`,
+  content: `Faz quase dois anos que uso o desodorante e o pó dental e são **muito eficientes**! As **embalagens são práticas** de carregar na bolsa. **Sem veneninhos** e **sem crueldade**! Recomendo!`,
 }, {
   name: 'Zilda Gama',
   location: 'Belém / PA',
   picture: 'zilda-gama.jpg',
-  content: `Em 2015 fui diagnosticada com câncer de mama o que me levou a iniciar uma busca por explicações para a causa da doença, especialmente em pessoas jovens e sem outros casos na família, eu tinha 34 anos. Nessa busca eu encontrei estudos que relacionavam o ca de mama a algumas substâncias presentes nos antitranspirantes o que me fez querer mudar meus hábitos de higiene e assim eu inicie uma nova busca, agora por desodorantes que fossem produzidos com a menor quantidade de substâncias possíveis e sem aquela infinidade de produtos químicos dos antitranspirantes disponíveis no mercado. Foi assim, que eu encontrei o desodorante da Vida Natural sendo vendido em um restaurante indiano de Porto Alegre e que atendeu todas as minhas expectativas. Em 2017, porém me mudei para Belém, mas não sabia mais viver sem o desodorante da vida natural e minha busca recomeçou, foi quando encontrei a página da Vida Natural no facebook e as gurias facilitam minha vida mandando para mim pelos correios sempre que eu os peço.`,
+  content: `Em 2015 fui diagnosticada com **câncer de mama** o que me levou a iniciar uma busca por explicações para a causa da doença, especialmente em pessoas jovens e sem outros casos na família, eu tinha 34 anos.
+  Nessa busca eu encontrei estudos que relacionavam o **câncer de mama** a algumas substâncias presentes nos antitranspirantes o que me fez querer **mudar meus hábitos** de higiene e assim eu iniciei uma nova busca, agora por desodorantes que fossem produzidos com a menor quantidade de substâncias possíveis e sem aquela infinidade de produtos químicos dos antitranspirantes disponíveis no mercado.
+  Foi assim, que eu encontrei o desodorante da Vida Natural sendo vendido em um restaurante indiano de Porto Alegre e que **atendeu todas as minhas expectativas**.
+  Em 2017, porém me mudei para Belém, mas não sabia mais viver sem o desodorante da Vida Natural e minha busca recomeçou, foi quando encontrei a página da Vida Natural no facebook e as gurias facilitam minha vida **mandando para mim pelos correios** sempre que eu os peço.`,
 }, {
   name: 'Rafael Pieruccini',
   role: 'Empresário',
   location: 'Porto Alegre / RS',
   picture: 'rafael-pieruccini.jpg',
-  content: `Faz anos que procurava um desodorante natural que funcionasse, até que encontrei o Vida Natural. Ele é extremamente eficiente, e o melhor, naturalmente.`,
+  content: `Faz anos que procurava um **desodorante natural que funcionasse**, até que **encontrei** o Vida Natural. Ele é **extremamente eficiente**, e o **melhor**, **naturalmente**.`,
 }, {
   name: 'Monica Auga',
   role: 'Agrônoma',
   location: 'Florianópolis / SC',
   picture: 'monica-auga.jpg',
-  content: `Incrível!  Único desodorante natural que realmente superou os químicos. .... super aprovo 5 anos q só uso vida natural!!!`,
+  content: `Incrível!  **Único desodorante natural** que realmente superou os químicos. .... super aprovo 5 anos que **só uso** Vida Natural!!!`,
 }, {
   name: 'Mayara',
   location: 'Foz do Iguaçu / PR',
   picture: 'mayara.jpg',
-  content: `Os produtos Vida Natural são incríveis, uso há uns 3 anos e não abro mão! São super eficientes, não prejudicam minha saúde ou a natureza, super recomendo!
-  Obrigada eu por criar esses produtos incríveis que eu tanto amo e uso desde que conheci 💞🌱🙏`,
+  content: `Os produtos Vida Natural são **incríveis**, uso há uns 3 anos e **não abro mão**! São **super eficientes**, não prejudicam minha **saúde ou a natureza**, super recomendo!
+  Obrigada por criar esses produtos incríveis que **eu tanto amo** e uso desde que conheci 💞🌱🙏`,
 }, {
   name: 'Andrea Freire',
   role: 'Bióloga',
   location: 'Florianópolis / SC',
   picture: 'andrea-freire.jpg',
-  content: `Durante 1 mês de árduo trabalho físico, velejando sob um sol escaldante e muito calor, o desodorante funcionou muito bem. Os produtos Vida Natural serão usados pelos pesquisadores no veleiro ECO/UFSC, pois aliam eficiência a sustentabilidade ambiental.`,
+  content: `Durante 1 mês de **árduo trabalho físico**, velejando sob um sol escaldante e muito calor, o **desodorante funcionou muito bem**.
+  Os produtos Vida Natural serão **usados pelos pesquisadores no veleiro ECO/UFSC**, pois aliam **eficiência** à **sustentabilidade ambiental**.`,
 }, {
   name: 'Denise Franco',
   role: 'Vendedora',
   location: 'Canoas / RS',
   picture: 'denise-franco.jpg',
-  content: `Conheci os Cosméticos Vida Natural digamos em um momento muito marcante da minha vida, em Fevereiro de 2016 fui diagnosticada com carcinoma Infiltrativo de Mama, com uma filhinha de apenas três anos, não me permiti desesperar, resolvi iniciar imediatamente uma alimentação natural e acompanhamento com um especialista da Área, e a primeira recomendação foi:  Não utilizar nenhum desodorante comum. Foi aí que começou outro problema, sempre tive problemas com transpiração excessiva e receitas caseiras ou desodorantes Naturais com precinhos bem altos, simplesmente não funcionavam para mim. Foi então que encontrei os desodorantes Cosméticos Vida Natural em uma casa de produtos Naturais, e já no primeiro dia fiquei aliviada, pois agora havia uma luz no fim do Túnel, naquele momento poderia me concentrar somente na recuperação do meu corpo Físico, sem me preocupar com certos tipos de odores. Hoje já recuperada, tenho a consciência de quanta química está não só em mossa alimentação, mas também nos produtos para cabelo e principalmente para pele, produtos altamente prejudiciais a nossa saúde e bem estar, e que estamos expostos a todo tempo, sem podermos contar com essa indústria e governo da “Doença”. Sinto uma profunda gratidão por haver pessoas empreendedoras que de certa forma enfrentam esse mercado criminoso, e apresentam produtos feitos com carinho e respeito, cuidando verdadeiramente do próximo.`,
+  content: `Conheci os cosméticos Vida Natural digamos em um momento muito marcante da minha vida, em Fevereiro de 2016 fui diagnosticada com **Carcinoma Infiltrativo de Mama**, com uma filhinha de apenas três anos, não me permiti desesperar, resolvi iniciar imediatamente uma **alimentação natural** e acompanhamento com um especialista da área, e a **primeira recomendação** foi:  Não utilizar **nenhum desodorante comum**.
+  Foi aí que começou outro problema, sempre tive problemas com transpiração excessiva e receitas caseiras ou desodorantes naturais com precinhos bem altos, simplesmente não funcionavam para mim.
+  Foi então que encontrei os Cosméticos Vida Natural em uma casa de produtos naturais, e **já no primeiro dia** fiquei aliviada, pois agora havia uma luz no fim do túnel, naquele momento poderia me concentrar somente na **recuperação do meu corpo Físico**, sem me preocupar com certos tipos de odores.
+  Hoje já recuperada, tenho a **consciência** de quanta química está não só em mossa alimentação, mas também nos produtos para cabelo e principalmente para pele, produtos altamente prejudiciais a nossa saúde e bem estar, e que estamos expostos a todo tempo, sem podermos contar com essa indústria e governo da “Doença”.
+  Sinto uma profunda gratidão por haver pessoas empreendedoras que de certa forma enfrentam esse mercado criminoso, e apresentam produtos feitos com **carinho e respeito**, **cuidando verdadeiramente** do próximo.`,
 }, {
   name: 'Samira Kohn',
   role: 'Empreendedora',
   location: 'Florianópolis / SC',
   picture: 'samira-kohn.jpg',
-  content: `Quando buscamos uma vida mais saudável começamos a olhar de forma mais consciente para as nossas escolhas e quanto isso nos afeta em todos os sentidos. Geralmente a mudança começa na alimentação, mas muitas vezes não percebemos o quanto a nossa pele tem uma grande função nessa parte. O Ayurveda, Medicina Tradicional Indiana fala: passe na sua pele apenas o que você pode comer. Isso caiu como uma chave na minha vida e fazia todo sentido. A pele é o maior órgão do nosso corpo, o que passamos na pele vai para nossa corrente sanguínea. Foi aí que comecei a ser muito mais criteriosa com todo cosmético que eu uso e  que o Vida Natural entrou na minha rotina. Trouxe um novo conceito de cuidado com o corpo, orgânico, saudável e o melhor de tudo livre de todas aquelas substâncias nocivas usadas nos produtos de beleza.
-  Amo toda a linha de produtos e recomendo muito!`,
+  content: `Quando buscamos uma **vida mais saudável** começamos a olhar de forma **mais consciente** para as **nossas escolhas** e quanto isso nos afeta em todos os sentidos.
+  Geralmente a **mudança** começa na alimentação, mas muitas vezes não percebemos o quanto a **nossa pele tem uma grande função** nessa parte.
+  O **Ayurveda**, Medicina Tradicional Indiana fala: **passe na sua pele apenas o que você pode comer**. Isso caiu como uma chave na minha vida e fazia todo sentido. A **pele é o maior órgão do nosso corpo**, o que passamos na pele **vai para nossa corrente sanguínea**.
+  Foi aí que comecei a ser muito mais **criteriosa** com todo cosmético que eu uso e que o Vida Natural **entrou na minha rotina**. Trouxe um **novo conceito de cuidado com o corpo**, **orgânico**, **saudável** e o melhor de tudo livre de todas aquelas substâncias nocivas usadas nos produtos de beleza.
+  **Amo toda a linha** de produtos e recomendo muito!`,
 }, {
   name: 'Diuly Venson',
   role: 'Fotógrafa',
   location: 'Curitiba / PR',
   picture: 'diuly-venson.jpg',
   ratio: '2by3',
-  content: `Fantástico! Segura o dia todo, inclusive durante atividades físicas, e o melhor, sem bloquear a transpiração. Um dos melhores desodorantes naturais que já experimentei. Super recomendo!!!`,
+  content: `**Fantástico**! Segura o **dia todo**, inclusive **durante atividades físicas**, e o **melhor, sem bloquear a transpiração**. Um dos melhores desodorantes naturais que já experimentei. Super recomendo!!!`,
 }, {
   name: 'Gisele de Menezes',
   role: 'Escritora e terapeuta ayurveda',
   location: 'Porto Alegre / RS',
   picture: 'gisele-de-menezes.jpg',
-  content: `Há muito tempo descobri o desodorante de creme em um restaurante de POA e ADOREI. Nunca mais quis comprar outros desodorantes, pois na minha adolescência eu tive que fazer uma pequena cirurgia devido a um entupimento das glândulas sebáceas da axila, causado por desodorantes convencionais. Depois de um tempo descobri o Rollon e não voltei atrás.
-  Claro que é importante manter uma boa assepsia do corpo, ter uma boa alimentação que não produza tanta acidez, mas considero o desodorante suficiente para minhas necessidades. E saber também que é um produto natural e artesanal é tudo! Que bom se os sabonetes, produtos de limpeza e todas as coisas fossem feitas dessa maneira!`,
+  content: `Há muito tempo descobri o desodorante de creme em um restaurante de POA e ADOREI. Nunca mais quis comprar outros desodorantes, pois na minha adolescência eu tive que fazer uma pequena cirurgia devido a um **entupimento das glândulas sebáceas da axila**, causado por **desodorantes convencionais**. Depois de um tempo descobri o Rollon e **não voltei atrás**.
+  Claro que é importante manter uma boa assepsia do corpo, ter uma **boa alimentação** que não produza tanta acidez, mas considero o desodorante **suficiente para minhas necessidades**. E saber também que é um produto **natural e artesanal** é tudo!
+  Que bom se os sabonetes, produtos de limpeza e todas as coisas fossem feitas dessa maneira!`,
 }, {
   name: 'Samantha Linsmeyer',
   picture: 'samantha-linsmeyer.jpg',
   ratio: '2by3',
-  content: `O desodorante que experimentei é simplesmente o melhor que já usei na minha vida. Eu não largo mais! Quero provar e experimentar os outros produtos.
-  Senti ele leve, o aroma agradável e com uma resistência muito importante para quem tem uma rotina agitada igual a minha. Agora quero mais, tenho certeza que vou amar os outros e me sinto feliz em cuidar também da natureza e dos animais desta forma!`,
+  content: `O desodorante que experimentei é **simplesmente o melhor que já usei na minha vida**. Eu não largo mais! Quero provar e experimentar os outros produtos.
+  Senti ele leve, o **aroma agradável** e com uma **resistência** muito importante para quem tem uma **rotina agitada** igual a minha. Agora quero mais, tenho certeza que vou amar os outros e me sinto feliz em **cuidar também da natureza e dos animais** desta forma!`,
 }, {
   name: 'Gabriela de Lucca',
   role: 'Pesquisadora',
   location: 'Canada',
   picture: 'gabriela-de-lucca.jpg',
-  content: `Ganhei o desodorante de presente e fiquei encantada com toda proposta da marca. Usar um produto todos os dias sabendo que é feito com total amor, consciente e natural faz meu dia começar muito melhor. Sem contar que funciona super bem e não mancha minhas blusas. Recomendo com todo meu coração.`
+  content: `Ganhei o desodorante de presente e fiquei **encantada com toda proposta** da marca. Usar um produto todos os dias sabendo que é **feito com total amor**, **consciente e natural** faz meu **dia começar muito melhor**. Sem contar que **funciona super bem** e **não mancha minhas blusas**. Recomendo com todo meu coração.`
 }, {
   name: 'Fabiula Zimmer',
   role: 'Empresária',
   location: 'São Leopoldo / RS',
   picture: 'fabiula-zimmer.jpg',
   ratio: '2by3',
-  content: `Os produtos Vida Natural fazem parte do meu dia a dia. Utilizo o desodorante em pasta alternado com o roll one o óleo de girassol com palmarosa e lavanda, que é super hidratante e tem um cheiro maravilhoso.`,
+  content: `Os produtos Vida Natural fazem parte do **meu dia a dia**. Utilizo o **desodorante em pasta** alternado com o **roll on** e o **óleo de girassol com palmarosa e lavanda**, que é super **hidratante** e tem um **cheiro maravilhoso**.`,
 }, {
   name: 'Carol Carida',
   role: 'Professora socióloga',
   location: 'Florianópolis / SC',
   picture: 'carol-carida.jpg',
-  content: `Eu adoro os produtos da vida natural. Abandonei o desodorante convencional e muita coisa mudou na minha relação com o meu corpo. Me sinto mais conectada com a minha essência, além de ter sentido minha pele mais macia e bem cuidada sem o uso de produtos químicos. Super recomendo esses produtos que são feitos com muito amor e contribuem com o nosso bem estar ❤`,
+  content: `Eu adoro os produtos da Vida Natural. **Abandonei o desodorante convencional** e muita coisa mudou na **minha relação com o meu corpo**. Me sinto mais **conectada com a minha essência**, além de ter sentido **minha pele mais macia e bem cuidada** sem o uso de produtos químicos. Super recomendo esses produtos que são feitos com muito amor e contribuem com o nosso bem estar ❤`,
 }, {
   name: 'Francisco Camolesi',
   role: 'Engenheiro de Produção',
   location: 'Imbituba / SC',
   picture: 'francisco-camolesi.jpg',
-  content: `Depois que experimentei nunca mais usei outro. Desodorante mais eficiente que já usei. O produto é simplesmente sensacional. Já estou usando há dois anos e nem penso em experimentar outro!`,
+  content: `Depois que experimentei **nunca mais usei outro**. Desodorante mais **eficiente** que já usei. O produto é **simplesmente sensacional**. Já estou usando há dois anos e nem penso em experimentar outro!`,
 }, {
   name: 'Gabriel de Menezes',
   role: 'Empresário',
   location: 'São Leopoldo / RS',
   picture: 'gabriel-de-menezes.jpg',
-  content: `Utilizo os produtos da vida natural há pelo menos 2 anos. O desodorante e os óleos hidratantes fazem parte do meu dia a dia desde então.`,
+  content: `Utilizo os produtos da Vida Natural há pelo menos 2 anos. O **desodorante** e os **óleos hidratantes** fazem **parte do meu dia a dia** desde então.`,
 }, {
   name: 'Lúcia do Valle',
   role: 'Cozinheira e Artesã',
   location: 'Florianópolis / SC',
   picture: 'lucia-do-valle.jpg',
-  content: `É saudável. É eficaz. E o planeta agradece.`,
+  content: `É **saudável**. É **eficaz**. E o **planeta agradece**.`,
 }, {
   name: 'Sebastian Bisbal',
   role: 'Salva Vidas',
   location: 'Argentina',
   picture: 'sebastian-bisbal.jpg',
-  content: `Yo no creia que los productos naturales iban hacer efecto. Desde hace un año que uso vida natural y no cambiaria por otros. Su eficacia es increible!`
+  content: `Yo no creia que los productos naturales iban hacer efecto. Desde hace un año que uso Vida Natural y **no cambiaria por otros**. Su **eficacia es increible**!`
 }, {
   name: 'Luise Rabelo',
   role: 'Arquiteta',
   location: 'Porto Alegre / RS',
   picture: 'luise-rabelo.jpg',
-  content: `Conheci os produtos Vida Natural por acaso há uns 3 anos e nunca mais deixei de usar, principalmente o desodorante em pasta, meu preferido. Os produtos são eficazes, tem um cheiro suave e gostoso e não agridem nosso organismo como os cosméticos convencionais. Obrigada Vida Natural por cuidar da gente com tanto carinho!`,
+  content: `Conheci os produtos Vida Natural por acaso há uns 3 anos e **nunca mais deixei de usar**, principalmente o **desodorante em pasta**, meu preferido. Os produtos são **eficazes**, tem um **cheiro suave e gostoso** e **não agridem nosso organismo** como os cosméticos convencionais. Obrigada Vida Natural por cuidar da gente com tanto **carinho**!`,
 }, {
   name: 'Camila de Lucca',
   role: 'Professora de Yoga',
   location: 'Florianópolis / SC',
   picture: 'camila-de-lucca.jpg',
-  content: `O que me encanta nesses produtos da Via Natural é que, além de serem feitos com ingredientes naturais e de ótima qualidade, são feitos com muito carinho e amor, e isso os transforma em verdadeiras "poções" de beleza e bem estar!`,
+  content: `O que me **encanta** nesses produtos da Via Natural é que, além de serem feitos com **ingredientes naturais** e de **ótima qualidade**, são feitos com muito **carinho e amor**, e isso os transforma em **verdadeiras "poções" de beleza e bem estar**!`,
 }, {
   name: 'Aline Niehues',
   role: 'Professora de Yoga',
   location: 'Joinville / SC',
   picture: 'aline-niehues.jpg',
   ratio: '2by3',
-  content: `Conhecemos a vida natural ,a mais ou menos,dois anos,e foi amor ao primeiro uso!Toda a nossa família usa os produtos,e desde então não consumimos outro.Tudo na vida natural,é feito com muito amor e carinho,isso se observa pela qualidade e aroma que os acompanha.Nós nos sentimos privilegiados por poder usar os produtos da vida natural e espero que assim seja por longos anos.Somos muito gratos por poder fazer parte deste caminho que visa o nosso bem-estar,mas em conjunto com os outros seres! Nosso agradecimento em especial e carinhoso à Dalila Ozório,criadora dos produtos!`,
+  content: `Conhecemos a Vida Natural há, mais ou menos, dois anos, e foi **amor ao primeiro uso**! **Toda a nossa família usa os produtos**, e desde então não consumimos outro.
+  Tudo na Vida Natural, é feito com muito **amor e carinho**, isso se observa pela **qualidade** e **aroma** que os acompanha.
+  Nós nos sentimos **privilegiados** por poder usar os produtos da Vida Natural e espero que assim seja por longos anos. Somos muito gratos por **poder fazer parte deste caminho** que visa o **nosso bem-estar**, mas em conjunto com os **outros seres**!
+  Nosso agradecimento em especial e carinhoso à Dalila Ozório, criadora dos produtos!`,
 }, {
   name: 'Priscila Pittel',
   role: 'Produtora de filmes',
   location: 'Rio de Janeiro / RJ',
   picture: 'priscila-pittel.jpg',
-  content: `O óleo além de hidratar a minha pele, estimula a auto massagem, o que me traz uma série de benefícios. O desodorante neutraliza o odor sem tampar os meus poros, que precisam colocar as toxinas para fora. São pequenos hábitos diários que fazem toda a diferença na vida.`,
+  content: `O óleo além de **hidratar a minha pele**, **estimula** a auto massagem, o que me traz uma **série de benefícios**. O **desodorante neutraliza o odor sem tampar os meus poros**, que **precisam colocar as toxinas para fora**. São **pequenos hábitos diários** que fazem toda a **diferença** na vida.`,
 }, {
   name: 'Daniela Caniçali',
   role: 'Jornalista',
   location: 'Florianópolis / SC',
   picture: 'daniela-canicali.jpg',
-  content: `Utilizo os produtos da Vida Natural há algum tempo, em especial os desodorantes e o pó dental. Considero todos de excelente qualidade. Os desodorantes são super eficazes: passo apenas uma vez ao dia, pela manhã, e eles geralmente duram o dia todo, sem necessidade de reaplicação. O pó dental também é uma ótima alternativa à pasta de dente tradicional. Além disso, o fato de serem feitos com ingredientes 100% naturais e veganos também proporcionam tranquilidade e segurança, por sabermos que não representam quaisquer riscos à nossa saúde ou de outros seres.`,
+  content: `Utilizo os produtos da Vida Natural há algum tempo, em especial os **desodorantes** e o **pó dental**. Considero todos de **excelente qualidade**.
+  Os desodorantes são **super eficazes**: passo **apenas uma vez ao dia**, pela manhã, e eles geralmente **duram o dia todo**, sem necessidade de reaplicação. O **pó dental** também é uma **ótima alternativa** à pasta de dente tradicional.
+  Além disso, o fato de serem feitos com **ingredientes 100% naturais e veganos** também proporcionam **tranquilidade e segurança**, por sabermos que não representam quaisquer riscos à nossa saúde ou de outros seres.`,
 }, {
   name: 'Merilyn Nossol da Silva',
   role: 'Educadora',
   location: 'Florianópolis / SC',
   picture: 'merilyn-da-silva.jpg',
   ratio: '2by3',
-  content: `“A mamãe e o papai sempre usam o óleo de rosa mosqueta da vida natural na minha pele. Ela fica macia e sem assaduras!”
-  Toda a nossa familia usa os produtos da vida natural. Desorante, óleo hidratante, óleo de rosa mosqueta e adoramos. Produtos feitos com consciência e amor!`,
+  content: `“A mamãe e o papai sempre usam o **óleo de rosa mosqueta** da Vida Natural na minha pele. Ela fica **macia** e sem assaduras!”
+  Toda a **nossa familia** usa os produtos da Vida Natural. Desorante, óleo hidratante, óleo de rosa mosqueta e adoramos. Produtos feitos com **consciência e amor**!`,
 }, {
   name: 'Renata Santanayanna',
   role: 'Relações Públicas',
   location: 'Joinville / SC',
   picture: 'renata-santanayanna.jpg',
-  content: `Há 5 anos já uso os produtos da marca Vida Natural. Acompanho o crescimento dos produtos desde o início da produção e tenho certeza continuará crescendo por sua qualidade e comprometimento com seus princípios de zelar pela saúde dos clientes. Fruto de um trabalho feito com muito amor, idealismo e muita preocupação com a opinião de seu consumidor, transformando as criticas em melhorias.`,
+  content: `Há 5 anos já uso os produtos da marca Vida Natural. Acompanho o crescimento dos produtos desde o início da produção e tenho certeza continuará crescendo por sua **qualidade e comprometimento** com seus princípios de zelar pela **saúde dos clientes**.
+  Fruto de um trabalho feito com **muito amor**, **idealismo** e muita preocupação com a opinião de seu consumidor, transformando as críticas em melhorias.`,
 }, {
   name: 'Bruno Pasti',
   role: 'Bacharel em Física',
   location: 'Florianópolis / SC',
   picture: 'bruno-pasti.jpg',
-  content: `Gosto do resultado dos cosméticos Vida Natural. A pele fica ótima com os hidratantes e o aroma dos óleos essenciais é uma delícia.`,
+  content: `Gosto do **resultado dos cosméticos** Vida Natural. A **pele fica ótima** com os hidratantes e o **aroma** dos óleos essenciais é uma **delícia**.`,
 }, {
   name: 'Karla Scherer',
   role: 'Professora de Dança Indiana',
   location: 'Florianópolis / SC',
   picture: 'karla-scherer.jpg',
-  content: `Sempre recomendo os produtos Vida Natural para meus amigos e para aqueles que desconhecem a eficácia dos desodorantes e hidratantes naturais. Os produtos têm excelente qualidade, composição perfeita e com ótimos preços!`,
+  content: `Sempre recomendo os produtos Vida Natural para meus amigos e para aqueles que desconhecem a **eficácia dos desodorantes** e hidratantes naturais. Os produtos têm **excelente qualidade**, **composição** perfeita e com ótimos preços!`,
 }]

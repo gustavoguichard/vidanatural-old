@@ -1,17 +1,17 @@
-import { Component } from "react"
-import dynamic from "next/dynamic"
-import Masonry from "react-masonry-component"
-import { Columns, Section } from "react-bulma-components"
-import { FaPlus } from "react-icons/fa"
-import get from "lodash/get"
+import { Component } from 'react'
+import dynamic from 'next/dynamic'
+import Masonry from 'react-masonry-component'
+import { Columns, Section } from 'react-bulma-components'
+import { FaPlus } from 'react-icons/fa'
+import get from 'lodash/get'
 
-import Layout from "components/Layout"
-import ImageReplace from "components/ImageReplace"
-import testimonials from "content/testimonials"
+import Layout from 'components/Layout'
+import ImageReplace from 'components/ImageReplace'
+import testimonials from 'content/testimonials'
 
-import "styles/index.scss"
+import 'styles/index.scss'
 
-const Testimonial = dynamic(import("components/Testimonial"))
+const Testimonial = dynamic(import('components/Testimonial/index'))
 
 class Index extends Component {
   constructor(props) {
@@ -27,7 +27,7 @@ class Index extends Component {
   }
 
   setWrapperWidth() {
-    const wrapperWidth = get(this.wrapper, "current.offsetWidth")
+    const wrapperWidth = get(this.wrapper, 'current.offsetWidth')
     this.setState({ wrapperWidth })
   }
 

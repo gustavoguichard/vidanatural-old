@@ -1,4 +1,18 @@
 @import 'node_modules/bulma/bulma';
+@import './colors';
+
+body {
+  background-color: black;
+
+  * {
+    color: white;
+  }
+
+  a {
+    color: $green;
+  }
+}
+
 .app-wrapper {
   background: black;
 }

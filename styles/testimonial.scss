@@ -1,9 +1,12 @@
-$green: #629f81;
+@import './colors';
+
+.testimonial-item {
+  position: relative;
+}
 
 .pop-over {
   background: $green;
   box-shadow: 0 0 10px rgba(black, 1);
-  color: white;
   font-size: 1.1em;
   max-width: 100%;
   padding: 30px;

@@ -7,7 +7,8 @@ module.exports = {
     ['module-resolver', {
       "root": ['./'],
       "alias": {
-        "components": "./components"
+        "components": "./components",
+        "utils": "./utils"
       }
     }]
   ],
