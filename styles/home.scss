@@ -1,0 +1,21 @@
+@import './colors';
+
+.home-bg {
+  background: url('/static/home-bg.jpg') no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.home-logo {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+
+  @media (max-device-width: 991px) {
+    right: inherit;
+  }
+}

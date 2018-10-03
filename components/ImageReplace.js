@@ -23,7 +23,7 @@ class ImageReplace extends Component {
   }
 
   render() {
-    const { children, retina, style } = this.props
+    const { children, retina, style, ...props } = this.props
     const { dimensions, isClient } = this.state
     const src = `/static/${this.props.src}`
     const factor = retina ? 2 : 1
@@ -38,7 +38,7 @@ class ImageReplace extends Component {
       ...style,
     }
     return dimensions ? (
-      <div {...this.props} style={styles}>
+      <div {...props} style={styles}>
         {children}
       </div>
     ) : isClient ? (
