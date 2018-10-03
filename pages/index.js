@@ -5,6 +5,7 @@ import { Columns, Section } from "react-bulma-components"
 import MediaQuery from "react-responsive"
 import { FaPlus } from "react-icons/fa"
 import get from "lodash/get"
+import shuffle from 'lodash/shuffle'
 import classnames from "classnames"
 
 import { MEDIA_QUERY } from "utils/responsive"
@@ -57,7 +58,7 @@ class Index extends Component {
 
   get renderTestimonials() {
     const { wrapperWidth } = this.state
-    return testimonials.map((testimonial, index) =>
+    return shuffle(testimonials).map((testimonial, index) =>
       <Testimonial key={index} {...testimonial} width={wrapperWidth} />
     )
   }
