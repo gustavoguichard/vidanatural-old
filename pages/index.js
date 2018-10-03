@@ -1,17 +1,20 @@
-import { Component } from 'react'
-import dynamic from 'next/dynamic'
-import Masonry from 'react-masonry-component'
-import { Columns, Section } from 'react-bulma-components'
-import { FaPlus } from 'react-icons/fa'
-import get from 'lodash/get'
+import { Component } from "react"
+import dynamic from "next/dynamic"
+import Masonry from "react-masonry-component"
+import { Columns, Section } from "react-bulma-components"
+import MediaQuery from "react-responsive"
+import { FaPlus } from "react-icons/fa"
+import get from "lodash/get"
+import classnames from "classnames"
 
-import Layout from 'components/Layout'
-import ImageReplace from 'components/ImageReplace'
-import testimonials from 'content/testimonials'
+import { MEDIA_QUERY } from "utils/responsive"
+import Layout from "components/Layout"
+import ImageReplace from "components/ImageReplace"
+import testimonials from "content/testimonials"
 
-import 'styles/index.scss'
+import "styles/index.scss"
 
-const Testimonial = dynamic(import('components/Testimonial/index'))
+const Testimonial = dynamic(import("components/Testimonial/index"))
 
 class Index extends Component {
   constructor(props) {
@@ -27,7 +30,7 @@ class Index extends Component {
   }
 
   setWrapperWidth() {
-    const wrapperWidth = get(this.wrapper, 'current.offsetWidth')
+    const wrapperWidth = get(this.wrapper, "current.offsetWidth")
     this.setState({ wrapperWidth })
   }
 
@@ -37,27 +40,33 @@ class Index extends Component {
     this.setState({ isContentOpen: !isContentOpen }, this.setWrapperWidth)
   }
 
+  get renderPlusBt() {
+    const { isContentOpen } = this.state
+    return (
+      <MediaQuery query={MEDIA_QUERY.DESKTOP}>
+        <a
+          href="#"
+          className={classnames({ "plus-bt": true, floating: !isContentOpen })}
+          onClick={this.toggleContent}
+        >
+          <FaPlus />
+        </a>
+      </MediaQuery>
+    )
+  }
+
+  get renderTestimonials() {
+    const { wrapperWidth } = this.state
+    return testimonials.map((testimonial, index) =>
+      <Testimonial key={index} {...testimonial} width={wrapperWidth} />
+    )
+  }
+
   render() {
-    const { isContentOpen, wrapperWidth } = this.state
+    const { isContentOpen } = this.state
     return (
       <Layout>
         <Columns gapless>
-          <Columns.Column className="masonry-wrapper">
-            <div ref={this.wrapper}>
-              <Masonry
-                className="testimonials-grid"
-                options={{ transitionDuration: 500 }}
-              >
-                {testimonials.map((testimonial, index) =>
-                  <Testimonial
-                    key={index}
-                    {...testimonial}
-                    width={wrapperWidth}
-                  />
-                )}
-              </Masonry>
-            </div>
-          </Columns.Column>
           {isContentOpen
             ? <Columns.Column className="side-content">
                 <Section>
@@ -70,19 +79,20 @@ class Index extends Component {
                       Descubra o que motiva as pessoas a usar nossos cosméticos
                       - Vida Natural
                     </p>
-                    <a
-                      href="#"
-                      className="plus-bt"
-                      onClick={this.toggleContent}
-                    >
-                      <FaPlus />
-                    </a>
+                    {this.renderPlusBt}
                   </div>
                 </Section>
               </Columns.Column>
-            : <a href="#" className="plus-bt floating" onClick={this.toggleContent}>
-                <FaPlus />
-              </a>}
+            : this.renderPlusBt}
+          <Columns.Column className="masonry-wrapper">
+            <div ref={this.wrapper}>
+              <Masonry
+                className="testimonials-grid"
+                children={this.renderTestimonials}
+                options={{ transitionDuration: 500 }}
+              />
+            </div>
+          </Columns.Column>
         </Columns>
       </Layout>
     )

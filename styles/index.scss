@@ -3,6 +3,10 @@
 .masonry-wrapper {
   max-height: 100vh;
   overflow: scroll;
+  @media (max-device-width: 991px) {
+    max-height: none;
+    overflow: visible;
+  }
 }
 
 a {
@@ -18,10 +22,10 @@ a {
   color: white;
   display: flex;
   max-height: 100vh;
+  order: 2;
 
   @media (max-device-width: 991px) {
-    position: fixed;
-    bottom: 0;
+    order: 0;
   }
 
   .section {

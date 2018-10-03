@@ -12,7 +12,28 @@
   padding: 30px;
   width: 500px;
 
+  * {
+    color: white;
+  }
+
   p {
-    margin: 2em 0 1em;
+    margin: 1em 0 1em;
+  }
+}
+
+.testimonial-slogan {
+  margin-bottom: 2em;
+}
+
+.testimonial-item{
+  cursor: pointer;
+}
+
+.testimonial-img {
+  filter: saturate(0);
+  transition: all .6s;
+
+  &:hover {
+    filter: none;
   }
 }

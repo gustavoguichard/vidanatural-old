@@ -10,20 +10,31 @@ import { MEDIA_QUERY } from "utils/responsive"
 
 import "styles/testimonial.scss"
 
-const TestimonialContent = ({ name, location, role, content }) =>
-  <article className="pop-over">
-    <ImageReplace src="slogan-black.png">
-      <h4>Eu uso cosmética consciente</h4>
-    </ImageReplace>
-    <ReactMarkdown escapeHtml={false} source={nl2Br(content)} />
-    <em>
-      {compact([name, role]).join(" - ")}
-    </em>
-    <br />
-    <em>
-      {location}
-    </em>
-  </article>
+const TestimonialContent = ({ name, location, role, content }) => {
+  const title = compact([name, role]).join(" - ")
+  return (
+    <article className="pop-over">
+      <MediaQuery query={MEDIA_QUERY.DESKTOP}>
+        <ImageReplace className="testimonial-slogan" src="slogan-black.png">
+          <h4>Eu uso cosmética consciente</h4>
+        </ImageReplace>
+      </MediaQuery>
+      <MediaQuery query={MEDIA_QUERY.TABLET_DOWN}>
+        <h3 className="title is-4">{title}</h3>
+      </MediaQuery>
+      <ReactMarkdown escapeHtml={false} source={nl2Br(content)} />
+      <MediaQuery query={MEDIA_QUERY.DESKTOP}>
+        <em>
+          {title}
+        </em>
+      </MediaQuery>
+      <br />
+      <em>
+        {location}
+      </em>
+    </article>
+  )
+}
 
 const PopoverContent = props => args =>
   <ArrowContainer
@@ -86,8 +97,7 @@ class Testimonial extends Component {
   render() {
     const { mounted, isContentOpen } = this.state
     return mounted
-      ? (
-        <Fragment>
+      ? <Fragment>
           <MediaQuery query={MEDIA_QUERY.DESKTOP}>
             <Popover
               isOpen={isContentOpen}
@@ -102,7 +112,7 @@ class Testimonial extends Component {
             {this.renderContent}
           </MediaQuery>
         </Fragment>
-      ) : <TestimonialContent {...this.props} />
+      : <TestimonialContent {...this.props} />
   }
 }
 
