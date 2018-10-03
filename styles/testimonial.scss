@@ -6,11 +6,14 @@
 
 .pop-over {
   background: $green;
-  box-shadow: 0 0 10px rgba(black, 1);
   font-size: 1.1em;
   max-width: 100%;
   padding: 30px;
   width: 500px;
+
+  @media (min-device-width: 992px) {
+    box-shadow: 0 0 10px rgba(black, 1);
+  }
 
   * {
     color: white;
@@ -21,7 +24,7 @@
   }
 }
 
-.testimonial-slogan {
+.slogan {
   margin-bottom: 2em;
 }
 

@@ -4,7 +4,7 @@ import MediaQuery from "react-responsive"
 import ReactMarkdown from "react-markdown"
 import Popover, { ArrowContainer } from "react-tiny-popover"
 import compact from "lodash/compact"
-import ImageReplace from "components/ImageReplace"
+import Slogan from "components/Slogan"
 import { nl2Br } from "utils/helpers"
 import { MEDIA_QUERY } from "utils/responsive"
 
@@ -15,9 +15,7 @@ const TestimonialContent = ({ name, location, role, content }) => {
   return (
     <article className="pop-over">
       <MediaQuery query={MEDIA_QUERY.DESKTOP}>
-        <ImageReplace className="testimonial-slogan" src="slogan-black.png">
-          <h4>Eu uso cosmética consciente</h4>
-        </ImageReplace>
+        <Slogan />
       </MediaQuery>
       <MediaQuery query={MEDIA_QUERY.TABLET_DOWN}>
         <h3 className="title is-4">{title}</h3>
