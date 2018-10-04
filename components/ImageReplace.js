@@ -39,7 +39,7 @@ class ImageReplace extends Component {
     ) : process.browser ? (
       <img onLoad={this.onImgLoad} src={src} />
     ) : (
-      children
+      <div style={styles}>{children}</div>
     )
   }
 }

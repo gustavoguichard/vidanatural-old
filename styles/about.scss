@@ -1,0 +1,48 @@
+@import './colors';
+
+.about-section {
+  align-items: stretch;
+  display: flex;
+  flex: 1;
+  height: 100vh;
+  justify-content: center;
+  margin-bottom: 0 !important;
+  position: relative;
+
+  .column {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .black-content {
+    margin: 2rem;
+
+    @media (min-device-width: 992px) {
+      margin: 2rem 4rem;
+      max-width: 400px;
+    }
+  }
+}
+
+.about-bg {
+  align-items: center;
+  background-attachment: fixed;
+  background: url('/static/about-bg.jpg') no-repeat center right;
+  background-size: cover;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.about-header {
+  @media (max-device-width: 991px) {
+    order: 2;
+
+    .page-breadcrumb {
+      display: none;
+    }
+  }
+}

@@ -11,6 +11,18 @@ html, body {
   a {
     color: $green;
   }
+
+  .title {
+    font-family: serif;
+    font-weight: bold;
+  }
+}
+
+.black-content {
+  background: black;
+  *, .title, a {
+    color: white;
+  }
 }
 
 .app-wrapper {

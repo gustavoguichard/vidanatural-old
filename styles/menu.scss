@@ -1,5 +1,9 @@
 @import './colors';
 
+html.is-menu-open {
+  overflow: hidden !important;
+}
+
 .main-menu, .main-menu-left {
   bottom: 0;
   display: flex;
@@ -23,8 +27,42 @@
 
 .main-menu {
   background: white;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
   right: 0;
-  min-width: 500px;
+
+  .menu-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: serif;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: black;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: #838383;
+      }
+    }
+  }
+
+  @media (min-device-width: 992px) {
+    flex-direction: row;
+    justify-content: start;
+    padding: 2rem 6rem;
+
+    .menu-list-wrapper {
+      margin-bottom: 0;
+      order: 2;
+      padding-left: 4rem;
+      text-align: left;
+    }
+  }
 }
 
 .menu-icon {
