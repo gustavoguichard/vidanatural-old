@@ -15,4 +15,6 @@ html, body {
 
 .app-wrapper {
   background: black;
+  display: flex;
+  flex-direction: column;
 }

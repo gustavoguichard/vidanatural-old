@@ -1,7 +1,9 @@
+@import './colors';
+
 .main-menu {
   background: white;
   bottom: 0;
-  box-shadow: 0 0 10px rgba(black, 1);
+  box-shadow: 0 0 10px rgba(black, .4);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,4 +13,81 @@
   width: 50%;
   min-width: 500px;
   z-index: 20;
+}
+
+.menu-icon {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 23px;
+  width: 35px;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+  transform: rotate(-45deg);
+  transition: all .15s;
+  transition-delay: .2s;
+  z-index: 1000;
+
+  .menu-icon-dash {
+    background-color: white;
+    border-radius: 3px;
+    width: 100%;
+    height: 3px;
+    transition: all .3s;
+
+    &.outer {
+      width: 60%;
+    }
+  }
+
+  &:hover {
+    transform: rotate(0deg);
+
+    .menu-icon-dash {
+      width: 100%;
+    }
+  }
+
+  &.is-open {
+    justify-content: center;
+
+    .menu-icon-dash {
+      background-color: black;
+      margin-bottom: -3px;
+      transition: all .15s;
+      transition-delay: .2s;
+
+      &:last-child {
+        transform: rotate(90deg);
+      }
+    }
+
+    &:hover {
+      .menu-icon-dash:last-child {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
+
+.social-icons {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 1000;
+
+  a {
+    margin-right: .6em;
+
+    &:hover svg {
+      fill: black;
+    }
+  }
+
+  svg {
+    transition: all .3s;
+  }
 }

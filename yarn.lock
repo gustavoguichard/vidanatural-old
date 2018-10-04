@@ -583,6 +583,12 @@
   dependencies:
     regenerator-runtime "^0.12.0"
 
+"@babel/runtime@^7.0.0":
+  version "7.1.2"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.1.2.tgz#81c89935f4647706fc54541145e6b4ecfef4b8e3"
+  dependencies:
+    regenerator-runtime "^0.12.0"
+
 "@babel/template@7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.0.0.tgz#c2bc9870405959c89a9c814376a2ecb247838c80"
@@ -4105,6 +4111,12 @@ react-side-effect@^1.1.0:
   dependencies:
     exenv "^1.2.1"
     shallowequal "^1.0.1"
+
+react-spring@^5.9.0:
+  version "5.9.0"
+  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-5.9.0.tgz#0ad0c6f9826fea9ce25e819d7a566dfc132c3d21"
+  dependencies:
+    "@babel/runtime" "^7.0.0"
 
 react-tiny-popover@^3.4.2:
   version "3.4.2"

@@ -5,12 +5,8 @@ class ImageReplace extends Component {
   constructor(props) {
     super(props)
 
-    this.state = { dimensions: null, isClient: false }
+    this.state = { dimensions: null }
     this.onImgLoad = this.onImgLoad.bind(this)
-  }
-
-  componentDidMount() {
-    this.setState({ isClient: true })
   }
 
   onImgLoad({ target: img }) {
@@ -24,7 +20,7 @@ class ImageReplace extends Component {
 
   render() {
     const { children, style, ...props } = this.props
-    const { dimensions, isClient } = this.state
+    const { dimensions } = this.state
     const src = `/static/${this.props.src}`
     const styles = {
       display: 'block',
@@ -40,7 +36,7 @@ class ImageReplace extends Component {
       <div {...props} style={styles}>
         {children}
       </div>
-    ) : isClient ? (
+    ) : process.browser ? (
       <img onLoad={this.onImgLoad} src={src} />
     ) : (
       children
