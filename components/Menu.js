@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { Transition, Spring } from 'react-spring'
 import { TiSocialFacebook, TiSocialInstagram } from 'react-icons/ti'
 
-import { isTabletDown } from 'utils/responsive'
+import { isTablet, isTabletDown } from 'utils/responsive'
 import ImageReplace from 'components/ImageReplace'
 import 'styles/menu.scss'
 
@@ -64,7 +64,7 @@ class Menu extends Component {
               <Fragment>
                 <div
                   className="main-menu"
-                  style={{ right, opacity: isTabletDown() ? opacity : 1 }}
+                  style={{ right, opacity: isTablet() ? opacity : 1 }}
                 >
                   <ImageReplace src="slogan.png">
                     <h2>Eu uso</h2>
@@ -77,22 +77,25 @@ class Menu extends Component {
                     <a>About</a>
                   </Link>
                 </div>
-                {!isTabletDown() &&
+                {!isTablet() &&
                   <div className="main-menu-left" style={{ left, opacity }}>
                     <Spring
                       from={{ opacity: 0 }}
                       to={{ opacity: 1 }}
-                      delay={500}
+                      config={{ friction: 50 }}
+                      delay={650}
                     >
                       {styles =>
-                        <ImageReplace src="logo-white.png" style={styles}>
-                          <h1>Vida Natural</h1>
-                        </ImageReplace>}
+                        <Fragment>
+                          <ImageReplace src="logo-white.png" style={styles}>
+                            <h1>Vida Natural</h1>
+                          </ImageReplace>
+                          <div className="page-breadcrumb" style={styles}>
+                            <img src="/static/page-feather.png" alt="icone" />
+                            <span>menu</span>
+                          </div>
+                        </Fragment>}
                     </Spring>
-                    <div className="page-breadcrumb">
-                      <img src="/static/page-feather.png" alt="icone" />
-                      <span>menu</span>
-                    </div>
                   </div>}
               </Fragment>)}
         </Transition>

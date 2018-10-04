@@ -10,29 +10,26 @@ import { MEDIA_QUERY } from "utils/responsive"
 
 import "styles/testimonial.scss"
 
-const TestimonialContent = ({ name, location, role, content }) => {
-  const title = compact([name, role]).join(" - ")
-  return (
-    <article className="pop-over">
-      <MediaQuery query={MEDIA_QUERY.DESKTOP}>
-        <Slogan />
-      </MediaQuery>
-      <MediaQuery query={MEDIA_QUERY.TABLET_DOWN}>
-        <h3 className="title is-4">{title}</h3>
-      </MediaQuery>
-      <ReactMarkdown escapeHtml={false} source={nl2Br(content)} />
-      <MediaQuery query={MEDIA_QUERY.DESKTOP}>
-        <em>
-          {title}
-        </em>
-      </MediaQuery>
-      <br />
+const TestimonialContent = ({ name, location, role, content }) => (
+  <article className="pop-over">
+    <MediaQuery query={MEDIA_QUERY.DESKTOP}>
+      <Slogan />
+    </MediaQuery>
+    <MediaQuery query={MEDIA_QUERY.TABLET_DOWN}>
+      <h3 className="title is-4">{name}</h3>
+    </MediaQuery>
+    <ReactMarkdown escapeHtml={false} source={nl2Br(content)} />
+    <MediaQuery query={MEDIA_QUERY.DESKTOP}>
       <em>
-        {location}
+        {name}
+        <br />
       </em>
-    </article>
-  )
-}
+    </MediaQuery>
+    <em>
+      {compact([role, location]).join(" - ")}
+    </em>
+  </article>
+)
 
 const PopoverContent = props => args =>
   <ArrowContainer
