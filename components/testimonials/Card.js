@@ -1,14 +1,12 @@
-import MediaQuery from 'react-responsive'
 import { Image } from 'react-bulma-components'
-import { MEDIA_QUERY } from 'utils/responsive'
+import { Responsive } from 'utils/responsive'
 import TestimonialContent from './TestimonialContent'
 
 export default ({ isOpen, columns, onClick, ...props }) => {
   const styles = {
-    width: `${100 / columns}%`,
-    border: 0,
-    padding: 0,
-    position: 'relative',
+    display: 'inline-block',
+    width: '100%',
+    margin: '0 0 -6px',
   }
   return (
     <div
@@ -21,9 +19,9 @@ export default ({ isOpen, columns, onClick, ...props }) => {
         src={`/static/testimonials/${props.picture}`}
         size={props.ratio}
       />
-      <MediaQuery query={MEDIA_QUERY.TABLET_DOWN}>
+      <Responsive media="tabletDown">
         <TestimonialContent {...props} />
-      </MediaQuery>
+      </Responsive>
     </div>
   )
 }

@@ -1,6 +1,5 @@
 import { Component, Fragment } from 'react'
-import MediaQuery from 'react-responsive'
-import { MEDIA_QUERY } from 'utils/responsive'
+import { Responsive } from 'utils/responsive'
 import Card from './Card'
 import PopOver from './PopOver'
 import TestimonialContent from './TestimonialContent'
@@ -47,7 +46,7 @@ export default class extends Component {
     )
     return mounted
       ? <Fragment>
-          <MediaQuery query={MEDIA_QUERY.DESKTOP}>
+          <Responsive>
             <PopOver
               {...this.props}
               isOpen={isOpen}
@@ -55,10 +54,10 @@ export default class extends Component {
             >
               {renderedCard}
             </PopOver>
-          </MediaQuery>
-          <MediaQuery query={MEDIA_QUERY.TABLET_DOWN}>
+          </Responsive>
+          <Responsive media="tabletDown">
             {renderedCard}
-          </MediaQuery>
+          </Responsive>
         </Fragment>
       : <TestimonialContent {...this.props} />
   }

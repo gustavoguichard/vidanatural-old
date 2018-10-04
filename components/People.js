@@ -1,17 +1,14 @@
 import { Component, Fragment } from 'react'
 import dynamic from 'next/dynamic'
-import Masonry from 'react-masonry-component'
 import { Columns, Section } from 'react-bulma-components'
-import MediaQuery from 'react-responsive'
-import { MEDIA_QUERY } from 'utils/responsive'
-import { FaPlus } from 'react-icons/fa'
+import { Responsive } from 'utils/responsive'
 import get from 'lodash/get'
 import take from 'lodash/take'
 import shuffle from 'lodash/shuffle'
-import classnames from 'classnames'
 
 import Slogan from 'components/Slogan'
 import testimonials from 'content/testimonials'
+import PlusButton from 'components/testimonials/PlusButton'
 
 import 'styles/people.scss'
 
@@ -23,12 +20,9 @@ class Index extends Component {
 
     this.wrapper = React.createRef()
     this.testimonials = shuffle(testimonials)
-    this.state = {
-      isContentOpen: true,
-      wrapperWidth: null,
-      testimonialsNumber: 8,
-    }
+    this.state = { isContentOpen: true, wrapperWidth: null, peopleLength: 8 }
     this.toggleContent = this.toggleContent.bind(this)
+    this.setWrapperWidth = this.setWrapperWidth.bind(this)
   }
 
   componentDidMount() {
@@ -36,51 +30,28 @@ class Index extends Component {
   }
 
   setWrapperWidth() {
-    const wrapperWidth = get(this.wrapper, 'current.offsetWidth')
-    this.setState({ wrapperWidth })
+    if (this.wrapper.getBoundingClientRect) {
+      const wrapperWidth = this.wrapper.getBoundingClientRect().widt
+      this.setState({ wrapperWidth })
+    }
   }
 
   toggleContent(number, isMobile) {
     return event => {
       event.preventDefault()
-      const testimonialsNumber = this.state.testimonialsNumber + number
+      const peopleLength = this.state.peopleLength + number
       const isContentOpen = isMobile || !this.state.isContentOpen
-      this.setState({ isContentOpen, testimonialsNumber }, this.setWrapperWidth)
+      this.setState({ isContentOpen, peopleLength }, this.setWrapperWidth)
     }
   }
 
-  renderPlusBt(number = Infinity, isMobile) {
-    const { isContentOpen } = this.state
-    return (
-      <a
-        href="#"
-        title={'Mais depoimentos'}
-        className={classnames({ 'plus-bt': true, floating: !isContentOpen })}
-        onClick={this.toggleContent(number, isMobile)}
-      >
-        <FaPlus />
-      </a>
-    )
-  }
-
   get isShowingAll() {
-    return this.state.testimonialsNumber >= this.testimonials.length
-  }
-
-  get renderTestimonials() {
-    const { wrapperWidth, testimonialsNumber } = this.state
-    const testimonialsArray = take(this.testimonials, testimonialsNumber)
-    return testimonialsArray.map((testimonial, index) =>
-      <Testimonial
-        key={`testimonial-${index}`}
-        {...testimonial}
-        width={wrapperWidth}
-      />,
-    )
+    return this.state.peopleLength >= this.testimonials.length
   }
 
   render() {
-    const { isContentOpen, testimonialsNumber } = this.state
+    const { isContentOpen, peopleLength } = this.state
+    const testimonialsToShow = take(this.testimonials, peopleLength)
     return (
       <Fragment>
         <Columns id="eu-uso" gapless>
@@ -93,32 +64,34 @@ class Index extends Component {
                       Descubra o que motiva as pessoas a usar nossos cosméticos
                       - Vida Natural
                     </p>
-                    <MediaQuery query={MEDIA_QUERY.DESKTOP}>
-                      {this.renderPlusBt()}
-                    </MediaQuery>
+                    <Responsive>
+                      <PlusButton onClick={this.toggleContent} />
+                    </Responsive>
                   </div>
                 </Section>
               </Columns.Column>
-            : this.renderPlusBt()}
+            : <PlusButton onClick={this.toggleContent} floating />}
           <Columns.Column className="masonry-wrapper">
-            <div ref={this.wrapper}>
-              <Masonry
-                className="testimonials-grid"
-                children={this.renderTestimonials}
-                options={{ transitionDuration: 500 }}
-              />
+            <div ref={this.wrapper} style={{ columns: 2, columnGap: 0 }}>
+              {testimonialsToShow.map((testimonial, index) =>
+                <Testimonial key={index} {...testimonial} />,
+              )}
             </div>
           </Columns.Column>
         </Columns>
         {this.isShowingAll ||
-          <MediaQuery query={MEDIA_QUERY.TABLET_DOWN}>
+          <Responsive media="tabletDown">
             <Section className="more-testimonials">
               <div className="content">
                 <p>Ver mais depoimentos</p>
-                {this.renderPlusBt(testimonialsNumber, true)}
+                <PlusButton
+                  number={peopleLength}
+                  isMobile
+                  onClick={this.toggleContent}
+                />
               </div>
             </Section>
-          </MediaQuery>}
+          </Responsive>}
       </Fragment>
     )
   }

@@ -1,12 +1,12 @@
 @import './colors';
 
 .masonry-wrapper {
-  max-height: 100vh;
+  height: 100vh;
   overflow: scroll;
-  @media (max-device-width: 991px) {
-    max-height: none;
-    overflow: visible;
-  }
+  // @media (max-device-width: 991px) {
+  //   max-height: none;
+  //   overflow: visible;
+  // }
 }
 
 .side-content {

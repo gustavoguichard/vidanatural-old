@@ -16,28 +16,28 @@ const MenuLink = ({ href, onClick, ...props }) => {
   )
 }
 
-export default props =>
+export default ({ onClick, ...props }) =>
   <div className="main-menu" {...props}>
     <nav className="menu-list-wrapper">
-      <MenuLink href="#home" {...props}>
+      <MenuLink href="#home" onClick={onClick}>
         Home
       </MenuLink>
-      <MenuLink href="#sobre" {...props}>
+      <MenuLink href="#sobre" onClick={onClick}>
         Sobre
       </MenuLink>
-      <MenuLink href="#eu-uso" {...props}>
+      <MenuLink href="#eu-uso" onClick={onClick}>
         Eu uso
       </MenuLink>
-      <MenuLink href="/" {...props}>
+      <MenuLink href="/" onClick={onClick}>
         Produtos
       </MenuLink>
-      <MenuLink href="/" {...props}>
+      <MenuLink href="/" onClick={onClick}>
         Conceito
       </MenuLink>
-      <MenuLink href="/" {...props}>
+      <MenuLink href="/" onClick={onClick}>
         Onde encontrar
       </MenuLink>
-      <MenuLink href="/" {...props}>
+      <MenuLink href="/" onClick={onClick}>
         Contato
       </MenuLink>
     </nav>

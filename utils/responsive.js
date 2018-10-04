@@ -1,4 +1,19 @@
+import get from 'lodash/get'
+import MediaQuery from 'react-responsive'
+
 export const isRetina = () => window.devicePixelRatio > 1.3
+
+export const Responsive = ({ media = 'desktop', children }) => {
+  const query = get(
+    {
+      desktop: '(min-device-width: 992px)',
+      tabletUp: '(min-device-width: 768px)',
+      tabletDown: '(max-device-width: 991px)',
+    },
+    media,
+  )
+  return <MediaQuery query={query} children={children} />
+}
 
 export const MEDIA_QUERY = {
   DESKTOP: '(min-device-width: 992px)',
