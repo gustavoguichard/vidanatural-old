@@ -7,7 +7,7 @@ import 'styles/about.scss'
 export default () =>
   <Columns id="sobre" className="about-section" gapless>
     <Columns.Column key="design" className="about-header" style={{ display: 'flex' }}>
-      <div className="about-bg">
+      <div key="about-bg" className="about-bg">
         <Logo key="logo" />
         <PageBreadCrumb key="breadcrumb" title="sobre" />
       </div>
