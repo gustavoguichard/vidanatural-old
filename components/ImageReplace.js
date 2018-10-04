@@ -1,8 +1,6 @@
 import { Component } from 'react'
 import get from 'lodash/get'
 
-import { isRetina } from 'utils/responsive'
-
 class ImageReplace extends Component {
   constructor(props) {
     super(props)
@@ -27,15 +25,13 @@ class ImageReplace extends Component {
   render() {
     const { children, style, ...props } = this.props
     const { dimensions, isClient } = this.state
-    const retina = isClient && isRetina()
     const src = `/static/${this.props.src}`
-    const factor = 2 - retina
     const styles = {
       display: 'block',
       background: `url(${src}) center no-repeat`,
       backgroundSize: 'contain',
-      height: get(dimensions, 'height', 0) / factor,
-      width: get(dimensions, 'width', 0) / factor,
+      height: get(dimensions, 'height', 0),
+      width: get(dimensions, 'width', 0),
       overflow: 'hidden',
       textIndent: '-999em',
       ...style,

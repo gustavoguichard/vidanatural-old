@@ -1,4 +1,4 @@
-export const isRetina = () => window.devicePixelRation > 1.3
+export const isRetina = () => window.devicePixelRatio > 1.3
 
 export const MEDIA_QUERY = {
   DESKTOP: '(min-device-width: 992px)',
