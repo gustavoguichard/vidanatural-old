@@ -6,11 +6,12 @@ export default ({ clickable = false, onClick, style, ...props }) =>
   <ImageReplace
     src="logo-white.png"
     onClick={
-      clickable &&
-      (event => {
-        onClick && onClick()
-        scrollToId()
-      })
+      clickable
+        ? event => {
+            onClick && onClick()
+            scrollToId()
+          }
+        : undefined
     }
     width="130"
     height="117"
