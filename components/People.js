@@ -1,10 +1,11 @@
 import { Component, Fragment } from 'react'
 import dynamic from 'next/dynamic'
-import { Columns, Section } from 'react-bulma-components'
-import { Responsive } from 'utils/responsive'
+import debounce from 'lodash/debounce'
 import get from 'lodash/get'
 import take from 'lodash/take'
 import shuffle from 'lodash/shuffle'
+import { Columns, Section } from 'react-bulma-components'
+import { Responsive } from 'utils/responsive'
 
 import Slogan from 'components/Slogan'
 import testimonials from 'content/testimonials'
@@ -20,20 +21,23 @@ class Index extends Component {
 
     this.wrapper = React.createRef()
     this.testimonials = shuffle(testimonials)
-    this.state = { isContentOpen: true, wrapperWidth: null, peopleLength: 8 }
+    this.state = { isContentOpen: true, wrapperWidth: 0, peopleLength: 8 }
     this.toggleContent = this.toggleContent.bind(this)
-    this.setWrapperWidth = this.setWrapperWidth.bind(this)
+    this.setWrapperWidth = debounce(this.setWrapperWidth.bind(this), 300)
   }
 
   componentDidMount() {
     this.setWrapperWidth()
+    window.addEventListener('resize', this.setWrapperWidth)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.setWrapperWidth)
   }
 
   setWrapperWidth() {
-    if (this.wrapper.getBoundingClientRect) {
-      const wrapperWidth = this.wrapper.getBoundingClientRect().widt
-      this.setState({ wrapperWidth })
-    }
+    const wrapperWidth = this.wrapper.current.getBoundingClientRect().width
+    this.setState({ wrapperWidth })
   }
 
   toggleContent(number, isMobile) {
@@ -50,8 +54,10 @@ class Index extends Component {
   }
 
   render() {
-    const { isContentOpen, peopleLength } = this.state
+    const { isContentOpen, peopleLength, wrapperWidth } = this.state
     const testimonialsToShow = take(this.testimonials, peopleLength)
+    const columns = wrapperWidth ? Math.round(wrapperWidth / 320) : 2
+
     return (
       <Fragment>
         <Columns id="eu-uso" gapless>
@@ -72,7 +78,7 @@ class Index extends Component {
               </Columns.Column>
             : <PlusButton onClick={this.toggleContent} floating />}
           <Columns.Column className="masonry-wrapper">
-            <div ref={this.wrapper} style={{ columns: 2, columnGap: 0 }}>
+            <div ref={this.wrapper} style={{ columns, columnGap: 0 }}>
               {testimonialsToShow.map((testimonial, index) =>
                 <Testimonial key={index} {...testimonial} />,
               )}
