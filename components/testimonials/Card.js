@@ -6,7 +6,7 @@ export default ({ isOpen, columns, onClick, ...props }) => {
   const styles = {
     display: 'inline-block',
     width: '100%',
-    margin: '0 0 -6px',
+    margin: '0 0 -5px',
   }
   return (
     <div

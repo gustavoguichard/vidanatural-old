@@ -78,7 +78,7 @@ class Index extends Component {
               </Columns.Column>
             : <PlusButton onClick={this.toggleContent} floating />}
           <Columns.Column className="masonry-wrapper">
-            <div ref={this.wrapper} style={{ columns, columnGap: 0 }}>
+            <div ref={this.wrapper} style={{ columns, columnGap: 1 }}>
               {testimonialsToShow.map((testimonial, index) =>
                 <Testimonial key={index} {...testimonial} />,
               )}
