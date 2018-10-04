@@ -67,7 +67,7 @@ class Menu extends Component {
                   >
                     {styles =>
                       <div className="main-menu-left" style={{ left, opacity }}>
-                        <Logo style={styles} />
+                        <Logo clickable onClick={this.toggleMenu} style={styles} />
                         <PageBreadCrumb title="menu" style={styles} />
                       </div>}
                   </Spring>}

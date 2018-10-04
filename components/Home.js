@@ -4,5 +4,5 @@ import 'styles/home.scss'
 
 export default () =>
   <div className="home-bg" id="home">
-    <Logo className="home-logo" />
+    <Logo clickable className="home-logo" />
   </div>
