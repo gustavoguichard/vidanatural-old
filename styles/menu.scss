@@ -1,18 +1,30 @@
 @import './colors';
 
-.main-menu {
-  background: white;
+.main-menu, .main-menu-left {
   bottom: 0;
-  box-shadow: 0 0 10px rgba(black, .4);
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
-  right: 0;
   top: 0;
   width: 50%;
-  min-width: 500px;
   z-index: 20;
+
+  @media (max-device-width: 991px) {
+    width: 100%;
+  }
+}
+
+.main-menu-left {
+  background: url('/static/menu-bg.jpg') no-repeat center;
+  background-size: cover;
+  left: 0;
+}
+
+.main-menu {
+  background: white;
+  right: 0;
+  min-width: 500px;
 }
 
 .menu-icon {
@@ -90,4 +102,14 @@
   svg {
     transition: all .3s;
   }
+}
+
+.page-breadcrumb {
+  align-items: center;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  left: 2rem;
+  position: absolute;
 }
