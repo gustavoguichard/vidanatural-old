@@ -3,7 +3,7 @@ import classnames from 'classnames'
 import Helmet from 'react-helmet'
 import { Transition, Spring } from 'react-spring'
 
-import { isTablet, isTabletDown } from 'utils/responsive'
+import { isDesktop } from 'utils/responsive'
 import Logo from 'components/Logo'
 import MenuList from 'components/menu/MenuList'
 import PageBreadCrumb from 'components/menu/PageBreadCrumb'
@@ -55,10 +55,10 @@ class Menu extends Component {
             (({ left, right, opacity }) =>
               <Fragment>
                 <MenuList
-                  style={{ right, opacity: isTablet() ? opacity : 1 }}
+                  style={{ right, opacity }}
                   onClick={this.toggleMenu}
                 />
-                {!isTablet() &&
+                {isDesktop() &&
                   <Spring
                     from={{ opacity: 0 }}
                     to={{ opacity: 1 }}

@@ -15,12 +15,6 @@ export const Responsive = ({ media = 'desktop', children }) => {
   return <MediaQuery query={query} children={children} />
 }
 
-export const MEDIA_QUERY = {
-  DESKTOP: '(min-device-width: 992px)',
-  TABLET_UP: '(min-device-width: 768px)',
-  TABLET_DOWN: '(max-device-width: 991px)',
-}
-
 export const isMobile = () =>
   (process.browser && navigator.userAgent.match(/Android/i)) ||
   navigator.userAgent.match(/webOS/i) ||
@@ -30,6 +24,6 @@ export const isMobile = () =>
   navigator.userAgent.match(/Windows Phone/i)
 
 export const isTablet = () =>
-  (process.browser && isMobile()) || navigator.userAgent.match(/iPad/i)
+  process.browser && (isMobile() || navigator.userAgent.match(/iPad/i))
 
 export const isDesktop = () => !isTablet()
