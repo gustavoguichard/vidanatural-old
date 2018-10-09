@@ -8,7 +8,7 @@ export default class extends Component {
   render() {
     const { picture } = this.props
     const { isOpen } = this.state
-    return (
+    return process.browser ? (
       <div
         className="testimonial-item"
         onClick={() => this.setState({ isOpen: !this.state.isOpen })}
@@ -30,6 +30,6 @@ export default class extends Component {
               </div>)}
         </Transition>
       </div>
-    )
+    ) : <TestimonialContent {...this.props} />
   }
 }

@@ -4,9 +4,11 @@ import { scrollToId } from 'utils/helpers'
 
 const MenuLink = ({ href, onClick, ...props }) => {
   const clickHandler = event => {
-    event.preventDefault()
-    const id = get(event, 'target.hash', '#').substring(1)
-    onClick(event)
+    const hash = get(event, 'target.hash', '#')
+    const lastDigitHref = get(event, 'target.href', '').substr(-1)
+    const isHash = hash.substring(0, 1) === '#' || lastDigitHref === '#'
+    const id = hash.substring(1)
+    onClick(isHash ? event : undefined)
     scrollToId(id)
   }
   return (
@@ -19,7 +21,7 @@ const MenuLink = ({ href, onClick, ...props }) => {
 export default ({ onClick, ...props }) =>
   <div className="main-menu" {...props}>
     <nav className="menu-list-wrapper">
-      <MenuLink href="#home" onClick={onClick}>
+      <MenuLink href="#" onClick={onClick}>
         Home
       </MenuLink>
       <MenuLink href="#sobre" onClick={onClick}>
@@ -28,16 +30,16 @@ export default ({ onClick, ...props }) =>
       <MenuLink href="#eu-uso" onClick={onClick}>
         Eu uso
       </MenuLink>
-      <MenuLink href="/" onClick={onClick}>
+      <MenuLink href="#" onClick={onClick}>
         Produtos
       </MenuLink>
-      <MenuLink href="/" onClick={onClick}>
+      <MenuLink href="#" onClick={onClick}>
         Conceito
       </MenuLink>
-      <MenuLink href="/" onClick={onClick}>
+      <MenuLink href="#" onClick={onClick}>
         Onde encontrar
       </MenuLink>
-      <MenuLink href="/" onClick={onClick}>
+      <MenuLink href="#" onClick={onClick}>
         Contato
       </MenuLink>
     </nav>
