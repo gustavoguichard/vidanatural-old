@@ -20,13 +20,14 @@ class Index extends Component {
     super(props)
 
     this.wrapper = React.createRef()
-    this.testimonials = shuffle(testimonials)
+    this.testimonials = testimonials
     this.state = { isContentOpen: true, wrapperWidth: 0, peopleLength: 8 }
     this.toggleContent = this.toggleContent.bind(this)
     this.setWrapperWidth = debounce(this.setWrapperWidth.bind(this), 300)
   }
 
   componentDidMount() {
+    this.testimonials = shuffle(testimonials)
     this.setWrapperWidth()
     window.addEventListener('resize', this.setWrapperWidth)
   }
@@ -87,7 +88,10 @@ class Index extends Component {
         </Columns>
         {this.isShowingAll ||
           <Responsive media="tabletDown">
-            <Section className="more-testimonials">
+            <Section
+              onClick={this.toggleContent(peopleLength, true)}
+              className="more-testimonials"
+            >
               <div className="content">
                 <p>Ver mais depoimentos</p>
                 <PlusButton

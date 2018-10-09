@@ -20,7 +20,7 @@ html.is-menu-open {
 }
 
 .main-menu-left {
-  background: url('/static/menu-bg.jpg') no-repeat center;
+  background: $green url('/static/menu-bg.jpg') no-repeat center;
   background-size: cover;
   left: 0;
 }
