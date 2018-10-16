@@ -1,5 +1,5 @@
 export default [{
-  name: 'Cristina',
+  name: 'Cristina Scudeler',
   role: 'Empresária',
   location: 'São Paulo / SP',
   picture: 'cristina.jpg',
