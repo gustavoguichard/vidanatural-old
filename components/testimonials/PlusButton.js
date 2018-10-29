@@ -5,7 +5,7 @@ export default ({ number = Infinity, isMobile, floating, onClick }) =>
   <a
     href="#"
     title="Mais depoimentos"
-    className={classnames({ 'plus-bt': true, floating })}
+    className={classnames({ 'plus-bt': true, floating: floating })}
     onClick={onClick(number, isMobile)}
   >
     <FaPlus />
