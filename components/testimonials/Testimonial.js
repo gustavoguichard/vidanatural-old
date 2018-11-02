@@ -1,22 +1,20 @@
 import { Component } from 'react'
-import { Image } from 'react-bulma-components'
 import { Transition } from 'react-spring'
 import TestimonialContent from './TestimonialContent'
+import TestimonialImage from './TestimonialImage'
 
 export default class extends Component {
   state = { isOpen: false }
   render() {
     const { picture } = this.props
     const { isOpen } = this.state
+    const path = '/static/testimonials'
     return process.browser ? (
       <div
         className="testimonial-item"
         onClick={() => this.setState({ isOpen: !this.state.isOpen })}
       >
-        <Image
-          className="testimonial-img"
-          src={`/static/testimonials/${picture}`}
-        />
+        <TestimonialImage src={picture} path={path} />
         <Transition
           from={{ height: 0, opacity: 0, top: 300 }}
           enter={{ height: 'auto', opacity: 1, top: 0 }}

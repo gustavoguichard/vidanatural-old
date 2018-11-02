@@ -68,17 +68,12 @@
   }
 }
 
-.testimonial-item {
-  position: relative;
-  display: inline-block;
-}
-
 .testimonial-content-wrapper {
   background: $green;
   overflow-y: auto;
   position: absolute;
   top: 0;
-  bottom: -5px;
+  bottom: 6px;
   right: 0;
   left: 0;
 }
@@ -104,13 +99,28 @@
 }
 
 .testimonial-item{
+  position: relative;
+  display: block;
   cursor: pointer;
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+  .spinning {
+    z-index: 2;
+  }
 }
+
+$spinning: 60px;
 
 .testimonial-img {
   filter: saturate(0);
   transition: filter .6s;
   margin-bottom: -5px;
+  width: 100%;
+  position: relative;
+  min-height: 250px;
 
   &:hover {
     filter: none;

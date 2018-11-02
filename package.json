@@ -22,16 +22,16 @@
     "lodash": "^4.17.11",
     "next": "^7.0.1",
     "node-sass": "^4.9.3",
-    "react": "^16.5.2",
+    "react": "^16.7.0-alpha.0",
     "react-bulma-components": "2.0.0",
-    "react-dom": "^16.5.2",
+    "react-dom": "^16.7.0-alpha.0",
     "react-ga": "^2.5.3",
     "react-helmet": "^5.2.0",
     "react-icons": "^3.1.0",
     "react-markdown": "^3.6.0",
     "react-responsive": "^5.0.0",
-    "react-spring": "^5.9.0",
-    "react-tiny-popover": "^3.4.2"
+    "react-spring": "5.9.0",
+    "the-platform": "^0.9.3"
   },
   "devDependencies": {
     "babel-plugin-module-resolver": "^3.1.1",
