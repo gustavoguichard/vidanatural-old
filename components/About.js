@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { Columns, Content, Section } from 'react-bulma-components'
 import Logo from 'components/Logo'
 import PageBreadCrumb from 'components/menu/PageBreadCrumb'
@@ -6,7 +7,7 @@ import { Responsive } from 'utils/responsive'
 
 import 'styles/about.scss'
 
-export default () =>
+export default memo(() => (
   <Columns id="sobre" className="about-section" gapless>
     <Columns.Column
       key="design"
@@ -45,3 +46,4 @@ export default () =>
       </Content>
     </Columns.Column>
   </Columns>
+))

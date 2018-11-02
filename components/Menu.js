@@ -1,4 +1,4 @@
-import { Component, Fragment } from 'react'
+import { PureComponent } from 'react'
 import classnames from 'classnames'
 import Helmet from 'react-helmet'
 import { Transition, Spring } from 'react-spring'
@@ -12,7 +12,7 @@ import SocialMenu from 'components/menu/SocialMenu'
 import Toggler from 'components/menu/Toggler'
 import 'styles/menu.scss'
 
-class Menu extends Component {
+class Menu extends PureComponent {
   constructor(props) {
     super(props)
 
@@ -38,7 +38,7 @@ class Menu extends Component {
   render() {
     const { isOpen } = this.state
     return (
-      <Fragment>
+      <>
         {isOpen &&
           <Helmet>
             <html class="is-menu-open" />
@@ -54,7 +54,7 @@ class Menu extends Component {
         >
           {isOpen &&
             (({ left, right, opacity }) =>
-              <Fragment>
+              <>
                 <MenuList
                   style={{ right, opacity }}
                   onClick={this.toggleMenu}
@@ -72,9 +72,9 @@ class Menu extends Component {
                         <PageBreadCrumb title="menu" style={styles} />
                       </ImageContainer>}
                   </Spring>}
-              </Fragment>)}
+              </>)}
         </Transition>
-      </Fragment>
+      </>
     )
   }
 }

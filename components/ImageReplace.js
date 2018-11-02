@@ -1,4 +1,6 @@
-export default ({ src, children, width = 0, height = 0, style, ...props }) => {
+import { memo } from 'react'
+
+export default memo(({ src, children, width = 0, height = 0, style, ...props }) => {
   const source = `/static/${src}`
   const styles = {
     display: 'block',
@@ -15,4 +17,4 @@ export default ({ src, children, width = 0, height = 0, style, ...props }) => {
       {children}
     </div>
   )
-}
+})

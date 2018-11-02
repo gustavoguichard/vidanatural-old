@@ -1,9 +1,9 @@
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import { Transition } from 'react-spring'
 import TestimonialContent from './TestimonialContent'
 import TestimonialImage from './TestimonialImage'
 
-export default class extends Component {
+export default class extends PureComponent {
   state = { isOpen: false }
   render() {
     const { picture } = this.props
