@@ -21,7 +21,11 @@ export const useProcessOnce = (value, fn) => {
   return ref.current
 }
 
-export const useMounted = () => useProcessOnce(false, value => !value)
+export const useMounted = () => {
+  const [isMounted, setIsMounted] = useState(false)
+  useEffect(() => setIsMounted(true), [])
+  return isMounted
+}
 
 export const useToggle = (initial = false) => {
   const [value, setValue] = useState(initial)
