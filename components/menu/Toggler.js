@@ -3,6 +3,7 @@ import classnames from 'classnames'
 export default ({ isOpen, onClick }) =>
   <a
     href="#menu"
+    title="Menu"
     onClick={onClick}
     className={classnames('menu-icon', { 'is-open': isOpen })}
   >
