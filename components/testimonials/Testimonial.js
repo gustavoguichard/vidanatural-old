@@ -6,7 +6,7 @@ import TestimonialImage from './TestimonialImage'
 export default class extends PureComponent {
   state = { isOpen: false }
   render() {
-    const { picture } = this.props
+    const { name, picture } = this.props
     const { isOpen } = this.state
     const path = '/static/testimonials'
     return process.browser ? (
@@ -14,7 +14,7 @@ export default class extends PureComponent {
         className="testimonial-item"
         onClick={() => this.setState({ isOpen: !this.state.isOpen })}
       >
-        <TestimonialImage src={picture} alt={props.name} path={path} />
+        <TestimonialImage src={picture} alt={name} path={path} />
         <Transition
           from={{ height: 0, opacity: 0, top: 300 }}
           enter={{ height: 'auto', opacity: 1, top: 0 }}
