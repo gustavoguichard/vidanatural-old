@@ -3,6 +3,7 @@
 .masonry-wrapper {
   height: 100vh;
   overflow: scroll;
+  position: relative;
 
   @media (max-device-width: 991px) {
     height: auto;

@@ -4,7 +4,8 @@ html.is-menu-open {
   overflow: hidden !important;
 }
 
-.main-menu, .main-menu-left {
+.main-menu,
+.main-menu-left {
   bottom: 0;
   display: flex;
   justify-content: center;
@@ -20,9 +21,15 @@ html.is-menu-open {
 }
 
 .main-menu-left {
-  background: $green url('/static/menu-bg.jpg') no-repeat center;
-  background-size: cover;
   left: 0;
+
+  .content-above {
+    flex: 1;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .main-menu {

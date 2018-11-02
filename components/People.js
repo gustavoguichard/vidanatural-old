@@ -6,6 +6,7 @@ import { Columns, Section } from 'react-bulma-components'
 import { Responsive } from 'utils/responsive'
 import { useProcessOnce, useWindowDimensions } from 'utils/hooks'
 
+import Loading from 'components/Loading'
 import Slogan from 'components/Slogan'
 import testimonials from 'content/testimonials'
 import PlusButton from 'components/testimonials/PlusButton'
@@ -60,7 +61,7 @@ export default () => {
         <Columns.Column className="masonry-wrapper">
           <div ref={wrapper} style={{ columns, columnGap: 1 }}>
             {testimonialsToShow.map((testimonial, index) =>
-              <Suspense key={index} fallback={<div>Loading...</div>}>
+              <Suspense key={index} fallback={<Loading size={80} />}>
                 <Testimonial {...testimonial} />
               </Suspense>
             )}

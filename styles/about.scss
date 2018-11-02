@@ -35,19 +35,13 @@
   }
 }
 
-.about-bg {
+.about-bg-content {
   align-items: center;
-  background: url('/static/about-bg.jpg') no-repeat center right;
-  background-size: cover;
   display: flex;
   flex: 1;
   justify-content: center;
   padding: 2rem;
   position: relative;
-
-  @media (min-device-width: 992px) {
-    background-attachment: fixed;
-  }
 }
 
 .about-header {

@@ -1,8 +1,9 @@
 import Logo from 'components/Logo'
+import ImageContainer from 'components/ImageContainer'
 
 import 'styles/home.scss'
 
 export default () =>
-  <div className="home-bg" id="home">
+  <ImageContainer src="/static/home-bg.jpg" id="home" contentClass="home-bg">
     <Logo clickable className="home-logo" />
-  </div>
+  </ImageContainer>

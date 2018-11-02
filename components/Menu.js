@@ -5,6 +5,7 @@ import { Transition, Spring } from 'react-spring'
 
 import { isDesktop } from 'utils/responsive'
 import Logo from 'components/Logo'
+import ImageContainer from 'components/ImageContainer'
 import MenuList from 'components/menu/MenuList'
 import PageBreadCrumb from 'components/menu/PageBreadCrumb'
 import SocialMenu from 'components/menu/SocialMenu'
@@ -66,10 +67,10 @@ class Menu extends Component {
                     delay={650}
                   >
                     {styles =>
-                      <div className="main-menu-left" style={{ left, opacity }}>
+                      <ImageContainer src="/static/menu-bg.jpg" className="main-menu-left" style={{ left, opacity }}>
                         <Logo clickable onClick={this.toggleMenu} style={styles} />
                         <PageBreadCrumb title="menu" style={styles} />
-                      </div>}
+                      </ImageContainer>}
                   </Spring>}
               </Fragment>)}
         </Transition>
