@@ -1,33 +1,31 @@
-import { PureComponent } from 'react'
-import { Transition } from 'react-spring'
+import { memo, useState } from 'react'
+import pose from 'react-pose'
 import TestimonialContent from './TestimonialContent'
 import TestimonialImage from './TestimonialImage'
+import { useToggle } from 'utils/hooks'
 
-export default class extends PureComponent {
-  state = { isOpen: false }
-  render() {
-    const { name, picture } = this.props
-    const { isOpen } = this.state
-    const path = '/static/testimonials'
-    return process.browser ? (
-      <div
-        className="testimonial-item"
-        onClick={() => this.setState({ isOpen: !this.state.isOpen })}
-      >
-        <TestimonialImage src={picture} alt={name} path={path} />
-        <Transition
-          from={{ height: 0, opacity: 0, top: 300 }}
-          enter={{ height: 'auto', opacity: 1, top: 0 }}
-          leave={{ height: 0, opacity: 0, top: 300 }}
-          config={{ tension: 5, velocity: 10, friction: 6 }}
-        >
-          {isOpen &&
-            (({ height, opacity, top }) =>
-              <div className="testimonial-content-wrapper" style={{ height }}>
-                <TestimonialContent {...this.props} style={{ opacity, top }} />
-              </div>)}
-        </Transition>
-      </div>
-    ) : <TestimonialContent {...this.props} />
-  }
+const Content = pose.div({
+  open: { height: 'auto', delayChildren: 100 },
+  closed: { height: 0 },
+})
+
+const Children = pose.div({
+  open: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 40, damping: 10 } },
+  closed: { opacity: 0, y: 300 },
+})
+
+const Testimonial = props => {
+  const [isOpen, toggleOpen] = useToggle(false)
+  const { name, picture } = props
+  const path = '/static/testimonials'
+  return process.browser ? (
+    <div className="testimonial-item" onClick={toggleOpen}>
+      <TestimonialImage src={picture} alt={name} path={path} />
+      <Content pose={isOpen ? 'open' : 'closed'} className="testimonial-content-wrapper">
+        <Children><TestimonialContent {...props} /></Children>
+      </Content>
+    </div>
+  ) : <TestimonialContent {...props} />
 }
+
+export default memo(Testimonial)

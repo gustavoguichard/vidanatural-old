@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, lazy, memo, Suspense } from 'react'
+import { useState, useRef, useEffect, useMemo, lazy, memo, Suspense } from 'react'
 import get from 'lodash/get'
 import take from 'lodash/take'
 import shuffle from 'lodash/shuffle'
@@ -15,7 +15,7 @@ import 'styles/people.scss'
 
 const Testimonial = lazy(() => import('components/testimonials/Testimonial'))
 
-export default memo(() => {
+const People = () => {
   const [isContentOpen, setIsContentOpen] = useState(true)
   const [wrapperWidth, setWrapperWidth] = useState(0)
   const [peopleLength, setPeopleLength] = useState(8)
@@ -86,4 +86,6 @@ export default memo(() => {
         </Responsive>}
     </>
   )
-})
+}
+
+export default memo(People)

@@ -20,23 +20,15 @@ const Img = props => {
   return <img {...props} />
 }
 
-export default memo(({
-  src,
-  thumbPath,
-  className,
-  contentClass = '',
-  children,
-  isBg = true,
-  cover = true,
-  fixed,
-  ...props
-}) => {
+export default memo(props => {
+  const { src, thumbPath, className, contentClass, children, ...otherProps } = props
+  const { isBg = true, cover = true, fixed, ...wrapperProps } = otherProps
   const classes = classnames('image-container', className)
   const bgClasses = classnames('bg-image', { cover, fixed })
   const contentClasses = classnames('content-above', contentClass)
   const isMounted = useMounted()
   return (
-    <div {...props} className={classes}>
+    <div {...wrapperProps} className={classes}>
       {isMounted &&
         <Suspense fallback={<Loading size={100} />}>
           <Img className={bgClasses} src={src} style={isBg ? { display: 'none' } : {}} />

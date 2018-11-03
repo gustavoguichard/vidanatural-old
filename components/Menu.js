@@ -1,82 +1,61 @@
-import { PureComponent } from 'react'
+import { memo } from 'react'
 import classnames from 'classnames'
 import Helmet from 'react-helmet'
-import { Transition, Spring } from 'react-spring'
+import pose, { PoseGroup } from 'react-pose'
 
-import { isDesktop } from 'utils/responsive'
+import MenuList from 'components/menu/MenuList'
 import Logo from 'components/Logo'
 import ImageContainer from 'components/ImageContainer'
-import MenuList from 'components/menu/MenuList'
 import PageBreadCrumb from 'components/menu/PageBreadCrumb'
 import SocialMenu from 'components/menu/SocialMenu'
 import Toggler from 'components/menu/Toggler'
+import { useToggle } from 'utils/hooks'
+
 import 'styles/menu.scss'
 
-class Menu extends PureComponent {
-  constructor(props) {
-    super(props)
+const transition = { type: 'spring', stiffness: 70, damping: 30 }
+const Left = pose.div({
+  enter: { x: 0, opacity: 1, transition, delayChildren: 1200 },
+  exit: { x: '-100%', opacity: 0, transition },
+})
+const Right = pose.div({
+  enter: { x: 0, transition, staggerChildren: 100, delayChildren: 500 },
+  exit: { x: '100%', transition },
+})
+const Appear = pose.div(
+  { enter: { opacity: 1, transition: { ease: 'easeOut', duration: 1000 } },
+  exit: { opacity: 0 },
+})
 
-    this.state = { isOpen: false }
-    this.toggleMenu = this.toggleMenu.bind(this)
-  }
-
-  get transitionProps() {
-    return process.browser && window.innerWidth < 800
-      ? { from: { opacity: 0 }, to: { opacity: 1 } }
-      : {
-          from: { right: '-50%', left: '-50%', opacity: 0 },
-          to: { right: '0%', left: '0%', opacity: 1 },
-        }
-  }
-
-  toggleMenu(event) {
+const Menu = () => {
+  const [isOpen, toggler] = useToggle()
+  const toggleMenu = event => {
     event && event.preventDefault()
-    const isOpen = !this.state.isOpen
-    this.setState({ isOpen })
+    toggler()
   }
-
-  render() {
-    const { isOpen } = this.state
-    return (
-      <>
-        {isOpen &&
-          <Helmet>
-            <html class="is-menu-open" />
-          </Helmet>}
-        <SocialMenu />
-        <Toggler isOpen={isOpen} onClick={this.toggleMenu} />
-        <Transition
-          from={this.transitionProps.from}
-          enter={this.transitionProps.to}
-          leave={this.transitionProps.from}
-          config={{ tension: 15, velocity: 4, friction: 8 }}
-          reverse={isOpen}
-        >
-          {isOpen &&
-            (({ left, right, opacity }) =>
-              <>
-                <MenuList
-                  style={{ right, opacity }}
-                  onClick={this.toggleMenu}
-                />
-                {isDesktop() &&
-                  <Spring
-                    from={{ opacity: 0 }}
-                    to={{ opacity: 1 }}
-                    config={{ friction: 50 }}
-                    delay={650}
-                  >
-                    {styles =>
-                      <ImageContainer src="/static/menu-bg.jpg" className="main-menu-left" style={{ left, opacity }}>
-                        <Logo clickable onClick={this.toggleMenu} style={styles} />
-                        <PageBreadCrumb title="menu" style={styles} />
-                      </ImageContainer>}
-                  </Spring>}
-              </>)}
-        </Transition>
-      </>
-    )
-  }
+  return (
+    <>
+      {isOpen &&
+        <Helmet>
+          <html class="is-menu-open" />
+        </Helmet>}
+      <SocialMenu />
+      <Toggler isOpen={isOpen} onClick={toggleMenu} />
+      <PoseGroup>
+        {isOpen && [
+          <Right key="right" className="main-menu"><MenuList onClick={toggleMenu} /></Right>,
+          <Left key="left" className="main-menu-left">
+            <ImageContainer key="left" src="/static/menu-bg.jpg">
+              <Appear key="content">
+                <Logo clickable onClick={toggleMenu} />
+                <PageBreadCrumb title="menu" />
+              </Appear>
+            </ImageContainer>
+          </Left>
+        ]}
+      </PoseGroup>
+    </>
+  )
 }
 
-export default Menu
+export default memo(Menu)

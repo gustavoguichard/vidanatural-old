@@ -24,6 +24,10 @@ html.is-menu-open {
   left: 0;
   background: $green;
 
+  .image-container {
+    height: 100vh;
+  }
+
   .content-above {
     flex: 1;
     display: flex;
