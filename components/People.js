@@ -1,9 +1,7 @@
-import { useState, useRef, useEffect, useMemo, lazy, memo, Suspense } from 'react'
-import get from 'lodash/get'
+import { useState, useRef, useEffect, lazy, memo, Suspense } from 'react'
 import take from 'lodash/take'
 import shuffle from 'lodash/shuffle'
 import { Columns, Section } from 'react-bulma-components'
-import { Responsive } from 'utils/responsive'
 import { useMedia, useProcessOnce, useWindowDimensions } from 'utils/hooks'
 
 import Loading from 'components/Loading'

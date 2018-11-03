@@ -1,5 +1,4 @@
 import { memo, useEffect } from 'react'
-import classnames from 'classnames'
 import pose, { PoseGroup } from 'react-pose'
 
 import MenuList from 'components/menu/MenuList'
@@ -39,7 +38,8 @@ const Menu = () => {
   }
 
   useEffect(() => {
-    document.documentElement.classList.toggle('is-menu-open')
+    const { classList } = document.documentElement
+    isOpen ? classList.add('is-menu-open') : classList.remove('is-menu-open')
   }, [isOpen])
 
   return (

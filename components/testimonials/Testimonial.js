@@ -1,4 +1,4 @@
-import { memo, useState } from 'react'
+import { memo } from 'react'
 import pose from 'react-pose'
 import TestimonialContent from './TestimonialContent'
 import TestimonialImage from './TestimonialImage'

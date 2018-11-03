@@ -1,5 +1,5 @@
 import { memo } from 'react'
-import { Columns, Content, Section } from 'react-bulma-components'
+import { Columns, Content } from 'react-bulma-components'
 import Logo from 'components/Logo'
 import PageBreadCrumb from 'components/menu/PageBreadCrumb'
 import ImageContainer from 'components/ImageContainer'

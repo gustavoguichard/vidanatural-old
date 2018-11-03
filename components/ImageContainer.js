@@ -2,26 +2,12 @@ import { Suspense, memo } from 'react'
 import classnames from 'classnames'
 import Loading from 'components/Loading'
 import { useMounted } from 'utils/hooks'
-import createResource from 'utils/createResource'
+import { Img } from 'utils/createResource'
 
 import 'styles/image-container.scss'
 
-const ImgResource = createResource(src => {
-  return new Promise((resolve, reject) => {
-    const image = process.browser && new Image()
-    image.src = src
-    image.onload = resolve
-    image.onerror = reject
-  })
-})
-
-const Img = props => {
-  ImgResource.read(props.src)
-  return <img {...props} />
-}
-
 export default memo(props => {
-  const { src, thumbPath, className, contentClass, children, ...otherProps } = props
+  const { src, className, contentClass, children, ...otherProps } = props
   const { isBg = true, cover = true, fixed, ...wrapperProps } = otherProps
   const classes = classnames('image-container', className)
   const bgClasses = classnames('bg-image', { cover, fixed })

@@ -1,0 +1,36 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "commonjs": true
+  },
+  "extends": "eslint:recommended",
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "react/prop-types": 0,
+    "import/extensions": 0,
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-vars": [2]
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["components", "./components"],
+          ["styles", "./styles"],
+          ["utils", "./utils"]
+        ],
+        "extensions": [".ts", ".js", ".jsx", ".json", ".css", ".scss", ".tsx"]
+      }
+    }
+  }
+}

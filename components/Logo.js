@@ -1,4 +1,3 @@
-import classnames from 'classnames'
 import { scrollToId } from 'utils/helpers'
 import ImageReplace from 'components/ImageReplace'
 
@@ -7,7 +6,7 @@ export default ({ clickable = false, onClick, style, ...props }) =>
     src="logo-white.png"
     onClick={
       clickable
-        ? event => {
+        ? () => {
             onClick && onClick()
             scrollToId()
           }

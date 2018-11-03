@@ -10,3 +10,4 @@ dist
 
 # hidden
 .env-config.js
+.eslintcache

@@ -1,5 +1,5 @@
 import { Suspense } from 'react'
-import { Img } from 'the-platform'
+import { Img } from 'utils/createResource'
 import Loading from 'components/Loading'
 
 export default ({ src, path, thumbsPath = 'thumbs', ...props }) => (
