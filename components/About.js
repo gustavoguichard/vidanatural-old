@@ -3,11 +3,13 @@ import { Columns, Content, Section } from 'react-bulma-components'
 import Logo from 'components/Logo'
 import PageBreadCrumb from 'components/menu/PageBreadCrumb'
 import ImageContainer from 'components/ImageContainer'
-import { Responsive } from 'utils/responsive'
+import { useMedia } from 'utils/hooks'
 
 import 'styles/about.scss'
 
-export default memo(() => (
+export default memo(() => {
+  const isDesktop = useMedia('desktop')
+  return (
   <Columns id="sobre" className="about-section" gapless>
     <Columns.Column
       key="design"
@@ -22,9 +24,7 @@ export default memo(() => (
         fixed
       >
         <Logo clickable key="logo" />
-        <Responsive>
-          <PageBreadCrumb key="breadcrumb" title="sobre" />
-        </Responsive>
+        {isDesktop && <PageBreadCrumb key="breadcrumb" title="sobre" />}
       </ImageContainer>
     </Columns.Column>
     <Columns.Column className="content-wrapper">
@@ -46,4 +46,4 @@ export default memo(() => (
       </Content>
     </Columns.Column>
   </Columns>
-))
+)})
