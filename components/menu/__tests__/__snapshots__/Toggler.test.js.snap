@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`accepts props 1`] = `
+<div>
+  <a
+    class="menu-icon is-open"
+    href="#menu"
+    title="Menu"
+  >
+    <div
+      class="menu-icon-dash outer"
+    />
+    <div
+      class="menu-icon-dash outer"
+    />
+  </a>
+</div>
+`;
+
+exports[`renders correctly 1`] = `
+<div>
+  <a
+    class="menu-icon"
+    href="#menu"
+    title="Menu"
+  >
+    <div
+      class="menu-icon-dash outer"
+    />
+    <div
+      class="menu-icon-dash"
+    />
+    <div
+      class="menu-icon-dash outer"
+    />
+  </a>
+</div>
+`;

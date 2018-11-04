@@ -20,9 +20,12 @@ const People = () => {
   const { width } = useWindowDimensions()
 
   const wrapper = useRef()
-  useEffect(() => {
-    setWrapperWidth(wrapper.current.getBoundingClientRect().width)
-  }, [isContentOpen, width])
+  useEffect(
+    () => {
+      setWrapperWidth(wrapper.current.getBoundingClientRect().width)
+    },
+    [isContentOpen, width]
+  )
 
   const shuffledTestimonials = useProcessOnce(testimonials, shuffle)
   const testimonialsToShow = take(shuffledTestimonials, peopleLength)
@@ -42,42 +45,48 @@ const People = () => {
   return (
     <>
       <Columns id="eu-uso" gapless>
-        {isContentOpen
-          ? <Columns.Column className="side-content">
-              <Section>
-                <div className="content">
-                  <Slogan />
-                  <p style={{ margin: '2em 0' }}>
-                    Descubra o que motiva as pessoas a usar nossos cosméticos -
-                    Vida Natural
-                  </p>
-                  {isDesktop && <PlusButton onClick={toggleContent} />}
-                </div>
-              </Section>
-            </Columns.Column>
-          : <PlusButton onClick={toggleContent} floating />}
+        {isContentOpen ? (
+          <Columns.Column className="side-content">
+            <Section>
+              <div className="content">
+                <Slogan />
+                <p style={{ margin: '2em 0' }}>
+                  Descubra o que motiva as pessoas a usar nossos cosméticos -
+                  Vida Natural
+                </p>
+                {isDesktop && <PlusButton onClick={toggleContent} />}
+              </div>
+            </Section>
+          </Columns.Column>
+        ) : (
+          <PlusButton onClick={toggleContent} floating />
+        )}
         <Columns.Column className="masonry-wrapper">
           <div ref={wrapper} style={{ columns, columnGap: 1 }}>
-            {testimonialsToShow.map((testimonial, index) =>
+            {testimonialsToShow.map((testimonial, index) => (
               <Suspense key={index} fallback={<Loading size={80} />}>
                 <Testimonial {...testimonial} />
               </Suspense>
-            )}
+            ))}
           </div>
         </Columns.Column>
       </Columns>
-      {isTabledDown && !isShowingAll && (
-        <Section onClick={toggleContent(peopleLength, true)} className="more-testimonials">
-          <div className="content">
-            <p>Ver mais depoimentos</p>
-            <PlusButton
-              number={peopleLength}
-              isMobile
-              onClick={toggleContent}
-            />
-          </div>
-        </Section>
-      )}
+      {isTabledDown &&
+        !isShowingAll && (
+          <Section
+            onClick={toggleContent(peopleLength, true)}
+            className="more-testimonials"
+          >
+            <div className="content">
+              <p>Ver mais depoimentos</p>
+              <PlusButton
+                number={peopleLength}
+                isMobile
+                onClick={toggleContent}
+              />
+            </div>
+          </Section>
+        )}
     </>
   )
 }

@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    class="about-section columns is-gapless is-multiline"
+    id="sobre"
+  >
+    <div
+      class="about-header column"
+      style="display: flex;"
+    >
+      <div
+        class="image-container about-bg"
+      >
+        <div
+          class="content-above about-bg-content"
+        >
+          <div
+            class="logo"
+            style="display: block; background: url(/static/logo-white.png) no-repeat center; background-size: contain; height: 117px; width: 130px; overflow: hidden; text-indent: -999em; cursor: pointer;"
+          >
+            <h1>
+              Vida Natural
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="content-wrapper column"
+    >
+      <div
+        class="content black-content"
+      >
+        <h2
+          class="title is-4"
+        >
+          Sobre
+        </h2>
+        <p>
+          Consciêcia talvez seja a palavra mais importante no nosso vocabulário. E, com o tempo, você vai perceber que ela está presente nas nossas iniciativas e, também, na forma como nos relacionamos com as pessoas, produzimos e distribuímos os nossos cosméticos.
+        </p>
+        <p>
+          Em breve, você conhecerá muito sobre nós, inclusive o nosso processo de produção. Tudo para motivar você a dizer
+           
+          <strong>
+            eu uso
+          </strong>
+           cosmética consciente e nos auxiliar a completar a grafia do nosso posicionamento.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

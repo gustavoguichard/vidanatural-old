@@ -1,11 +1,12 @@
+import { memo } from 'react'
 import Menu from './Menu'
 import 'styles/main.scss'
 
-const Layout = props => (
+const Layout = ({ children }) => (
   <div className="app-wrapper">
     <Menu />
-    {props.children}
+    {children}
   </div>
 )
 
-export default Layout
+export default memo(Layout)

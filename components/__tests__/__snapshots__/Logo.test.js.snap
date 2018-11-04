@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    class="logo"
+    foo="bar"
+    style="display: block; background: url(/static/logo-white.png) no-repeat center; background-size: contain; height: 117px; width: 130px; overflow: hidden; text-indent: -999em; cursor: inherit; margin: 0px;"
+  >
+    <h1>
+      Vida Natural
+    </h1>
+  </div>
+</div>
+`;

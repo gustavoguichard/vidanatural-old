@@ -28,15 +28,8 @@ export const useMedia = (media, defaultState = false) => {
   )
   useEffect(
     () => {
-      let mounted = true
       const mql = window.matchMedia(query)
-      const onChange = () => {
-        if (!mounted) {
-          return false
-        }
-        setState(!!mql.matches)
-      }
-
+      const onChange = () => setState(!!mql.matches)
       mql.addListener(onChange)
       setState(mql.matches)
 
@@ -62,6 +55,16 @@ export const useMounted = () => {
 
 export const useToggle = (initial = false) => {
   const [value, setValue] = useState(initial)
-  const toggler = useCallback(() => setValue(value => !value))
+  const toggler = () => setValue(value => !value)
   return [value, toggler]
+}
+
+export const useHtmlClass = (className, condition) => {
+  useEffect(
+    () => {
+      const { classList } = document.documentElement
+      condition ? classList.add(className) : classList.remove(className)
+    },
+    [condition]
+  )
 }

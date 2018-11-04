@@ -1,7 +1,8 @@
+import { memo } from 'react'
 import { scrollToId } from 'utils/helpers'
 import ImageReplace from 'components/ImageReplace'
 
-export default ({ clickable = false, onClick, style, ...props }) =>
+const Logo = ({ clickable = false, onClick, style, ...props }) => (
   <ImageReplace
     src="logo-white.png"
     onClick={
@@ -20,3 +21,6 @@ export default ({ clickable = false, onClick, style, ...props }) =>
   >
     <h1>Vida Natural</h1>
   </ImageReplace>
+)
+
+export default memo(Logo)

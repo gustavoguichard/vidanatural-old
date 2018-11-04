@@ -1,6 +1,7 @@
 # dependencies
 node_modules
 # logs
+coverage
 npm-debug.log
 
 # generated

@@ -47,6 +47,7 @@
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.1",
     "kcd-scripts": "^0.45.0",
+    "react-test-renderer": "^16.6.0",
     "react-testing-library": "^5.2.3"
   }
 }

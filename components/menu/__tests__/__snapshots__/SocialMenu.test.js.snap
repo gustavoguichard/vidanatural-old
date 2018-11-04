@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <aside
+    class="social-icons"
+  >
+    <a
+      href="https://facebook.com/vidanatural.eco/"
+      target="blank"
+      title="Facebook"
+    >
+      <svg
+        baseProfile="tiny"
+        fill="currentColor"
+        height="1.8em"
+        stroke="currentColor"
+        stroke-width="0"
+        version="1.2"
+        viewBox="0 0 24 24"
+        width="1.8em"
+      >
+        <path
+          d="M13 10h3v3h-3v7h-3v-7h-3v-3h3v-1.255c0-1.189.374-2.691 1.118-3.512.744-.823 1.673-1.233 2.786-1.233h2.096v3h-2.1c-.498 0-.9.402-.9.899v2.101z"
+        />
+      </svg>
+    </a>
+    <a
+      href="https://www.instagram.com/vidanatural.eco/"
+      target="blank"
+      title="Instagram"
+    >
+      <svg
+        baseProfile="tiny"
+        fill="currentColor"
+        height="1.8em"
+        stroke="currentColor"
+        stroke-width="0"
+        version="1.2"
+        viewBox="0 0 24 24"
+        width="1.8em"
+      >
+        <path
+          d="M18 3h-12c-1.7 0-3 1.3-3 3v12c0 1.7 1.3 3 3 3h12c1.7 0 3-1.3 3-3v-12c0-1.7-1.3-3-3-3zm-6 6c1.7 0 3 1.3 3 3s-1.3 3-3 3-3-1.3-3-3 1.3-3 3-3zm3.8-2c0-.7.6-1.2 1.2-1.2s1.2.6 1.2 1.2-.5 1.2-1.2 1.2-1.2-.5-1.2-1.2zm2.2 12h-12c-.6 0-1-.4-1-1v-6h2c0 2.8 2.2 5 5 5s5-2.2 5-5h2v6c0 .6-.4 1-1 1z"
+        />
+      </svg>
+    </a>
+  </aside>
+</div>
+`;

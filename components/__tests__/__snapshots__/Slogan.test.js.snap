@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    class="slogan test"
+    foo="bar"
+    style="display: block; background: url(/static/slogan.png) no-repeat center; background-size: contain; height: 45px; width: 288px; overflow: hidden; text-indent: -999em;"
+  >
+    <h2>
+      Eu uso
+    </h2>
+    <h3>
+      Cosmética Consciente
+    </h3>
+  </div>
+</div>
+`;

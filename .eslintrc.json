@@ -20,7 +20,7 @@
     "comma-dangle": [
       "error",
       {
-        "arrays": "never",
+        "arrays": "always-multiline",
         "objects": "always-multiline",
         "imports": "never",
         "exports": "never",
@@ -29,6 +29,13 @@
     ],
     "react/prop-types": 0,
     "import/extensions": 0,
+    "prefer-const": [
+      "error",
+      {
+        "destructuring": "all",
+        "ignoreReadBeforeAssign": true
+      }
+    ],
     "react/react-in-jsx-scope": "off",
     "react/jsx-uses-vars": [2],
     "quotes": [2, "single"],

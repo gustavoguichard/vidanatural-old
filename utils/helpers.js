@@ -1,8 +1,7 @@
 import get from 'lodash/get'
 import isFunction from 'lodash/isFunction'
 
-export const nl2Br = content =>
-  content.replace(/(?:\r\n|\r|\n)/g, '<br />')
+export const nl2Br = content => content.replace(/(?:\r\n|\r|\n)/g, '<br />')
 
 export const smoothScrolling = element => {
   const top = get(element, 'offsetTop', 0)
@@ -14,7 +13,10 @@ export const scrollToId = id => {
   smoothScrolling(element)
 }
 
-export const callAll = (...fns) => (...args) => fns.forEach(fn => fn && fn(...args))
+export const callAll = (...fns) => (...args) =>
+  fns.forEach(fn => isFunction(fn) && fn(...args))
+
+export const callIf = (condition, fn) => (...args) => condition && fn(...args)
 
 export const callDeep = (obj, path) => (...args) => {
   const fn = get(obj, path, obj)

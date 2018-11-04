@@ -1,4 +1,5 @@
-import { memo, useEffect } from 'react'
+import { memo } from 'react'
+import flow from 'lodash/flow'
 import pose, { PoseGroup } from 'react-pose'
 
 import MenuList from 'components/menu/MenuList'
@@ -7,7 +8,7 @@ import ImageContainer from 'components/ImageContainer'
 import PageBreadCrumb from 'components/menu/PageBreadCrumb'
 import SocialMenu from 'components/menu/SocialMenu'
 import Toggler from 'components/menu/Toggler'
-import { useToggle, useMedia } from 'utils/hooks'
+import { useToggle, useHtmlClass, useMedia } from 'utils/hooks'
 
 import 'styles/menu.scss'
 
@@ -24,43 +25,46 @@ const Center = pose.div({
   enter: { opacity: 1, transition, staggerChildren: 100, delayChildren: 500 },
   exit: { opacity: 0, transition },
 })
-const Appear = pose.div(
-  { enter: { opacity: 1, transition: { ease: 'easeOut', duration: 1000 } },
+const Appear = pose.div({
+  enter: { opacity: 1, transition: { ease: 'easeOut', duration: 1000 } },
   exit: { opacity: 0 },
 })
 
 const Menu = () => {
   const [isOpen, toggler] = useToggle()
   const isDesktop = useMedia('desktop')
-  const toggleMenu = event => {
-    event && event.preventDefault()
-    toggler()
-  }
-
-  useEffect(() => {
-    const { classList } = document.documentElement
-    isOpen ? classList.add('is-menu-open') : classList.remove('is-menu-open')
-  }, [isOpen])
+  const preventer = event => event && event.preventDefault()
+  const toggleMenu = flow(
+    preventer,
+    toggler
+  )
+  useHtmlClass('is-menu-open', isOpen)
 
   return (
     <>
       <SocialMenu />
       <Toggler isOpen={isOpen} onClick={toggleMenu} />
       <PoseGroup>
-        {isOpen && isDesktop && [
-          <Right key="right" className="main-menu"><MenuList onClick={toggleMenu} /></Right>,
-          <Left key="left" className="main-menu-left">
-            <ImageContainer key="left" src="/static/menu-bg.jpg">
-              <Appear key="content">
-                <Logo clickable onClick={toggleMenu} />
-                <PageBreadCrumb title="menu" />
-              </Appear>
-            </ImageContainer>
-          </Left>
-        ]}
-        {isOpen && !isDesktop && [
-          <Center key="center" className="main-menu"><MenuList onClick={toggleMenu} /></Center>
-        ]}
+        {isOpen &&
+          isDesktop && [
+            <Right key="right" className="main-menu">
+              <MenuList onClick={toggleMenu} />
+            </Right>,
+            <Left key="left" className="main-menu-left">
+              <ImageContainer key="left" src="/static/menu-bg.jpg">
+                <Appear key="content">
+                  <Logo clickable onClick={toggleMenu} />
+                  <PageBreadCrumb title="menu" />
+                </Appear>
+              </ImageContainer>
+            </Left>,
+          ]}
+        {isOpen &&
+          !isDesktop && [
+            <Center key="center" className="main-menu">
+              <MenuList onClick={toggleMenu} />
+            </Center>,
+          ]}
       </PoseGroup>
     </>
   )

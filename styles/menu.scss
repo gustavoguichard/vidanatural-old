@@ -10,7 +10,7 @@ html.is-menu-open {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
+  position: fixed !important;
   top: 0;
   width: 50%;
   z-index: 20;

@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <nav
+    class="menu-list-wrapper"
+  >
+    <a
+      style="transform: ;transform: none;"
+    >
+      Home
+    </a>
+    <a
+      style="transform: ;transform: none;"
+    >
+      Sobre
+    </a>
+    <a
+      style="transform: ;transform: none;"
+    >
+      Eu uso
+    </a>
+    <a
+      style="transform: ;transform: none;"
+    >
+      Produtos
+    </a>
+    <a
+      style="transform: ;transform: none;"
+    >
+      Conceito
+    </a>
+    <a
+      style="transform: ;transform: none;"
+    >
+      Onde encontrar
+    </a>
+    <a
+      style="transform: ;transform: none;"
+    >
+      Contato
+    </a>
+  </nav>
+  <img
+    alt="Ramo"
+    src="/static/vine.png"
+    width="70"
+  />
+</div>
+`;
