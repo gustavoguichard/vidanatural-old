@@ -149,6 +149,7 @@ exports[`renders correctly 1`] = `
             <strong>
               Vida Natural
             </strong>
+             🌱
             <br />
              
             <svg
