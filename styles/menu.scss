@@ -54,6 +54,10 @@ html.is-menu-open {
     font-size: 1.4rem;
     color: black;
 
+    &, & * {
+      color: black;
+    }
+
     a {
       color: inherit;
 
