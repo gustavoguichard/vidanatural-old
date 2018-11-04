@@ -1,28 +1,31 @@
 import { useState } from 'react'
+import { withRouter } from 'next/router'
 import take from 'lodash/take'
 import shuffle from 'lodash/shuffle'
-import { Columns, Section } from 'react-bulma-components'
-import { useProcessOnce, useWindowDimensions } from 'utils/hooks'
+import { Columns } from 'react-bulma-components'
 import { FaPlus } from 'react-icons/fa'
 
 import Testimonial from 'components/testimonials/Testimonial'
 import Slogan from 'components/Slogan'
-import testimonials from 'content/testimonials'
+import { useWindowDimensions } from 'utils/hooks'
 
+import testimonials from 'content/testimonials'
 import 'styles/people.scss'
 
-const People = () => {
+const shuffledTestimonials = shuffle(testimonials)
+
+const People = ({ router }) => {
   const [faceCount, setFaceCount] = useState(8)
 
-  const shuffledTestimonials = useProcessOnce(testimonials, shuffle)
   const testimonialsToShow = take(shuffledTestimonials, faceCount)
 
   const { width } = useWindowDimensions()
   const columns = width ? Math.round(width / 365) : 2
+  const increaseFactor = router.pathname === '/' ? 4 : 8
 
   const isShowingAll = faceCount >= testimonials.length
 
-  const loadMoreFaces = () => setFaceCount(faceCount + 4)
+  const loadMoreFaces = () => setFaceCount(faceCount + increaseFactor)
 
   return (
     <Columns id="eu-uso" gapless>
@@ -62,4 +65,4 @@ const People = () => {
   )
 }
 
-export default People
+export default withRouter(People)

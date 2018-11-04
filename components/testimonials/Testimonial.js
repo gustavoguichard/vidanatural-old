@@ -10,7 +10,11 @@ const Content = pose.div({
 })
 
 const Children = pose.div({
-  open: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 40, damping: 10 } },
+  open: {
+    opacity: 1,
+    y: 0,
+    transition: { type: 'spring', stiffness: 40, damping: 10 },
+  },
   closed: { opacity: 0, y: 300 },
 })
 
@@ -21,11 +25,18 @@ const Testimonial = props => {
   return process.browser ? (
     <div className="testimonial-item" onClick={toggleOpen}>
       <TestimonialImage src={picture} alt={name} path={path} />
-      <Content pose={isOpen ? 'open' : 'closed'} className="testimonial-content-wrapper">
-        <Children><TestimonialContent {...props} /></Children>
+      <Content
+        pose={isOpen ? 'open' : 'closed'}
+        className="testimonial-content-wrapper"
+      >
+        <Children>
+          <TestimonialContent {...props} />
+        </Children>
       </Content>
     </div>
-  ) : <TestimonialContent {...props} />
+  ) : (
+    <TestimonialContent {...props} />
+  )
 }
 
 export default memo(Testimonial)
