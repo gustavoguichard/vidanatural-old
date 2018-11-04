@@ -1,0 +1,34 @@
+.banner-container {
+  width: 100%;
+  position: relative;
+
+  .banner-content-wrapper,
+  .banner-image {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: space-around;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+
+  .banner-placeholder {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: space-around;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+
+  .copy-container {
+    margin: 1rem auto;
+    padding: 0 1rem;
+    text-align: left;
+
+    @media (min-device-width: 992px) {
+      max-width: 40rem;
+      width: 80%;
+    }
+  }
+}

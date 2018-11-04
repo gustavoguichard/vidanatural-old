@@ -1,6 +1,8 @@
 import { memo } from 'react'
+import { withRouter } from 'next/router'
 import Link from 'next/link'
 import get from 'lodash/get'
+import map from 'lodash/map'
 import { scrollToId } from 'utils/helpers'
 import pose, { PoseGroup } from 'react-pose'
 
@@ -11,10 +13,12 @@ const InnerLink = pose.span({
 
 const MenuLink = ({ href, onClick, children, ...props }) => {
   const clickHandler = event => {
-    const hash = get(event, 'currentTarget.hash', '#')
-    const id = hash.substring(1)
-    onClick(event)
-    scrollToId(id)
+    const hash = get(event, 'currentTarget.hash')
+    if (hash !== undefined) {
+      const id = hash.substring(1)
+      onClick(event)
+      scrollToId(id)
+    }
   }
   return (
     <InnerLink>
@@ -27,35 +31,38 @@ const MenuLink = ({ href, onClick, children, ...props }) => {
   )
 }
 
-const MenuList = ({ onClick }) => (
-  <>
-    <nav className="menu-list-wrapper">
-      <PoseGroup>
-        <MenuLink key="home" href="#" onClick={onClick}>
-          Home
-        </MenuLink>
-        <MenuLink key="sobre" href="#sobre" onClick={onClick}>
-          Sobre
-        </MenuLink>
-        <MenuLink key="eu_uso" href="#eu-uso" onClick={onClick}>
-          Eu uso
-        </MenuLink>
-        <MenuLink key="produtos" href="#" onClick={onClick}>
-          Produtos
-        </MenuLink>
-        <MenuLink key="conceito" href="#" onClick={onClick}>
-          Conceito
-        </MenuLink>
-        <MenuLink key="onde_encontrar" href="#" onClick={onClick}>
-          Onde encontrar
-        </MenuLink>
-        <MenuLink key="contato" href="#contato" onClick={onClick}>
-          Contato
-        </MenuLink>
-      </PoseGroup>
-    </nav>
-    <img src="/static/vine.png" alt="Ramo" width="70" />
-  </>
-)
+const links = {
+  Home: '/',
+  Sobre: '/sobre',
+  'Eu uso': '/eu-uso',
+  Produtos: '/produtos',
+  // Conceito: '/conceito',
+  // 'Onde encontrar': '/onde-encontrar',
+  Contato: '#contato',
+}
 
-export default memo(MenuList)
+const MenuList = ({ onClick, router }) => {
+  const showLinks =
+    router.pathname === '/'
+      ? {
+          ...links,
+          Home: '#',
+          Sobre: '#sobre',
+          'Eu uso': '#eu-uso',
+        }
+      : links
+  return (
+    <>
+      <nav className="menu-list-wrapper">
+        <PoseGroup>
+          {map(showLinks, (path, key) => (
+            <MenuLink key={key} href={path} onClick={onClick} children={key} />
+          ))}
+        </PoseGroup>
+      </nav>
+      <img src="/static/vine.png" alt="Ramo" width="70" />
+    </>
+  )
+}
+
+export default memo(withRouter(MenuList))

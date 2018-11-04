@@ -1,4 +1,5 @@
 import { memo } from 'react'
+import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import { Button, Columns, Content } from 'react-bulma-components'
 import Logo from 'components/Logo'
@@ -30,15 +31,19 @@ export default memo(() => {
         </ImageContainer>
       </Columns.Column>
       <Columns.Column className="content-wrapper">
-        <Content key="content" className="black-content">
-          <h2 className="title is-4">Sobre a VN</h2>
-          <ReactMarkdown className="md-content" source={content} />
-          <p>
-            <Button color="light" className="is-large" rounded outlined>
-              Quero saber mais
-            </Button>
+        <div className="banner-content-wrapper">
+          <Content key="content" className="black-content banner-content">
+            <h2 className="title is-4">Sobre a VN</h2>
+            <ReactMarkdown className="md-content" source={content} />
+          </Content>
+          <p className="banner-content">
+            <Link href="sobre">
+              <Button color="light" className="is-large" rounded outlined>
+                Quero saber mais
+              </Button>
+            </Link>
           </p>
-        </Content>
+        </div>
       </Columns.Column>
     </Columns>
   )

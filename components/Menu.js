@@ -46,25 +46,25 @@ const Menu = () => {
       <Toggler isOpen={isOpen} onClick={toggleMenu} />
       <PoseGroup>
         {isOpen &&
-          isDesktop && [
-            <Right key="right" className="main-menu">
-              <MenuList onClick={toggleMenu} />
-            </Right>,
-            <Left key="left" className="main-menu-left">
-              <ImageContainer key="left" src="/static/menu-bg.jpg">
-                <Appear key="content">
-                  <Logo clickable onClick={toggleMenu} />
-                  <PageBreadCrumb title="menu" />
-                </Appear>
-              </ImageContainer>
-            </Left>,
-          ]}
-        {isOpen &&
-          !isDesktop && [
-            <Center key="center" className="main-menu">
-              <MenuList onClick={toggleMenu} />
-            </Center>,
-          ]}
+          (isDesktop
+            ? [
+                <Right key="right" className="main-menu">
+                  <MenuList onClick={toggleMenu} />
+                </Right>,
+                <Left key="left" className="main-menu-left">
+                  <ImageContainer key="left" src="/static/menu-bg.jpg">
+                    <Appear key="content">
+                      <Logo clickable onClick={toggleMenu} />
+                      <PageBreadCrumb title="menu" />
+                    </Appear>
+                  </ImageContainer>
+                </Left>,
+              ]
+            : [
+                <Center key="center" className="main-menu">
+                  <MenuList onClick={toggleMenu} />
+                </Center>,
+              ])}
       </PoseGroup>
     </>
   )
