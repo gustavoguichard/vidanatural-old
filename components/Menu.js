@@ -18,7 +18,7 @@ const Left = pose.div({
   exit: { x: '-100%', opacity: 0, transition },
 })
 const Right = pose.div({
-  enter: { x: 0, transition, staggerChildren: 100, delayChildren: 500 },
+  enter: { x: 0, transition, staggerChildren: 50, delayChildren: 500 },
   exit: { x: '100%', transition },
 })
 const Center = pose.div({
