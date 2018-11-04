@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, lazy, memo, Suspense } from 'react'
+import { useState, lazy, memo, Suspense } from 'react'
 import take from 'lodash/take'
 import shuffle from 'lodash/shuffle'
 import { Columns, Section } from 'react-bulma-components'
@@ -15,37 +15,29 @@ const Testimonial = lazy(() => import('components/testimonials/Testimonial'))
 
 const People = () => {
   const [isContentOpen, setIsContentOpen] = useState(true)
-  const [wrapperWidth, setWrapperWidth] = useState(0)
-  const [peopleLength, setPeopleLength] = useState(8)
-  const { width } = useWindowDimensions()
-
-  const wrapper = useRef()
-  useEffect(
-    () => {
-      setWrapperWidth(wrapper.current.getBoundingClientRect().width)
-    },
-    [isContentOpen, width]
-  )
+  const [faceCount, setFaceCount] = useState(8)
 
   const shuffledTestimonials = useProcessOnce(testimonials, shuffle)
-  const testimonialsToShow = take(shuffledTestimonials, peopleLength)
+  const testimonialsToShow = take(shuffledTestimonials, faceCount)
 
-  const columns = wrapperWidth ? Math.round(wrapperWidth / 320) : 2
-  const isShowingAll = peopleLength >= testimonials.length
+  const { width } = useWindowDimensions()
   const isDesktop = useMedia('desktop')
-  const isTabledDown = useMedia('tabletDown')
+  const wrapperWidth = width * (isDesktop && isContentOpen ? 0.5 : 1)
+  const columns = wrapperWidth ? Math.round(wrapperWidth / 320) : 2
 
-  const toggleContent = (number, isMobile) => {
-    return event => {
-      event.preventDefault()
-      setPeopleLength(peopleLength + number)
-      setIsContentOpen(isMobile || !isContentOpen)
-    }
+  const isShowingAll = faceCount >= testimonials.length
+  const hasMoreToShow = !(isShowingAll || isDesktop)
+
+  const toggleContent = (number, isMobile) => event => {
+    event.preventDefault()
+    setFaceCount(faceCount + number)
+    setIsContentOpen(isMobile || !isContentOpen)
   }
+
   return (
     <>
       <Columns id="eu-uso" gapless>
-        {isContentOpen ? (
+        {isContentOpen && (
           <Columns.Column className="side-content">
             <Section>
               <div className="content">
@@ -58,11 +50,10 @@ const People = () => {
               </div>
             </Section>
           </Columns.Column>
-        ) : (
-          <PlusButton onClick={toggleContent} floating />
         )}
+        {isContentOpen || <PlusButton onClick={toggleContent} floating />}
         <Columns.Column className="masonry-wrapper">
-          <div ref={wrapper} style={{ columns, columnGap: 1 }}>
+          <div style={{ columns, columnGap: 1 }}>
             {testimonialsToShow.map((testimonial, index) => (
               <Suspense key={index} fallback={<Loading size={80} />}>
                 <Testimonial {...testimonial} />
@@ -71,22 +62,17 @@ const People = () => {
           </div>
         </Columns.Column>
       </Columns>
-      {isTabledDown &&
-        !isShowingAll && (
-          <Section
-            onClick={toggleContent(peopleLength, true)}
-            className="more-testimonials"
-          >
-            <div className="content">
-              <p>Ver mais depoimentos</p>
-              <PlusButton
-                number={peopleLength}
-                isMobile
-                onClick={toggleContent}
-              />
-            </div>
-          </Section>
-        )}
+      {hasMoreToShow && (
+        <Section
+          onClick={toggleContent(faceCount, true)}
+          className="more-testimonials"
+        >
+          <div className="content">
+            <p>Ver mais depoimentos</p>
+            <PlusButton number={faceCount} isMobile onClick={toggleContent} />
+          </div>
+        </Section>
+      )}
     </>
   )
 }
