@@ -50,10 +50,10 @@ body {
 
 #contato {
   width: 100%;
-  align-self: center;
-  display: flex;
   padding: 2rem 1.5rem 2rem;
   margin-top: 0;
+  position: relative;
+  z-index: 2;
 
   svg {
     position: relative;

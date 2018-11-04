@@ -42,12 +42,12 @@ exports[`renders correctly 1`] = `
           Consciêcia talvez seja a palavra mais importante no nosso vocabulário. E, com o tempo, você vai perceber que ela está presente nas nossas iniciativas e, também, na forma como nos relacionamos com as pessoas, produzimos e distribuímos os nossos cosméticos.
         </p>
         <p>
-          Em breve, você conhecerá muito sobre nós, inclusive o nosso processo de produção. Tudo para motivar você a dizer
-           
+          Em breve, você conhecerá muito sobre nós, inclusive o nosso processo de produção. Tudo para motivar você a dizer 
           <strong>
             eu uso
           </strong>
-           cosmética consciente e nos auxiliar a completar a grafia do nosso posicionamento.
+           
+          cosmética consciente e nos auxiliar a completar a grafia do nosso posicionamento.
         </p>
       </div>
     </div>

@@ -1,89 +1,29 @@
 @import './colors';
 
-.masonry-wrapper {
-  height: 100vh;
-  overflow: scroll;
-  position: relative;
-
-  @media (max-device-width: 991px) {
-    height: auto;
-    min-height: 100vh;
-    overflow: visible;
-  }
-}
-
-.side-content {
-  background-color: black;
-  color: white;
-  display: flex;
-  max-height: 100vh;
-  order: 2;
-
-  @media (max-device-width: 991px) {
-    order: 0;
-  }
-
-  .section {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    justify-content: center;
-    margin: 3rem 0;
-  }
-
-  .content {
-    max-width: 400px;
-  }
-
-  .slogan {
-    margin-bottom: 2em;
-  }
-}
-
-.more-testimonials {
-  padding: 1.5rem;
-  padding-top: 0;
-  z-index: 3;
-
-  .content {
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-  }
-}
-
 .plus-bt {
   display: flex;
   align-items: center;
   height: 30px;
   width: 30px;
   justify-content: center;
+  background: none;
   border: 1px solid white;
   border-radius: 50%;
-  align-self: center;
-
-  &.floating {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    z-index: 30;
-  }
+  margin: 1rem;
 }
 
 .testimonial-content-wrapper {
-  background: rgba($green, .8);
+  background: rgba($green, 0.8);
   overflow-y: auto;
   position: absolute;
   top: 0;
-  bottom: 6px;
+  bottom: 1px;
   right: 0;
   left: 0;
 }
 
 .testimonial-content {
   font-size: 1.1em;
-  margin-bottom: 6px;
   max-width: 100%;
   padding: 30px;
   position: relative;
@@ -97,15 +37,28 @@
   }
 }
 
-.slogan {
-  margin-bottom: 2em;
-}
-
-.testimonial-item{
+.testimonial-item {
   position: relative;
   display: block;
   cursor: pointer;
+  overflow: hidden;
   width: 100%;
+
+  .tile-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .inner-content {
+    margin: 5rem 3rem;
+  }
+
+  &.no-click {
+    cursor: default;
+  }
 
   img {
     width: 100%;
@@ -115,11 +68,9 @@
   }
 }
 
-$spinning: 60px;
-
 .testimonial-img {
   filter: saturate(0);
-  transition: filter .6s;
+  transition: filter 0.6s;
   margin-bottom: -5px;
   width: 100%;
   position: relative;
