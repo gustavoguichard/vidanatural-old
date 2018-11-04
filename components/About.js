@@ -1,5 +1,6 @@
 import { memo } from 'react'
 import Link from 'next/link'
+import classnames from 'classnames'
 import ReactMarkdown from 'react-markdown'
 import { Button, Columns, Content } from 'react-bulma-components'
 import Logo from 'components/Logo'
@@ -10,10 +11,11 @@ import { useMedia } from 'utils/hooks'
 import content from 'content/about'
 import 'styles/about.scss'
 
-export default memo(() => {
+export default memo(({ excerpt }) => {
   const isDesktop = useMedia('desktop')
+  const className = classnames('about-section', { 'is-fullheight': excerpt })
   return (
-    <Columns id="sobre" className="about-section" gapless>
+    <Columns id="sobre" className={className} gapless>
       <Columns.Column
         key="design"
         className="about-header"
@@ -33,16 +35,20 @@ export default memo(() => {
       <Columns.Column className="content-wrapper">
         <div className="banner-content-wrapper">
           <Content key="content" className="black-content banner-content">
-            <h2 className="title is-4">Sobre a VN</h2>
+            <h2 className="title is-4">
+              {excerpt ? 'Sobre a VN' : 'Filosofia'}
+            </h2>
             <ReactMarkdown className="md-content" source={content} />
           </Content>
-          <p className="banner-content">
-            <Link href="sobre">
-              <Button color="light" className="is-large" rounded outlined>
-                Quero saber mais
-              </Button>
-            </Link>
-          </p>
+          {excerpt && (
+            <p className="banner-content">
+              <Link href="sobre">
+                <Button color="light" className="is-large" rounded outlined>
+                  Quero saber mais
+                </Button>
+              </Link>
+            </p>
+          )}
         </div>
       </Columns.Column>
     </Columns>

@@ -28,7 +28,10 @@ export default class extends Document {
         htmlAttributes={{ lang: 'pt-BR' }}
         title={title}
         meta={[
-          { name: 'description', content: `Consciêcia talvez seja a palavra mais importante no nosso vocabulário. E, com o tempo, você vai perceber que ela está presente nas nossas iniciativas e, também, na forma como nos relacionamos com as pessoas, produzimos e distribuímos os nossos cosméticos.` },
+          {
+            name: 'description',
+            content: 'Consciêcia talvez seja a palavra mais importante no nosso vocabulário. E, com o tempo, você vai perceber que ela está presente nas nossas iniciativas e, também, na forma como nos relacionamos com as pessoas, produzimos e distribuímos os nossos cosméticos.',
+          },
           { name: 'viewport', content: 'width=device-width, initial-scale=1' },
           { property: 'og:title', content: title },
         ]}
@@ -42,7 +45,11 @@ export default class extends Document {
         <Head>
           {this.helmetJsx}
           {this.helmetHeadComponents}
-          <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico"/>
+          <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="/static/favicon.ico"
+          />
         </Head>
         <body {...this.helmetBodyAttrComponents}>
           <Main />

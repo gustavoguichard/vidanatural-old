@@ -17,9 +17,9 @@ const Loading = ({ size = 30, absolute = true }) => {
     height: `${size}px`,
   }
   return (
-    <span style={style} className="spinning">
+    <div style={style} className="spinning">
       <FaSpinner />
-    </span>
+    </div>
   )
 }
 

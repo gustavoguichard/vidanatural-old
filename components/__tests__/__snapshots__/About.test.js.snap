@@ -31,24 +31,53 @@ exports[`renders correctly 1`] = `
       class="content-wrapper column"
     >
       <div
-        class="content black-content"
+        class="banner-content-wrapper"
       >
-        <h2
-          class="title is-4"
+        <div
+          class="content black-content banner-content"
         >
-          Sobre
-        </h2>
-        <p>
-          Consciêcia talvez seja a palavra mais importante no nosso vocabulário. E, com o tempo, você vai perceber que ela está presente nas nossas iniciativas e, também, na forma como nos relacionamos com as pessoas, produzimos e distribuímos os nossos cosméticos.
-        </p>
-        <p>
-          Em breve, você conhecerá muito sobre nós, inclusive o nosso processo de produção. Tudo para motivar você a dizer 
-          <strong>
-            eu uso
-          </strong>
-           
-          cosmética consciente e nos auxiliar a completar a grafia do nosso posicionamento.
-        </p>
+          <h2
+            class="title is-4"
+          >
+            Filosofia
+          </h2>
+          <div
+            class="md-content"
+          >
+            <p>
+              Acreditamos que cada um de nós, através de nossas pequenas e
+constantes 
+              <strong>
+                ações
+              </strong>
+              , tem o poder de construir grandes coisas.
+            </p>
+            <p>
+              Somos todos capazes de 
+              <strong>
+                transformar
+              </strong>
+              ! De onde estamos, com o que temos
+e a partir do que já somos!
+            </p>
+            <p>
+              Acreditamos que cada pequena 
+              <strong>
+                atitude
+              </strong>
+               tem o poder de gerar grandes
+transformações.
+            </p>
+            <blockquote>
+              <p>
+                A responsabilidade das nossas escolhas vai muito além de nós.
+              </p>
+              <p>
+                Esteja cada vez mais integrado e consciente dessa rede.
+              </p>
+            </blockquote>
+          </div>
+        </div>
       </div>
     </div>
   </div>

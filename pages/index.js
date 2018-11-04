@@ -6,13 +6,12 @@ import Loading from 'components/Loading'
 
 const People = dynamic(() => import('components/People'), {
   loading: () => <Loading size={80} />,
-  ssr: false,
 })
 
 export default () => (
   <Layout>
     <Home />
-    <About />
+    <About excerpt />
     <People />
   </Layout>
 )

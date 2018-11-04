@@ -40,29 +40,9 @@ exports[`renders correctly 1`] = `
     >
       <a
         _pose="enter"
-        href="#"
+        href="/produtos"
       >
         Produtos
-      </a>
-    </span>
-    <span
-      style="transform: ;transform: none;"
-    >
-      <a
-        _pose="enter"
-        href="#"
-      >
-        Conceito
-      </a>
-    </span>
-    <span
-      style="transform: ;transform: none;"
-    >
-      <a
-        _pose="enter"
-        href="#"
-      >
-        Onde encontrar
       </a>
     </span>
     <span

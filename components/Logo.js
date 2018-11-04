@@ -1,14 +1,16 @@
 import { memo } from 'react'
+import { withRouter } from 'next/router'
 import { scrollToId } from 'utils/helpers'
 import ImageReplace from 'components/ImageReplace'
 
-const Logo = ({ clickable = false, onClick, style, ...props }) => (
+const Logo = ({ router, clickable = false, onClick, style, ...props }) => (
   <ImageReplace
     src="logo-white.png"
     onClick={
       clickable
         ? () => {
             onClick && onClick()
+            router.pathname === '/' || router.push('/')
             scrollToId()
           }
         : undefined
@@ -23,4 +25,4 @@ const Logo = ({ clickable = false, onClick, style, ...props }) => (
   </ImageReplace>
 )
 
-export default memo(Logo)
+export default withRouter(memo(Logo))

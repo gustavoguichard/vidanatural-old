@@ -14,8 +14,55 @@ body {
   }
 
   .title {
-    font-family: serif;
     font-weight: bold;
+  }
+}
+
+.hero {
+  &.is-primary {
+    background-color: black;
+  }
+  .hero-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 8rem;
+
+    .title {
+      color: white;
+      margin-top: 2rem;
+    }
+  }
+  .hero-body {
+    margin: 0 auto;
+    max-width: 40rem;
+    text-align: center;
+
+    .title {
+      font-weight: 400;
+      @media (min-width: 769px) {
+        font-size: 2.7rem;
+        line-height: 1.4;
+      }
+
+      strong {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.tile {
+  .tile-copy {
+    padding: 2rem 2rem 4rem;
+    justify-content: space-around;
+    background-color: white;
+    @media (min-width: 769px) {
+      padding: 2rem 5rem 4rem;
+    }
+    * {
+      color: black !important;
+    }
   }
 }
 

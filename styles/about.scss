@@ -18,11 +18,14 @@
   justify-content: space-around;
 }
 
+.is-fullheight {
+  min-height: 100vh;
+}
+
 .about-section {
   align-items: stretch;
   display: flex;
   flex: 1;
-  min-height: 100vh;
   justify-content: center;
   margin-bottom: 0 !important;
   position: relative;

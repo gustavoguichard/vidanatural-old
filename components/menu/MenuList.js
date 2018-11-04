@@ -1,8 +1,9 @@
 import { memo } from 'react'
-import { withRouter } from 'next/router'
+import Router, { withRouter } from 'next/router'
 import Link from 'next/link'
 import get from 'lodash/get'
 import map from 'lodash/map'
+import last from 'lodash/last'
 import { scrollToId } from 'utils/helpers'
 import pose, { PoseGroup } from 'react-pose'
 
@@ -13,12 +14,14 @@ const InnerLink = pose.span({
 
 const MenuLink = ({ href, onClick, children, ...props }) => {
   const clickHandler = event => {
-    const hash = get(event, 'currentTarget.hash')
-    if (hash !== undefined) {
-      const id = hash.substring(1)
-      onClick(event)
-      scrollToId(id)
+    const href = get(event, 'currentTarget.href', '')
+    const urlArray = href.split('#')
+    const [, hash] = urlArray
+    onClick(event)
+    if (!hash && !href.includes('#')) {
+      Router.push(href)
     }
+    scrollToId(hash)
   }
   return (
     <InnerLink>
