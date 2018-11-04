@@ -4,28 +4,30 @@ import get from 'lodash/get'
 import { scrollToId } from 'utils/helpers'
 import pose, { PoseGroup } from 'react-pose'
 
-const InnerLink = pose.a({
+const InnerLink = pose.span({
   enter: { opacity: 1, y: 0 },
   exit: { opacity: 0, y: -15 },
 })
 
-const MenuLink = ({ href, onClick, ...props }) => {
+const MenuLink = ({ href, onClick, children, ...props }) => {
   const clickHandler = event => {
-    const hash = get(event, 'target.hash', '#')
-    const lastDigitHref = get(event, 'target.href', '').substr(-1)
-    const isHash = hash.substring(0, 1) === '#' || lastDigitHref === '#'
+    const hash = get(event, 'currentTarget.hash', '#')
     const id = hash.substring(1)
-    onClick(isHash ? event : undefined)
+    onClick(event)
     scrollToId(id)
   }
   return (
-    <Link href={href}>
-      <InnerLink {...props} onClick={clickHandler} />
-    </Link>
+    <InnerLink>
+      <Link href={href}>
+        <a {...props} onClick={clickHandler}>
+          {children}
+        </a>
+      </Link>
+    </InnerLink>
   )
 }
 
-const MenuList = ({ onClick }) =>
+const MenuList = ({ onClick }) => (
   <>
     <nav className="menu-list-wrapper">
       <PoseGroup>
@@ -44,15 +46,16 @@ const MenuList = ({ onClick }) =>
         <MenuLink key="conceito" href="#" onClick={onClick}>
           Conceito
         </MenuLink>
-        <MenuLink key="onde)encontrar" href="#" onClick={onClick}>
+        <MenuLink key="onde_encontrar" href="#" onClick={onClick}>
           Onde encontrar
         </MenuLink>
-        <MenuLink key="contato" href="#" onClick={onClick}>
+        <MenuLink key="contato" href="#contato" onClick={onClick}>
           Contato
         </MenuLink>
       </PoseGroup>
     </nav>
     <img src="/static/vine.png" alt="Ramo" width="70" />
   </>
+)
 
 export default memo(MenuList)

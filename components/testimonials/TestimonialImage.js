@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 import { Img } from 'utils/createResource'
 import Loading from 'components/Loading'
 
-export default ({ src, path, thumbsPath = 'thumbs', ...props }) => (
+const TestimonialImage = ({ src, path, thumbsPath = 'thumbs', ...props }) => (
   <Suspense
     maxDuration={500}
     fallback={
@@ -17,3 +17,5 @@ export default ({ src, path, thumbsPath = 'thumbs', ...props }) => (
     </figure>
   </Suspense>
 )
+
+export default TestimonialImage

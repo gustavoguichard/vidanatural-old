@@ -1,6 +1,7 @@
+import { memo } from 'react'
 import classnames from 'classnames'
 
-export default ({ isOpen, onClick }) =>
+const Toggler = ({ isOpen, onClick }) => (
   <a
     href="#menu"
     title="Menu"
@@ -11,3 +12,6 @@ export default ({ isOpen, onClick }) =>
     {isOpen || <div className="menu-icon-dash" />}
     <div className="menu-icon-dash outer" />
   </a>
+)
+
+export default memo(Toggler)

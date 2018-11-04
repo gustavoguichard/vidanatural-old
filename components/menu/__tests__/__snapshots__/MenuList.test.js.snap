@@ -5,41 +5,76 @@ exports[`renders correctly 1`] = `
   <nav
     class="menu-list-wrapper"
   >
-    <a
+    <span
       style="transform: ;transform: none;"
     >
-      Home
-    </a>
-    <a
+      <a
+        _pose="enter"
+        href="#"
+      >
+        Home
+      </a>
+    </span>
+    <span
       style="transform: ;transform: none;"
     >
-      Sobre
-    </a>
-    <a
+      <a
+        _pose="enter"
+        href="#sobre"
+      >
+        Sobre
+      </a>
+    </span>
+    <span
       style="transform: ;transform: none;"
     >
-      Eu uso
-    </a>
-    <a
+      <a
+        _pose="enter"
+        href="#eu-uso"
+      >
+        Eu uso
+      </a>
+    </span>
+    <span
       style="transform: ;transform: none;"
     >
-      Produtos
-    </a>
-    <a
+      <a
+        _pose="enter"
+        href="#"
+      >
+        Produtos
+      </a>
+    </span>
+    <span
       style="transform: ;transform: none;"
     >
-      Conceito
-    </a>
-    <a
+      <a
+        _pose="enter"
+        href="#"
+      >
+        Conceito
+      </a>
+    </span>
+    <span
       style="transform: ;transform: none;"
     >
-      Onde encontrar
-    </a>
-    <a
+      <a
+        _pose="enter"
+        href="#"
+      >
+        Onde encontrar
+      </a>
+    </span>
+    <span
       style="transform: ;transform: none;"
     >
-      Contato
-    </a>
+      <a
+        _pose="enter"
+        href="#contato"
+      >
+        Contato
+      </a>
+    </span>
   </nav>
   <img
     alt="Ramo"
