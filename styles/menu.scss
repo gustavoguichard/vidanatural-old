@@ -54,7 +54,8 @@ html.is-menu-open {
     font-size: 1.4rem;
     color: black;
 
-    &, & * {
+    &,
+    & * {
       color: black;
     }
 
@@ -91,10 +92,10 @@ html.is-menu-open {
   justify-content: space-between;
   position: fixed;
   right: 2rem;
-  top: 2rem;
+  top: 1.5rem;
   transform: rotate(-45deg);
-  transition: all .15s;
-  transition-delay: .2s;
+  transition: all 0.15s;
+  transition-delay: 0.2s;
   z-index: 1000;
 
   .menu-icon-dash {
@@ -102,7 +103,7 @@ html.is-menu-open {
     border-radius: 3px;
     width: 100%;
     height: 3px;
-    transition: all .3s;
+    transition: all 0.3s;
 
     &.outer {
       width: 60%;
@@ -123,8 +124,8 @@ html.is-menu-open {
     .menu-icon-dash {
       background-color: black;
       margin-bottom: -3px;
-      transition: all .15s;
-      transition-delay: .2s;
+      transition: all 0.15s;
+      transition-delay: 0.2s;
 
       &:last-child {
         transform: rotate(90deg);
@@ -141,12 +142,12 @@ html.is-menu-open {
 
 .social-icons {
   position: fixed;
-  top: 2rem;
+  top: 1.5rem;
   left: 2rem;
   z-index: 1000;
 
   a {
-    margin-right: .6em;
+    margin-right: 0.6em;
 
     &:hover svg {
       fill: black;
@@ -154,7 +155,7 @@ html.is-menu-open {
   }
 
   svg {
-    transition: all .3s;
+    transition: all 0.3s;
   }
 }
 
