@@ -77,4 +77,4 @@ const People = () => {
   )
 }
 
-export default memo(People)
+export default People
