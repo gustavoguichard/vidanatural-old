@@ -1,12 +1,14 @@
 @import './colors';
-.black-content {
-  margin: 2rem;
-  padding-top: 4rem;
+.about-section {
+  .black-content {
+    margin: 2rem;
+    padding-top: 4rem;
 
-  @media (min-device-width: 992px) {
-    padding-top: 0;
-    margin: 2rem 4rem;
-    max-width: 400px;
+    @media (min-device-width: 992px) {
+      padding-top: 0;
+      margin: 2rem 4rem;
+      max-width: 400px;
+    }
   }
 }
 
@@ -31,6 +33,10 @@
     @media (min-device-width: 992px) {
       flex: 1;
     }
+  }
+
+  .md-content {
+    margin-bottom: 2rem;
   }
 }
 
