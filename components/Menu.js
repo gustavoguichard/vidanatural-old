@@ -22,7 +22,7 @@ const Right = pose.div({
   exit: { x: '100%', transition },
 })
 const Center = pose.div({
-  enter: { opacity: 1, transition, staggerChildren: 100, delayChildren: 500 },
+  enter: { opacity: 1, transition, staggerChildren: 50, delayChildren: 500 },
   exit: { opacity: 0, transition },
 })
 const Appear = pose.div({
