@@ -10,7 +10,7 @@ const Contact = () => (
     <Container>
       <Content style={{ textAlign: 'center' }}>
         <p>
-          <strong>Vida Natural</strong> cosmética consciente 🌱
+          <strong>Vida Natural</strong> cosmética consciente
           <br /> <FaWhatsapp /> (48) 99103.9557
           <br />{' '}
           <a
