@@ -8,7 +8,8 @@ import PageBreadCrumb from 'components/menu/PageBreadCrumb'
 import ImageContainer from 'components/ImageContainer'
 import { useMedia } from 'utils/hooks'
 
-import content from 'content/about'
+import shortContent from 'content/about'
+import content from 'content/sobre'
 import 'styles/about.scss'
 
 export default memo(({ excerpt }) => {
@@ -38,7 +39,7 @@ export default memo(({ excerpt }) => {
             <h2 className="title is-4">
               {excerpt ? 'Sobre a VN' : 'Filosofia'}
             </h2>
-            <ReactMarkdown className="md-content" source={content} />
+            <ReactMarkdown className="md-content" source={excerpt ? content : shortContent} />
           </Content>
           {excerpt && (
             <p className="banner-content">
