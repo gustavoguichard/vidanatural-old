@@ -1,4 +1,5 @@
 import App, { Container } from 'next/app'
+import Head from 'next/head'
 import Router from 'next/router'
 import { initGA, logPageView } from 'utils/analytics'
 
@@ -21,8 +22,12 @@ export default class VidaNatural extends App {
 
   render() {
     const { Component, pageProps } = this.props
+    const title = 'Vida Natural | Cosmética Consciente'
     return (
       <Container>
+        <Head>
+          <title>{title}</title>
+        </Head>
         <Component {...pageProps} />
       </Container>
     )
