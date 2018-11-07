@@ -60,7 +60,7 @@ const People = () => {
   return (
     <div id="eu-uso">
       <div className="masonry-wrapper">
-        <Tile>
+        <div className="page-tile">
           {hasSidebar && (
             <Intro isSidebar>
               <div className="banner-content">
@@ -82,7 +82,7 @@ const People = () => {
           <div className="tile" ref={wrapper}>
             {isDesktop || <Intro />}
             {times(columns, index => (
-              <Tile key={`tile-${index}`} vertical>
+              <div className="people-tile" key={`tile-${index}`}>
                 {testimonialsToShow
                   .filter((testimonial, filterIndex) => {
                     return (filterIndex + index + 3) % columns === 0
@@ -90,10 +90,10 @@ const People = () => {
                   .map((testimonial, index) => (
                     <Testimonial key={index} {...testimonial} />
                   ))}
-              </Tile>
+              </div>
             ))}
           </div>
-        </Tile>
+        </div>
         {isShowingAll ||
           ((isOpen || !isDesktop) && (
             <div className="testimonial-item">
@@ -110,6 +110,20 @@ const People = () => {
             </div>
           ))}
       </div>
+      <style jsx>{`
+        .people-tile,
+        .page-tile {
+          align-items: stretch;
+          display: flex;
+          flex-basis: 0;
+          flex-grow: 1;
+          flex-shrink: 1;
+          min-height: min-content;
+        }
+        .people-tile {
+          flex-direction: column;
+        }
+      `}</style>
     </div>
   )
 }
