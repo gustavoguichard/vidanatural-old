@@ -36,8 +36,8 @@ const People = ({ router }) => {
               <div className="inner-content">
                 <Slogan responsive />
                 <p style={{ margin: '2em 0' }}>
-                  Descubra o que motiva as pessoas a usar nossos cosméticos -
-                  Vida Natural
+                  Descubra o que motiva as pessoas a usarem os nossos cosméticos
+                  - Vida Natural
                 </p>
               </div>
             </div>
