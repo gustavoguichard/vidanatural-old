@@ -1,27 +1,4 @@
 @import './colors';
-.banner-content {
-  margin: 2rem;
-  width: 80%;
-
-  @media (min-device-width: 992px) {
-    padding-top: 0;
-    margin: 2rem 4rem;
-    max-width: 400px;
-  }
-}
-
-.banner-content-wrapper {
-  margin: 3.5rem 0;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.is-fullheight {
-  min-height: 100vh;
-}
-
 .about-section {
   align-items: stretch;
   display: flex;

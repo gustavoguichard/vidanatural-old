@@ -37,6 +37,14 @@
   }
 }
 
+.tile-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
 .testimonial-item {
   position: relative;
   display: block;
@@ -44,20 +52,8 @@
   overflow: hidden;
   width: 100%;
 
-  .tile-content {
-    display: flex;
-    flex-direction: column;
-    min-height: 300px;
-    justify-content: center;
-    align-items: center;
-  }
-
   .inner-content {
     margin: 5rem 3rem;
-  }
-
-  &.no-click {
-    cursor: default;
   }
 
   img {

@@ -3,390 +3,79 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    class="columns is-gapless is-multiline"
     id="eu-uso"
   >
     <div
-      class="masonry-wrapper column"
+      class="masonry-wrapper"
     >
-      <div>
+      <div
+        class="tile"
+      >
         <div
-          class="testimonial-item no-click"
+          class="tile"
         >
           <div
-            class="tile-content"
+            class="testimonial-item"
           >
             <div
-              class="inner-content"
+              class="tile-content"
             >
               <div
-                class="slogan"
-                style="display: block; background: url(/static/slogan.png) no-repeat center; background-size: contain; height: 45px; overflow: hidden; text-indent: -999em;"
+                class="inner-content"
               >
-                <h2>
-                  Eu uso
-                </h2>
-                <h3>
-                  Cosmética Consciente
-                </h3>
+                <div
+                  class="slogan"
+                  style="display: block; background: url(/static/slogan.png) no-repeat center; background-size: contain; height: 45px; overflow: hidden; text-indent: -999em;"
+                >
+                  <h2>
+                    Eu uso
+                  </h2>
+                  <h3>
+                    Cosmética Consciente
+                  </h3>
+                </div>
+                <p
+                  style="margin: 2em 0px;"
+                >
+                  Descubra o que motiva as pessoas a usarem os nossos cosméticos - Vida Natural
+                </p>
               </div>
-              <p
-                style="margin: 2em 0px;"
-              >
-                Descubra o que motiva as pessoas a usar nossos cosméticos - Vida Natural
-              </p>
             </div>
           </div>
-        </div>
-        <article
-          class="testimonial-content"
-        >
-          <h3
-            class="title is-4"
-          >
-            Gisele de Menezes
-          </h3>
-          <div>
-            <p>
-              Há muito tempo descobri o desodorante de creme em um restaurante de POA e ADOREI. Nunca mais quis comprar outros desodorantes, pois na minha adolescência eu tive que fazer uma pequena cirurgia devido a um 
-              <strong>
-                entupimento das glândulas sebáceas da axila
-              </strong>
-              , causado por 
-              <strong>
-                desodorantes convencionais
-              </strong>
-              . Depois de um tempo descobri o Rollon e 
-              <strong>
-                não voltei atrás
-              </strong>
-              .
-              <br />
-                Claro que é importante manter uma boa assepsia do corpo, ter uma 
-              <strong>
-                boa alimentação
-              </strong>
-               que não produza tanta acidez, mas considero o desodorante 
-              <strong>
-                suficiente para minhas necessidades
-              </strong>
-              . E saber também que é um produto 
-              <strong>
-                natural e artesanal
-              </strong>
-               é tudo!
-              <br />
-                Que bom se os sabonetes, produtos de limpeza e todas as coisas fossem feitas dessa maneira!
-            </p>
-          </div>
-          <em>
-            Escritora e terapeuta ayurveda - Porto Alegre / RS
-          </em>
-        </article>
-        <article
-          class="testimonial-content"
-        >
-          <h3
-            class="title is-4"
-          >
-            Juliana Eichenberg
-          </h3>
-          <div>
-            <p>
-              A Vida Natural, mais do que uma marca, é a forma de vida da sua querida idealizadora. Não há limites separando a vida da Lila da Vida Natural e a Vida Natural da vida da Lila.
-              <br />
-                Essa fusão, da criadora e da criação, é que torna os 
-              <strong>
-                produtos que uso tão especiais
-              </strong>
-               para mim. Tudo nasce de uma 
-              <strong>
-                verdade profunda
-              </strong>
-              , de um anseio por 
-              <strong>
-                sustentabilidade, regeneração e saúde
-              </strong>
-              . O que é evidente e palpável na postura da Lila e nos benefícios que sentimos ao nos nutrir através da Vida Natural.
-              <br />
-                Obrigada, Vida Natural! Obrigada, Lila! Muito bom trilhar esse caminho com vocês, um grande privilégio!
-            </p>
-          </div>
-          <em>
-            Professora de Yoga - Garopaba / SC
-          </em>
-        </article>
-        <article
-          class="testimonial-content"
-        >
-          <h3
-            class="title is-4"
-          >
-            Samantha Linsmeyer
-          </h3>
-          <div>
-            <p>
-              O desodorante que experimentei é 
-              <strong>
-                simplesmente o melhor que já usei na minha vida
-              </strong>
-              . Eu não largo mais! Quero provar e experimentar os outros produtos.
-              <br />
-                Senti ele leve, o 
-              <strong>
-                aroma agradável
-              </strong>
-               e com uma 
-              <strong>
-                resistência
-              </strong>
-               muito importante para quem tem uma 
-              <strong>
-                rotina agitada
-              </strong>
-               igual a minha. Agora quero mais, tenho certeza que vou amar os outros e me sinto feliz em 
-              <strong>
-                cuidar também da natureza e dos animais
-              </strong>
-               desta forma!
-            </p>
-          </div>
-          <em />
-        </article>
-        <article
-          class="testimonial-content"
-        >
-          <h3
-            class="title is-4"
-          >
-            Dircéia
-          </h3>
-          <div>
-            <p>
-              Sou nutricionista e há alguns anos vinha procurando por um desodorante que 
-              <strong>
-                não prejudicasse minha saúde
-              </strong>
-              , 
-              <strong>
-                livre de alumínio
-              </strong>
-              , 
-              <strong>
-                parabenos
-              </strong>
-               e outras substâncias tóxicas.
-              <br />
-                Na época que comecei a procurar, em torno de 10 anos atrás, não achava nada aqui no Brasil, então sempre que viajava eu buscava por um diferente, na esperança que fosse ótimo, afinal eram marcas importadas e de ótima qualidade! Fiquei um bom tempo intercalando os desodorantes normais com os livres de alumínio pois não achava um realmente bom. Foi então que um dia estava comprando alguns produtos em uma loja de Garopaba e 
-              <strong>
-                achei o desodorante da Vida Natural
-              </strong>
-              ! 
-              <strong>
-                Olhei os ingredientes
-              </strong>
-              , como de costume, e fiquei super 
-              <strong>
-                empolgada com a composição
-              </strong>
-              ! Ainda mais que eu tinha feito recentemente um curso de aromaterapia e sabia dos 
-              <strong>
-                benefícios dos óleos essenciais
-              </strong>
-               na sua composição!
-              <br />
-                Quando usei fiquei 
-              <strong>
-                suuuuper feliz
-              </strong>
-              ! Enfim achei um 
-              <strong>
-                produto de qualidade
-              </strong>
-              , realmente 
-              <strong>
-                natural
-              </strong>
-               e que funciona! Uso e indico para todos!! Obrigada por criar esse excelente produto! A 
-              <strong>
-                saúde e a natureza
-              </strong>
-               agradecem!
-            </p>
-          </div>
-          <em>
-            Nutricionista - Garopaba / SC
-          </em>
-        </article>
-        <article
-          class="testimonial-content"
-        >
-          <h3
-            class="title is-4"
-          >
-            Samira Abdalah
-          </h3>
-          <div>
-            <p>
-              Usar os produtos da Vida Natural é 
-              <strong>
-                se sentir em harmonia com o corpo
-              </strong>
-               e o 
-              <strong>
-                meio ambiente
-              </strong>
-              . São produtos feitos com toda 
-              <strong>
-                dedicação e carinho
-              </strong>
-               e  de muita qualidade. Super ultra recomendado!
-            </p>
-          </div>
-          <em>
-            Mestra em Educação - Montenegro / RS
-          </em>
-        </article>
-        <article
-          class="testimonial-content"
-        >
-          <h3
-            class="title is-4"
-          >
-            Luise Rabelo
-          </h3>
-          <div>
-            <p>
-              Conheci os produtos Vida Natural por acaso há uns 3 anos e 
-              <strong>
-                nunca mais deixei de usar
-              </strong>
-              , principalmente o 
-              <strong>
-                desodorante em pasta
-              </strong>
-              , meu preferido. Os produtos são 
-              <strong>
-                eficazes
-              </strong>
-              , tem um 
-              <strong>
-                cheiro suave e gostoso
-              </strong>
-               e 
-              <strong>
-                não agridem nosso organismo
-              </strong>
-               como os cosméticos convencionais. Obrigada Vida Natural por cuidar da gente com tanto 
-              <strong>
-                carinho
-              </strong>
-              !
-            </p>
-          </div>
-          <em>
-            Arquiteta - Porto Alegre / RS
-          </em>
-        </article>
-        <article
-          class="testimonial-content"
-        >
-          <h3
-            class="title is-4"
-          >
-            Francisco Camolesi
-          </h3>
-          <div>
-            <p>
-              Depois que experimentei 
-              <strong>
-                nunca mais usei outro
-              </strong>
-              . Desodorante mais 
-              <strong>
-                eficiente
-              </strong>
-               que já usei. O produto é 
-              <strong>
-                simplesmente sensacional
-              </strong>
-              . Já estou usando há dois anos e nem penso em experimentar outro!
-            </p>
-          </div>
-          <em>
-            Engenheiro de Produção - Imbituba / SC
-          </em>
-        </article>
-        <article
-          class="testimonial-content"
-        >
-          <h3
-            class="title is-4"
-          >
-            Zilda Gama
-          </h3>
-          <div>
-            <p>
-              Em 2015 fui diagnosticada com 
-              <strong>
-                câncer de mama
-              </strong>
-               o que me levou a iniciar uma busca por explicações para a causa da doença, especialmente em pessoas jovens e sem outros casos na família, eu tinha 34 anos.
-              <br />
-                Nessa busca eu encontrei estudos que relacionavam o 
-              <strong>
-                câncer de mama
-              </strong>
-               a algumas substâncias presentes nos antitranspirantes o que me fez querer 
-              <strong>
-                mudar meus hábitos
-              </strong>
-               de higiene e assim eu iniciei uma nova busca, agora por desodorantes que fossem produzidos com a menor quantidade de substâncias possíveis e sem aquela infinidade de produtos químicos dos antitranspirantes disponíveis no mercado.
-              <br />
-                Foi assim, que eu encontrei o desodorante da Vida Natural sendo vendido em um restaurante indiano de Porto Alegre e que 
-              <strong>
-                atendeu todas as minhas expectativas
-              </strong>
-              .
-              <br />
-                Em 2017, porém me mudei para Belém, mas não sabia mais viver sem o desodorante da Vida Natural e minha busca recomeçou, foi quando encontrei a página da Vida Natural no facebook e as gurias facilitam minha vida 
-              <strong>
-                mandando para mim pelos correios
-              </strong>
-               sempre que eu os peço.
-            </p>
-          </div>
-          <em>
-            Belém / PA
-          </em>
-        </article>
-        <div
-          class="testimonial-item"
-        >
           <div
-            class="tile-content center"
+            class="tile is-vertical"
+          />
+          <div
+            class="tile is-vertical"
+          />
+        </div>
+      </div>
+      <div
+        class="testimonial-item"
+      >
+        <div
+          class="tile-content center"
+        >
+          <p>
+            Ver mais depoimentos
+          </p>
+          <button
+            class="plus-bt"
+            title="Mais depoimentos"
           >
-            <p>
-              Ver mais depoimentos
-            </p>
-            <button
-              class="plus-bt"
-              title="Mais depoimentos"
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 448 512"
+              width="1em"
             >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                viewBox="0 0 448 512"
-                width="1em"
-              >
-                <path
-                  d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
-                />
-              </svg>
-            </button>
-          </div>
+              <path
+                d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </div>

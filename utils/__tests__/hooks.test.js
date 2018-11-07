@@ -67,7 +67,7 @@ describe('useMedia', () => {
 describe('useProcessOnce', () => {
   it('returns the value of current ref', () => {
     const Component = ({ value, fn }) => {
-      const result = subject.useProcessOnce(value, fn)
+      const result = subject.useProcessOnce(fn, value)
       return element(result)
     }
     const { el, rerender } = getResultNode(

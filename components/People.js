@@ -1,51 +1,101 @@
-import { useState } from 'react'
-import { withRouter } from 'next/router'
+import { useState, useRef, memo, useEffect } from 'react'
 import take from 'lodash/take'
+import times from 'lodash/times'
 import shuffle from 'lodash/shuffle'
-import { Columns } from 'react-bulma-components'
+import { Button, Tile } from 'react-bulma-components'
 import { FaPlus } from 'react-icons/fa'
 
 import Testimonial from 'components/testimonials/Testimonial'
 import Slogan from 'components/Slogan'
-import { useWindowDimensions } from 'utils/hooks'
+import { useWindowDimensions, useProcessOnce, useMedia } from 'utils/hooks'
 
 import testimonials from 'content/testimonials'
+import 'styles/banner.scss'
 import 'styles/people.scss'
 
-const shuffledTestimonials = shuffle(testimonials)
+const Intro = memo(({ isSidebar, children }) => (
+  <div
+    className={
+      isSidebar ? 'tile is-vertical content-wrapper' : 'testimonial-item'
+    }
+    style={isSidebar ? { order: 2 } : {}}
+  >
+    <div
+      className={isSidebar ? 'banner-content-wrapper' : 'tile-content'}
+      style={isSidebar ? { maxHeight: '100vh', justifyContent: 'center' } : {}}
+    >
+      <div className={isSidebar ? 'banner-content' : 'inner-content'}>
+        <Slogan responsive />
+        <p style={{ margin: '2em 0' }}>
+          Descubra o que motiva as pessoas a usarem os nossos cosméticos - Vida
+          Natural
+        </p>
+      </div>
+      {children}
+    </div>
+  </div>
+))
 
-const People = ({ router }) => {
-  const [faceCount, setFaceCount] = useState(8)
-
+const People = () => {
+  const [faceCount, setFaceCount] = useState(6)
+  const [isOpen, setIsOpen] = useState(false)
+  const [wrapperWidth, setWrapperWidth] = useState(0)
+  const shuffledTestimonials = useProcessOnce(shuffle, testimonials)
   const testimonialsToShow = take(shuffledTestimonials, faceCount)
 
   const { width } = useWindowDimensions()
-  const columns = width ? Math.round(width / 365) : 2
-  const increaseFactor = router.pathname === '/' ? 4 : 8
+  const wrapper = useRef(null)
+  useEffect(
+    () => setWrapperWidth(wrapper.current.getBoundingClientRect().width),
+    [width, isOpen]
+  )
+  const columns = wrapperWidth ? Math.round(wrapperWidth / 365) : 2
+  const isDesktop = useMedia('desktop')
 
   const isShowingAll = faceCount >= testimonials.length
+  const loadMoreFaces = () => setFaceCount(faceCount + 4)
 
-  const loadMoreFaces = () => setFaceCount(faceCount + increaseFactor)
+  const hasSidebar = isDesktop && !isOpen
 
   return (
-    <Columns id="eu-uso" gapless>
-      <Columns.Column className="masonry-wrapper">
-        <div style={{ columns, columnGap: 1 }}>
-          <div className="testimonial-item no-click">
-            <div className="tile-content">
-              <div className="inner-content">
-                <Slogan responsive />
-                <p style={{ margin: '2em 0' }}>
-                  Descubra o que motiva as pessoas a usarem os nossos cosméticos
-                  - Vida Natural
-                </p>
+    <div id="eu-uso">
+      <div className="masonry-wrapper">
+        <Tile>
+          {hasSidebar && (
+            <Intro isSidebar>
+              <div className="banner-content">
+                <Button
+                  color="light"
+                  className="is-large"
+                  rounded
+                  outlined
+                  onClick={() => {
+                    loadMoreFaces()
+                    setIsOpen(true)
+                  }}
+                >
+                  + Depoimentos
+                </Button>
               </div>
-            </div>
+            </Intro>
+          )}
+          <div className="tile" ref={wrapper}>
+            {isDesktop || <Intro />}
+            {times(columns, index => (
+              <Tile key={`tile-${index}`} vertical>
+                {testimonialsToShow
+                  .filter((testimonial, filterIndex) => {
+                    return (filterIndex + index + 3) % columns === 0
+                  })
+                  .map((testimonial, index) => (
+                    <Testimonial key={index} {...testimonial} />
+                  ))}
+              </Tile>
+            ))}
           </div>
-          {testimonialsToShow.map((testimonial, index) => (
-            <Testimonial key={index} {...testimonial} />
-          ))}
-          {isShowingAll || (
+        </Tile>
+        {isShowingAll ||
+          ((isOpen || !isDesktop) && (
             <div className="testimonial-item">
               <div className="tile-content center" onClick={loadMoreFaces}>
                 <p>Ver mais depoimentos</p>
@@ -58,11 +108,10 @@ const People = ({ router }) => {
                 </button>
               </div>
             </div>
-          )}
-        </div>
-      </Columns.Column>
-    </Columns>
+          ))}
+      </div>
+    </div>
   )
 }
 
-export default withRouter(People)
+export default memo(People)
