@@ -2,7 +2,7 @@ import { useState, useRef, memo, useEffect } from 'react'
 import take from 'lodash/take'
 import times from 'lodash/times'
 import shuffle from 'lodash/shuffle'
-import { Button, Tile } from 'react-bulma-components'
+import { Button } from 'react-bulma-components'
 import { FaPlus } from 'react-icons/fa'
 
 import Testimonial from 'components/testimonials/Testimonial'

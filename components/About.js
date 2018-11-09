@@ -39,7 +39,10 @@ export default memo(({ excerpt }) => {
             <h2 className="title is-4">
               {excerpt ? 'Sobre a VN' : 'Filosofia'}
             </h2>
-            <ReactMarkdown className="md-content" source={excerpt ? content : shortContent} />
+            <ReactMarkdown
+              className="md-content"
+              source={excerpt ? content : shortContent}
+            />
           </Content>
           {excerpt && (
             <p className="banner-content">

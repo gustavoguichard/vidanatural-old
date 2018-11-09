@@ -3,16 +3,17 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
+    class="jsx-2415907154"
     id="eu-uso"
   >
     <div
-      class="masonry-wrapper"
+      class="jsx-2415907154 masonry-wrapper"
     >
       <div
-        class="tile"
+        class="jsx-2415907154 page-tile"
       >
         <div
-          class="tile"
+          class="jsx-2415907154 tile"
         >
           <div
             class="testimonial-item"
@@ -43,24 +44,26 @@ exports[`renders correctly 1`] = `
             </div>
           </div>
           <div
-            class="tile is-vertical"
+            class="jsx-2415907154 people-tile"
           />
           <div
-            class="tile is-vertical"
+            class="jsx-2415907154 people-tile"
           />
         </div>
       </div>
       <div
-        class="testimonial-item"
+        class="jsx-2415907154 testimonial-item"
       >
         <div
-          class="tile-content center"
+          class="jsx-2415907154 tile-content center"
         >
-          <p>
+          <p
+            class="jsx-2415907154"
+          >
             Ver mais depoimentos
           </p>
           <button
-            class="plus-bt"
+            class="jsx-2415907154 plus-bt"
             title="Mais depoimentos"
           >
             <svg

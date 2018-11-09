@@ -3,19 +3,19 @@ import { Img } from 'utils/createResource'
 import Loading from 'components/Loading'
 
 const TestimonialImage = ({ src, path, thumbsPath = 'thumbs', ...props }) => (
-  <Suspense
-    maxDuration={500}
-    fallback={
-      <figure className="testimonial-img">
-        <Loading size={60} />
-        <img src={[path, thumbsPath, src].join('/')} {...props} />
-      </figure>
-    }
-  >
-    <figure className="testimonial-img">
+  <figure className="testimonial-img">
+    <Suspense
+      maxDuration={500}
+      fallback={
+        <>
+          <Loading size={60} />
+          <img src={[path, thumbsPath, src].join('/')} {...props} />
+        </>
+      }
+    >
       <Img src={[path, src].join('/')} {...props} />
-    </figure>
-  </Suspense>
+    </Suspense>
+  </figure>
 )
 
 export default TestimonialImage

@@ -9,12 +9,9 @@ const Content = pose.div({
   closed: { height: 0 },
 })
 
+const transition = { type: 'spring', stiffness: 40, damping: 10 }
 const Children = pose.div({
-  open: {
-    opacity: 1,
-    y: 0,
-    transition: { type: 'spring', stiffness: 40, damping: 10 },
-  },
+  open: { opacity: 1, y: 0, transition },
   closed: { opacity: 0, y: 300 },
 })
 
