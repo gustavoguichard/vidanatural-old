@@ -7,6 +7,7 @@ import { FaPlus } from 'react-icons/fa'
 
 import Testimonial from 'components/testimonials/Testimonial'
 import Slogan from 'components/Slogan'
+import Masonry from 'components/Masonry'
 import { useWindowDimensions, useProcessOnce, useMedia } from 'utils/hooks'
 
 import testimonials from 'content/testimonials'
@@ -22,7 +23,7 @@ const Intro = memo(({ isSidebar, children }) => (
   >
     <div
       className={isSidebar ? 'banner-content-wrapper' : 'tile-content'}
-      style={isSidebar ? { maxHeight: '100vh', justifyContent: 'center' } : {}}
+      style={isSidebar ? { justifyContent: 'center', maxHeight: '100vh' } : {}}
     >
       <div className={isSidebar ? 'banner-content' : 'inner-content'}>
         <Slogan responsive />
@@ -47,83 +48,62 @@ const People = () => {
   const wrapper = useRef(null)
   useEffect(
     () => setWrapperWidth(wrapper.current.getBoundingClientRect().width),
-    [width, isOpen]
+    [width, isOpen],
   )
   const columns = wrapperWidth ? Math.round(wrapperWidth / 365) : 2
   const isDesktop = useMedia('desktop')
 
   const isShowingAll = faceCount >= testimonials.length
   const loadMoreFaces = () => setFaceCount(faceCount + 4)
+  const openContent = () => {
+    setIsOpen(true)
+    loadMoreFaces()
+  }
 
-  const hasSidebar = isDesktop && !isOpen
+  const showSidebar = isDesktop && !isOpen
+  const showMoreTile = !(showSidebar || isShowingAll)
 
   return (
     <div id="eu-uso">
-      <div className="masonry-wrapper">
-        <div className="page-tile">
-          {hasSidebar && (
-            <Intro isSidebar>
-              <div className="banner-content">
-                <Button
-                  color="light"
-                  className="is-large"
-                  rounded
-                  outlined
-                  onClick={() => {
-                    loadMoreFaces()
-                    setIsOpen(true)
-                  }}
-                >
-                  + Depoimentos
-                </Button>
-              </div>
-            </Intro>
-          )}
-          <div className="tile" ref={wrapper}>
-            {isDesktop || <Intro />}
-            {times(columns, index => (
-              <div className="people-tile" key={`tile-${index}`}>
-                {testimonialsToShow
-                  .filter((testimonial, filterIndex) => {
-                    return (filterIndex + index + 3) % columns === 0
-                  })
-                  .map((testimonial, index) => (
-                    <Testimonial key={index} {...testimonial} />
-                  ))}
-              </div>
-            ))}
-          </div>
-        </div>
-        {isShowingAll ||
-          ((isOpen || !isDesktop) && (
-            <div className="testimonial-item">
-              <div className="tile-content center" onClick={loadMoreFaces}>
-                <p>Ver mais depoimentos</p>
-                <button
-                  title="Mais depoimentos"
-                  className="plus-bt"
-                  onClick={loadMoreFaces}
-                >
-                  <FaPlus />
-                </button>
-              </div>
+      <div className="tile">
+        {showSidebar && (
+          <Intro isSidebar>
+            <div className="banner-content">
+              <Button
+                color="light"
+                className="is-large"
+                rounded
+                outlined
+                onClick={openContent}
+              >
+                + Depoimentos
+              </Button>
             </div>
-          ))}
+          </Intro>
+        )}
+        <div className="tile" ref={wrapper}>
+          <Masonry columns={columns}>
+            {isDesktop || <Intro />}
+            {testimonialsToShow.map((testimonial, index) => (
+              <Testimonial key={index} {...testimonial} />
+            ))}
+            {showMoreTile && (
+              <div className="testimonial-item">
+                <div className="tile-content center" onClick={loadMoreFaces}>
+                  <p>Ver mais depoimentos</p>
+                  <button
+                    title="Mais depoimentos"
+                    className="plus-bt"
+                    onClick={loadMoreFaces}
+                  >
+                    <FaPlus />
+                  </button>
+                </div>
+              </div>
+            )}
+          </Masonry>
+        </div>
       </div>
-      <style jsx>{`
-        .people-tile,
-        .page-tile {
-          align-items: stretch;
-          display: flex;
-          flex-basis: 0;
-          flex-grow: 1;
-          flex-shrink: 1;
-          min-height: min-content;
-        }
-        .people-tile {
-          flex-direction: column;
-        }
-      `}</style>
     </div>
   )
 }
