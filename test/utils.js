@@ -22,3 +22,5 @@ export const getResultNode = component => {
   const rerenderTwice = flow([rerender, rerender])
   return { el, rerender, rerenderTwice }
 }
+
+export const Hook = ({ use, children, ...props }) => children(use(props))

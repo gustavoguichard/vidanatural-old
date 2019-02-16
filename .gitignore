@@ -12,3 +12,5 @@ dist
 # hidden
 .env-config.js
 .eslintcache
+
+s3/

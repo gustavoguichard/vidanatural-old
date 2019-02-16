@@ -1,6 +1,5 @@
-import { useState, useRef, memo, useEffect } from 'react'
+import { useState, useRef, memo, useLayoutEffect } from 'react'
 import take from 'lodash/take'
-import times from 'lodash/times'
 import shuffle from 'lodash/shuffle'
 import { Button } from 'react-bulma-components'
 import { FaPlus } from 'react-icons/fa'
@@ -46,7 +45,7 @@ const People = () => {
 
   const { width } = useWindowDimensions()
   const wrapper = useRef(null)
-  useEffect(
+  useLayoutEffect(
     () => setWrapperWidth(wrapper.current.getBoundingClientRect().width),
     [width, isOpen],
   )
