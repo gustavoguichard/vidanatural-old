@@ -1,8 +1,6 @@
-import { Suspense, memo } from 'react'
+import { memo } from 'react'
 import classnames from 'classnames'
-import Loading from 'components/Loading'
 import { useMounted } from 'utils/hooks'
-import { Img } from 'utils/createResource'
 
 import 'styles/image-container.scss'
 
@@ -25,8 +23,8 @@ export default memo(props => {
   return (
     <div {...wrapperProps} className={classes}>
       {isMounted && (
-        <Suspense fallback={<Loading size={100} />}>
-          <Img
+        <>
+          <img
             className={bgClasses}
             src={src}
             style={isBg ? { display: 'none' } : {}}
@@ -37,7 +35,7 @@ export default memo(props => {
               style={{ backgroundImage: `url(${src})` }}
             />
           )}
-        </Suspense>
+        </>
       )}
       <div className={contentClasses} style={contentStyle}>
         {children}
