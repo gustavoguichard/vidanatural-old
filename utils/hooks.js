@@ -29,6 +29,7 @@ export const useMedia = (media, defaultState = false) => {
   )
   useLayoutEffect(
     () => {
+      if (!window.matchMedia) return null;
       const mql = window.matchMedia(query)
       const onChange = () => setState(!!mql.matches)
       mql.addListener(onChange)

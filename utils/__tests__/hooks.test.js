@@ -1,10 +1,4 @@
-import {
-  cleanup,
-  render,
-  getNodeText,
-  fireEvent,
-  flushEffects,
-} from 'react-testing-library'
+import { cleanup, render, getNodeText, fireEvent } from 'react-testing-library'
 import identity from 'lodash/identity'
 
 import { element, getResultValue, getResultNode, clickEl } from 'test/utils'
@@ -34,7 +28,6 @@ describe('useWindowDimensions', () => {
     window.innerWidth = 800
     fireEvent(window, new Event('resize'))
     rerender(<Component />)
-    flushEffects()
     expect(getNodeText(el)).toBe('1024')
     await sleep(4)
     rerender(<Component />)
