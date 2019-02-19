@@ -1,4 +1,4 @@
-import { useState, useRef, memo, useLayoutEffect } from 'react'
+import { useState, useRef, memo, useEffect } from 'react'
 import take from 'lodash/take'
 import shuffle from 'lodash/shuffle'
 import { Button } from 'react-bulma-components'
@@ -45,7 +45,7 @@ const People = () => {
 
   const { width } = useWindowDimensions()
   const wrapper = useRef(null)
-  useLayoutEffect(
+  useEffect(
     () => setWrapperWidth(wrapper.current.getBoundingClientRect().width),
     [width, isOpen],
   )
