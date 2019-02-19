@@ -32,8 +32,8 @@ export default () => (
               artesanais, bioderadáveis, SEM conservantes e fragrâncias
               artificiais, SEM parabenos, SEM derivados de petroquímica ou
               animal, SEM metais pesados, livres de violência, livres de
-              toxinas. Essa é umas das formas que participamos da construção de
-              um mundo melhor.
+              toxinas. Essa é umas das formas pela qual participamos da
+              construção de um mundo melhor.
             </p>
           </Tile>
         </Tile>
