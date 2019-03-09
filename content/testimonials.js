@@ -2,6 +2,7 @@ export default [
   {
     name: 'Cristina Scudeler',
     role: 'Empresária',
+    tags: ['pasta'],
     location: 'São Paulo / SP',
     picture: 'cristina.jpg',
     ratio: '2by3',
@@ -11,6 +12,7 @@ export default [
   {
     name: 'Maia Silva',
     role: 'Psicóloga Social',
+    tags: ['all'],
     location: 'Argentina',
     picture: 'maia-silva.jpg',
     content: `Eu amo escolher **diariamente** a Vida Natural para **nutrir** meu corpo. Falar de cosméticos é falar de prevenção e alimentação também.
@@ -19,6 +21,7 @@ export default [
   {
     name: 'Juliana Eichenberg',
     role: 'Professora de Yoga',
+    tags: ['all'],
     location: 'Garopaba / SC',
     picture: 'juliana-eichenberg.jpg',
     content: `A Vida Natural, mais do que uma marca, é a forma de vida da sua querida idealizadora. Não há limites separando a vida da Lila da Vida Natural e a Vida Natural da vida da Lila.
@@ -27,6 +30,7 @@ export default [
   },
   {
     name: 'Thais e Bruno Padoveze',
+    tags: ['all'],
     location: 'Goiânia',
     picture: 'thais-e-bruno.jpg',
     content: `Há 3 anos comprovando a **eficácia**, a **pureza** e a riqueza **natural** de toda a linha de produtos. Muitos, mas muitos amigos hoje em dia também são clientes e fãs dos cosméticos Vida Natural.
@@ -35,6 +39,7 @@ export default [
   {
     name: 'Samira Abdalah',
     role: 'Mestra em Educação',
+    tags: ['all'],
     location: 'Montenegro / RS',
     picture: 'samira-abdalah.jpg',
     ratio: '2by3',
@@ -43,6 +48,7 @@ export default [
   {
     name: 'Maurício Frighetto',
     role: 'Jornalista',
+    tags: ['all'],
     location: 'Florianópolis / SC',
     picture: 'mauricio-frighetto.jpg',
     ratio: '2by3',
@@ -51,6 +57,7 @@ export default [
   {
     name: 'Dircéia',
     role: 'Nutricionista',
+    tags: ['rollon', 'pasta'],
     location: 'Garopaba / SC',
     picture: 'dirceia.jpg',
     content: `Sou nutricionista e há alguns anos vinha procurando por um desodorante que **não prejudicasse minha saúde**, **livre de alumínio**, **parabenos** e outras substâncias tóxicas.
@@ -60,6 +67,7 @@ export default [
   {
     name: 'Aline Blasius',
     role: 'Dançarina',
+    tags: ['rollon', 'pasta', 'pó dental'],
     location: 'Florianópolis / SC',
     picture: 'aline-blasius.jpg',
     ratio: '2by3',
@@ -67,6 +75,7 @@ export default [
   },
   {
     name: 'Zilda Gama',
+    tags: ['rollon', 'pasta'],
     location: 'Belém / PA',
     picture: 'zilda-gama.jpg',
     content: `Em 2015 fui diagnosticada com **câncer de mama** o que me levou a iniciar uma busca por explicações para a causa da doença, especialmente em pessoas jovens e sem outros casos na família, eu tinha 34 anos.
@@ -77,6 +86,7 @@ export default [
   {
     name: 'Rafael Pieruccini',
     role: 'Empresário',
+    tags: ['rollon', 'pasta'],
     location: 'Porto Alegre / RS',
     picture: 'rafael-pieruccini.jpg',
     content: `Faz anos que procurava um **desodorante natural que funcionasse**, até que **encontrei** o Vida Natural. Ele é **extremamente eficiente**, e o **melhor**, **naturalmente**.`,
@@ -84,12 +94,14 @@ export default [
   {
     name: 'Monica Auga',
     role: 'Agrônoma',
+    tags: ['rollon', 'pasta'],
     location: 'Florianópolis / SC',
     picture: 'monica-auga.jpg',
     content: `Incrível!  **Único desodorante natural** que realmente superou os químicos. .... super aprovo, 5 anos que **só uso** Vida Natural!!!`,
   },
   {
     name: 'Mayara',
+    tags: ['all'],
     location: 'Foz do Iguaçu / PR',
     picture: 'mayara.jpg',
     content: `Os produtos Vida Natural são **incríveis**, uso há uns 3 anos e **não abro mão**! São **super eficientes**, não prejudicam minha **saúde ou a natureza**, super recomendo!
@@ -98,6 +110,7 @@ export default [
   {
     name: 'Andrea Freire',
     role: 'Bióloga',
+    tags: ['rollon', 'pasta'],
     location: 'Florianópolis / SC',
     picture: 'andrea-freire.jpg',
     content: `Durante 1 mês de **árduo trabalho físico**, velejando sob um sol escaldante e muito calor, o **desodorante funcionou muito bem**.
@@ -106,6 +119,7 @@ export default [
   {
     name: 'Denise Franco',
     role: 'Vendedora',
+    tags: ['rollon', 'pasta'],
     location: 'Canoas / RS',
     picture: 'denise-franco.jpg',
     content: `Conheci os cosméticos Vida Natural - digamos - em um momento muito marcante da minha vida: em Fevereiro de 2016, fui diagnosticada com **Carcinoma Infiltrativo de Mama**. Com uma filhinha de apenas três anos, não me permiti desesperar, resolvi iniciar imediatamente uma **alimentação natural** e acompanhamento com um especialista da área, e a **primeira recomendação** foi: não utilizar **nenhum desodorante comum**.
@@ -117,6 +131,7 @@ export default [
   {
     name: 'Samira Kohn',
     role: 'Empreendedora',
+    tags: ['hidratante'],
     location: 'Florianópolis / SC',
     picture: 'samira-kohn.jpg',
     content: `Quando buscamos uma **vida mais saudável**, começamos a olhar de forma **mais consciente** para as **nossas escolhas** e o quanto isso nos afeta em todos os sentidos.
@@ -128,6 +143,7 @@ export default [
   {
     name: 'Diuly Venson',
     role: 'Fotógrafa',
+    tags: ['rollon', 'pasta'],
     location: 'Curitiba / PR',
     picture: 'diuly-venson.jpg',
     ratio: '2by3',
@@ -136,6 +152,7 @@ export default [
   {
     name: 'Gisele de Menezes',
     role: 'Escritora e terapeuta ayurveda',
+    tags: ['rollon', 'pasta'],
     location: 'Porto Alegre / RS',
     picture: 'gisele-de-menezes.jpg',
     content: `Há muito tempo descobri o desodorante de creme em um restaurante de POA e ADOREI. Nunca mais quis comprar outros desodorantes, pois na minha adolescência eu tive que fazer uma pequena cirurgia devido a um **entupimento das glândulas sebáceas da axila**, causado por **desodorantes convencionais**. Depois de um tempo descobri o Rollon e **não voltei atrás**.
@@ -144,6 +161,7 @@ export default [
   },
   {
     name: 'Samantha Linsmeyer',
+    tags: ['rollon', 'pasta'],
     picture: 'samantha-linsmeyer.jpg',
     ratio: '2by3',
     content: `O desodorante que experimentei é **simplesmente o melhor que já usei na minha vida**. Eu não largo mais! Quero provar e experimentar os outros produtos.
@@ -152,6 +170,7 @@ export default [
   {
     name: 'Gabriela de Lucca',
     role: 'Pesquisadora',
+    tags: ['rollon', 'pasta'],
     location: 'Canada',
     picture: 'gabriela-de-lucca.jpg',
     content: `Ganhei o desodorante de presente e fiquei **encantada com toda proposta** da marca. Usar um produto todos os dias sabendo que é **feito com total amor**, **consciente e natural** faz meu **dia começar muito melhor**. Sem contar que **funciona super bem** e **não mancha minhas blusas**. Recomendo com todo meu coração.`,
@@ -159,6 +178,7 @@ export default [
   {
     name: 'Fabiula Zimmer',
     role: 'Empresária',
+    tags: ['rollon', 'pasta', 'hidratante'],
     location: 'São Leopoldo / RS',
     picture: 'fabiula-zimmer.jpg',
     ratio: '2by3',
@@ -167,6 +187,7 @@ export default [
   {
     name: 'Carol Carida',
     role: 'Professora socióloga',
+    tags: ['rollon', 'pasta'],
     location: 'Florianópolis / SC',
     picture: 'carol-carida.jpg',
     content: `Eu adoro os produtos da Vida Natural. **Abandonei o desodorante convencional** e muita coisa mudou na **minha relação com o meu corpo**. Me sinto mais **conectada com a minha essência**, além de ter sentido **minha pele mais macia e bem cuidada** sem o uso de produtos químicos. Super recomendo esses produtos que são feitos com muito amor e contribuem com o nosso bem estar ❤`,
@@ -174,6 +195,7 @@ export default [
   {
     name: 'Francisco Camolesi',
     role: 'Engenheiro de Produção',
+    tags: ['rollon', 'pasta'],
     location: 'Imbituba / SC',
     picture: 'francisco-camolesi.jpg',
     content: `Depois que experimentei **nunca mais usei outro**. Desodorante mais **eficiente** que já usei. O produto é **simplesmente sensacional**. Já estou usando há dois anos e nem penso em experimentar outro!`,
@@ -181,6 +203,7 @@ export default [
   {
     name: 'Gabriel de Menezes',
     role: 'Empresário',
+    tags: ['rollon', 'pasta', 'hidratante'],
     location: 'São Leopoldo / RS',
     picture: 'gabriel-de-menezes.jpg',
     content: `Utilizo os produtos da Vida Natural há pelo menos 2 anos. O **desodorante** e os **óleos hidratantes** fazem **parte do meu dia a dia** desde então.`,
@@ -188,6 +211,7 @@ export default [
   {
     name: 'Lúcia do Valle',
     role: 'Cozinheira e Artesã',
+    tags: ['all'],
     location: 'Florianópolis / SC',
     picture: 'lucia-do-valle.jpg',
     content: `É **saudável**. É **eficaz**. E o **planeta agradece**.`,
@@ -195,6 +219,7 @@ export default [
   {
     name: 'Sebastian Bisbal',
     role: 'Salva Vidas',
+    tags: ['all'],
     location: 'Argentina',
     picture: 'sebastian-bisbal.jpg',
     content: `Yo no creia que los productos naturales iban hacer efecto. Desde hace un año que uso Vida Natural y **no cambiaria por otros**. Su **eficacia es increible**!`,
@@ -202,6 +227,7 @@ export default [
   {
     name: 'Luise Rabelo',
     role: 'Arquiteta',
+    tags: ['pasta'],
     location: 'Porto Alegre / RS',
     picture: 'luise-rabelo.jpg',
     content: `Conheci os produtos Vida Natural por acaso há uns 3 anos e **nunca mais deixei de usar**, principalmente o **desodorante em pasta**, meu preferido. Os produtos são **eficazes**, tem um **cheiro suave e gostoso** e **não agridem nosso organismo** como os cosméticos convencionais. Obrigada Vida Natural por cuidar da gente com tanto **carinho**!`,
@@ -209,6 +235,7 @@ export default [
   {
     name: 'Camila de Lucca',
     role: 'Professora de Yoga',
+    tags: ['all', 'hidratante'],
     location: 'Florianópolis / SC',
     picture: 'camila-de-lucca.jpg',
     content: `O que me **encanta** nesses produtos da Vida Natural é que, além de serem feitos com **ingredientes naturais** e de **ótima qualidade**, são feitos com muito **carinho e amor**, e isso os transforma em **verdadeiras "poções" de beleza e bem estar**!`,
@@ -216,6 +243,7 @@ export default [
   {
     name: 'Aline Niehues',
     role: 'Professora de Yoga',
+    tags: ['all'],
     location: 'Joinville / SC',
     picture: 'aline-niehues.jpg',
     ratio: '2by3',
@@ -227,6 +255,7 @@ export default [
   {
     name: 'Priscila Pittel',
     role: 'Produtora de filmes',
+    tags: ['rollon', 'pasta', 'hidratante'],
     location: 'Rio de Janeiro / RJ',
     picture: 'priscila-pittel.jpg',
     content: `O óleo além de **hidratar a minha pele**, **estimula** a auto massagem, o que me traz uma **série de benefícios**. O **desodorante neutraliza o odor sem tampar os meus poros**, que **precisam colocar as toxinas para fora**. São **pequenos hábitos diários** que fazem toda a **diferença** na vida.`,
@@ -234,6 +263,7 @@ export default [
   {
     name: 'Daniela Caniçali',
     role: 'Jornalista',
+    tags: ['rollon', 'pasta', 'pó dental'],
     location: 'Florianópolis / SC',
     picture: 'daniela-canicali.jpg',
     content: `Utilizo os produtos da Vida Natural há algum tempo, em especial os **desodorantes** e o **pó dental**. Considero todos de **excelente qualidade**.
@@ -243,6 +273,7 @@ export default [
   {
     name: 'Merilyn Nossol da Silva',
     role: 'Educadora',
+    tags: ['rosa mosqueta'],
     location: 'Florianópolis / SC',
     picture: 'merilyn-da-silva.jpg',
     ratio: '2by3',
@@ -252,6 +283,7 @@ export default [
   {
     name: 'Renata Santanayanna',
     role: 'Relações Públicas',
+    tags: ['all'],
     location: 'Joinville / SC',
     picture: 'renata-santanayanna.jpg',
     content: `Há 5 anos já uso os produtos da marca Vida Natural. Acompanho o crescimento dos produtos desde o início da produção e, tenho certeza, continuará crescendo por sua **qualidade e comprometimento** com seus princípios de zelar pela **saúde dos clientes**.
@@ -260,6 +292,7 @@ export default [
   {
     name: 'Bruno Pasti',
     role: 'Bacharel em Física',
+    tags: ['hidratante'],
     location: 'Florianópolis / SC',
     picture: 'bruno-pasti.jpg',
     content: `Gosto do **resultado dos cosméticos** Vida Natural. A **pele fica ótima** com os hidratantes e o **aroma** dos óleos essenciais é uma **delícia**.`,
@@ -267,6 +300,7 @@ export default [
   {
     name: 'Karla Scherer',
     role: 'Professora de Dança Indiana',
+    tags: ['rollon', 'pasta', 'hidratante'],
     location: 'Florianópolis / SC',
     picture: 'karla-scherer.jpg',
     content: `Sempre recomendo os produtos Vida Natural para meus amigos e para aqueles que desconhecem a **eficácia dos desodorantes** e hidratantes naturais. Os produtos têm **excelente qualidade**, **composição** perfeita e com ótimos preços!`,

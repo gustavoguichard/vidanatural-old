@@ -13,7 +13,7 @@ export default () => (
   <Layout>
     <Home />
     <ProductList />
-    <About excerpt />
+    <About />
     <People />
   </Layout>
 )

@@ -1,6 +1,5 @@
 import { memo } from 'react'
 import Link from 'next/link'
-import classnames from 'classnames'
 import ReactMarkdown from 'react-markdown'
 import { Button, Columns, Content } from 'react-bulma-components'
 import Logo from 'components/Logo'
@@ -8,15 +7,13 @@ import PageBreadCrumb from 'components/menu/PageBreadCrumb'
 import ImageContainer from 'components/ImageContainer'
 import { useMedia } from 'utils/hooks'
 
-import shortContent from 'content/about'
 import content from 'content/sobre'
 import 'styles/about.scss'
 
-export default memo(({ excerpt }) => {
+export default memo(() => {
   const isDesktop = useMedia('desktop')
-  const className = classnames('about-section', { 'is-fullheight': excerpt })
   return (
-    <Columns id="sobre" className={className} gapless>
+    <Columns id="sobre" className="about-section is-fullheight" gapless>
       <Columns.Column
         key="design"
         className="about-header"
@@ -36,23 +33,16 @@ export default memo(({ excerpt }) => {
       <Columns.Column className="content-wrapper">
         <div className="banner-content-wrapper">
           <Content key="content" className="black-content banner-content">
-            <h2 className="title is-4">
-              {excerpt ? 'Sobre a VN' : 'Filosofia'}
-            </h2>
-            <ReactMarkdown
-              className="md-content"
-              source={excerpt ? content : shortContent}
-            />
+            <h2 className="title is-4">Sobre a VN</h2>
+            <ReactMarkdown className="md-content" source={content} />
           </Content>
-          {excerpt && (
-            <p className="banner-content">
-              <Link href="sobre">
-                <Button color="light" className="is-large" rounded outlined>
-                  Quero saber mais
-                </Button>
-              </Link>
-            </p>
-          )}
+          <p className="banner-content">
+            <Link href="sobre">
+              <Button color="light" className="is-large" rounded outlined>
+                Quero saber mais
+              </Button>
+            </Link>
+          </p>
         </div>
       </Columns.Column>
     </Columns>

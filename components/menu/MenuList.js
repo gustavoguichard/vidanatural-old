@@ -3,7 +3,6 @@ import Router, { withRouter } from 'next/router'
 import Link from 'next/link'
 import get from 'lodash/get'
 import map from 'lodash/map'
-import last from 'lodash/last'
 import { scrollToId } from 'utils/helpers'
 import pose, { PoseGroup } from 'react-pose'
 

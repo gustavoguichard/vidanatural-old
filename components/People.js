@@ -1,4 +1,5 @@
 import { useState, useRef, memo, useEffect } from 'react'
+import Link from 'next/link'
 import take from 'lodash/take'
 import shuffle from 'lodash/shuffle'
 import { Button } from 'react-bulma-components'
@@ -27,8 +28,22 @@ const Intro = memo(({ isSidebar, children }) => (
       <div className={isSidebar ? 'banner-content' : 'inner-content'}>
         <Slogan responsive />
         <p style={{ margin: '2em 0' }}>
-          Descubra o que motiva as pessoas a usarem os nossos cosméticos - Vida
-          Natural
+          Temos um profundo respeito pelos nossos consumidores e isso nos
+          motivou a criar este espaço para todos eles no nosso site.
+          <br />
+          Confira aqui o que realmente motivas as pessoas a usarem os cosméticos
+          da <b>Vida Natural</b>.
+        </p>
+        <p style={{ margin: '2em 0' }}>
+          Vale lembrar, que este espaço também é seu.
+          <br />
+          Gostaria de nos contar algo sobre a sua experiência com algum produto
+          da nossa linha de cosméticos?
+          <br />
+          <Link href="#contato">
+            <a>Converse com a gente!</a>
+          </Link>{' '}
+          Estamos prontos e curiosos para ouvir.
         </p>
       </div>
       {children}
