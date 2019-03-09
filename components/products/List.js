@@ -7,7 +7,8 @@ const Product = ({ name, src }) => (
       backgroundImage: `url(/static/products/thumbs/${src}.jpg)`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      height: 0,
+      minHeight: 300,
+      minWidth: 240,
       paddingTop: '25%',
       position: 'relative',
       overflow: 'hidden',
@@ -49,7 +50,13 @@ export default () => (
     <Product name="Desodorante Rollon" src="rollon" />
     <Product name="Desodorante Pasta" src="desodorante_pasta" />
     <Product name="Óleo Hidratante" src="oleo_hidratante" />
-    <Columns.Column css={{ position: 'relative' }}>
+    <Columns.Column
+      css={{
+        position: 'relative',
+        minWidth: 240,
+        minHeight: 200,
+      }}
+    >
       <a
         className="tile-content center"
         href="/produtos"
