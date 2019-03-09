@@ -18,8 +18,7 @@ const Children = pose.div({
 const Testimonial = props => {
   const [isOpen, toggleOpen] = useToggle(false)
   const { name, picture } = props
-  const path =
-    'https://s3-sa-east-1.amazonaws.com/br.eco.vidanatural/testimonials'
+  const path = '/static/testimonials'
   return process.browser ? (
     <div className="testimonial-item" onClick={toggleOpen}>
       <TestimonialImage src={picture} alt={name} path={path} />
