@@ -13,6 +13,15 @@ exports[`renders correctly 1`] = `
       <div
         class="image-container about-bg"
       >
+        <img
+          class="bg-image cover fixed"
+          src="/static/about-bg.jpg"
+          style="display: none;"
+        />
+        <div
+          class="bg-image cover fixed"
+          style="background-image: url(/static/about-bg.jpg);"
+        />
         <div
           class="content-above about-bg-content"
         >

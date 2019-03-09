@@ -25,29 +25,27 @@ exports[`renders correctly 1`] = `
               >
                 Cristina Scudeler
               </h3>
-              <div>
-                <p>
-                  Há mais de dois anos que uso o desodorante em pasta em 
-                  <strong>
-                    não troco
-                  </strong>
-                   por outro. 
-                  <strong>
-                    Super eficiente
-                  </strong>
-                  , 
-                  <strong>
-                    100% Natural
-                  </strong>
-                  , e rende muito, uso por pelo menos 
-                  <strong>
-                    2 meses o mesmo
-                  </strong>
-                   tubinho.
-                  <br />
-                    Super feliz por esse produto existir!
-                </p>
-              </div>
+              <p>
+                Há mais de dois anos que uso o desodorante em pasta e 
+                <strong>
+                  não troco
+                </strong>
+                 por outro. 
+                <strong>
+                  Super eficiente
+                </strong>
+                , 
+                <strong>
+                  100% Natural
+                </strong>
+                , e rende muito, uso por pelo menos 
+                <strong>
+                  2 meses o mesmo
+                </strong>
+                 tubinho.
+                <br />
+                  Super feliz por esse produto existir!
+              </p>
               <em>
                 Empresária - São Paulo / SP
               </em>
@@ -60,27 +58,25 @@ exports[`renders correctly 1`] = `
               >
                 Juliana Eichenberg
               </h3>
-              <div>
-                <p>
-                  A Vida Natural, mais do que uma marca, é a forma de vida da sua querida idealizadora. Não há limites separando a vida da Lila da Vida Natural e a Vida Natural da vida da Lila.
-                  <br />
-                    Essa fusão, da criadora e da criação, é que torna os 
-                  <strong>
-                    produtos que uso tão especiais
-                  </strong>
-                   para mim. Tudo nasce de uma 
-                  <strong>
-                    verdade profunda
-                  </strong>
-                  , de um anseio por 
-                  <strong>
-                    sustentabilidade, regeneração e saúde
-                  </strong>
-                  . O que é evidente e palpável na postura da Lila e nos benefícios que sentimos ao nos nutrir através da Vida Natural.
-                  <br />
-                    Obrigada, Vida Natural! Obrigada, Lila! Muito bom trilhar esse caminho com vocês, um grande privilégio!
-                </p>
-              </div>
+              <p>
+                A Vida Natural, mais do que uma marca, é a forma de vida da sua querida idealizadora. Não há limites separando a vida da Lila da Vida Natural e a Vida Natural da vida da Lila.
+                <br />
+                  Essa fusão, da criadora e da criação, é que torna os 
+                <strong>
+                  produtos que uso tão especiais
+                </strong>
+                 para mim. Tudo nasce de uma 
+                <strong>
+                  verdade profunda
+                </strong>
+                , de um anseio por 
+                <strong>
+                  sustentabilidade, regeneração e saúde
+                </strong>
+                . O que é evidente e palpável na postura da Lila e nos benefícios que sentimos ao nos nutrir através da Vida Natural.
+                <br />
+                  Obrigada, Vida Natural! Obrigada, Lila! Muito bom trilhar esse caminho com vocês, um grande privilégio!
+              </p>
               <em>
                 Professora de Yoga - Garopaba / SC
               </em>
@@ -93,23 +89,21 @@ exports[`renders correctly 1`] = `
               >
                 Samira Abdalah
               </h3>
-              <div>
-                <p>
-                  Usar os produtos da Vida Natural é 
-                  <strong>
-                    se sentir em harmonia com o corpo
-                  </strong>
-                   e o 
-                  <strong>
-                    meio ambiente
-                  </strong>
-                  . São produtos feitos com toda 
-                  <strong>
-                    dedicação e carinho
-                  </strong>
-                   e  de muita qualidade. Super ultra recomendado!
-                </p>
-              </div>
+              <p>
+                Usar os produtos da Vida Natural é 
+                <strong>
+                  se sentir em harmonia com o corpo
+                </strong>
+                 e o 
+                <strong>
+                  meio ambiente
+                </strong>
+                . São produtos feitos com toda 
+                <strong>
+                  dedicação e carinho
+                </strong>
+                 e  de muita qualidade. Super ultra recomendado!
+              </p>
               <em>
                 Mestra em Educação - Montenegro / RS
               </em>
@@ -134,6 +128,7 @@ exports[`renders correctly 1`] = `
                     stroke-width="0"
                     viewBox="0 0 448 512"
                     width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
@@ -182,33 +177,31 @@ exports[`renders correctly 1`] = `
               >
                 Maia Silva
               </h3>
-              <div>
-                <p>
-                  Eu amo escolher 
-                  <strong>
-                    diariamente
-                  </strong>
-                   a Vida Natural para 
-                  <strong>
-                    nutrir
-                  </strong>
-                   meu corpo. Falar de cosméticos é falar de prevenção e alimentação também.
-                  <br />
-                    Além de serem uma 
-                  <strong>
-                    escolha de consumo consciente e responsável
-                  </strong>
-                  , eles deixam minha pele cheirosa e nutrida por muito tempo, 
-                  <strong>
-                    livre de toxinas
-                  </strong>
-                   que ao longo dos anos possam danificar minha 
-                  <strong>
-                    saúde
-                  </strong>
-                  .
-                </p>
-              </div>
+              <p>
+                Eu amo escolher 
+                <strong>
+                  diariamente
+                </strong>
+                 a Vida Natural para 
+                <strong>
+                  nutrir
+                </strong>
+                 meu corpo. Falar de cosméticos é falar de prevenção e alimentação também.
+                <br />
+                  Além de serem uma 
+                <strong>
+                  escolha de consumo consciente e responsável
+                </strong>
+                , eles deixam minha pele cheirosa e nutrida por muito tempo, 
+                <strong>
+                  livre de toxinas
+                </strong>
+                 que ao longo dos anos possam danificar minha 
+                <strong>
+                  saúde
+                </strong>
+                .
+              </p>
               <em>
                 Psicóloga Social - Argentina
               </em>
@@ -221,29 +214,27 @@ exports[`renders correctly 1`] = `
               >
                 Thais e Bruno Padoveze
               </h3>
-              <div>
-                <p>
-                  Há 3 anos comprovando a 
-                  <strong>
-                    eficácia
-                  </strong>
-                  , a 
-                  <strong>
-                    pureza
-                  </strong>
-                   e a riqueza 
-                  <strong>
-                    natural
-                  </strong>
-                   de toda a linha de produtos. Muitos, mas muitos amigos hoje em dia também são clientes e fãs dos cosméticos Vida Natural.
-                  <br />
-                    Ainda bem que existem produtos tão 
-                  <strong>
-                    seguros e naturais
-                  </strong>
-                   ao alcance de nossas mãos aqui no Brasil. Obrigado Lila!
-                </p>
-              </div>
+              <p>
+                Há 3 anos comprovando a 
+                <strong>
+                  eficácia
+                </strong>
+                , a 
+                <strong>
+                  pureza
+                </strong>
+                 e a riqueza 
+                <strong>
+                  natural
+                </strong>
+                 de toda a linha de produtos. Muitos, mas muitos amigos hoje em dia também são clientes e fãs dos cosméticos Vida Natural.
+                <br />
+                  Ainda bem que existem produtos tão 
+                <strong>
+                  seguros e naturais
+                </strong>
+                 ao alcance de nossas mãos aqui no Brasil. Obrigado Lila!
+              </p>
               <em>
                 Goiânia
               </em>
@@ -256,23 +247,21 @@ exports[`renders correctly 1`] = `
               >
                 Maurício Frighetto
               </h3>
-              <div>
-                <p>
-                  Todos os produtos que experimentei da Vida Natural foram 
-                  <strong>
-                    muito eficientes
-                  </strong>
-                  . O que já é um grande ponto positivo. Mas talvez o mais importante para mim seja saber que eles foram feitos com 
-                  <strong>
-                    carinho
-                  </strong>
-                   e, principalmente, sem o uso de 
-                  <strong>
-                    nenhum produto de origem animal
-                  </strong>
-                  . É um grande diferencial. Por estes dois motivos, recomendo fortemente
-                </p>
-              </div>
+              <p>
+                Todos os produtos que experimentei da Vida Natural foram 
+                <strong>
+                  muito eficientes
+                </strong>
+                . O que já é um grande ponto positivo. Mas talvez o mais importante para mim seja saber que eles foram feitos com 
+                <strong>
+                  carinho
+                </strong>
+                 e, principalmente, sem o uso de 
+                <strong>
+                  nenhum produto de origem animal
+                </strong>
+                . É um grande diferencial. Por estes dois motivos, recomendo fortemente
+              </p>
               <em>
                 Jornalista - Florianópolis / SC
               </em>

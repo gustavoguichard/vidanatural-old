@@ -1,11 +1,11 @@
-import { useState, useRef, useEffect, useReducer, useLayoutEffect } from 'react'
+import { useState, useRef, useEffect, useReducer } from 'react'
 import get from 'lodash/get'
 import debounce from 'lodash/debounce'
 import isEqual from 'lodash/isEqual'
 
 export const useWindowDimensions = (throttle = 300) => {
   const [dimensions, setDimensions] = useState({ height: 0, width: 0 })
-  useLayoutEffect(() => {
+  useEffect(() => {
     const update = () =>
       setDimensions({ height: window.innerHeight, width: window.innerWidth })
     const handleResize = debounce(update, throttle)
@@ -27,9 +27,9 @@ export const useMedia = (media, defaultState = false) => {
     media,
     media,
   )
-  useLayoutEffect(
+  useEffect(
     () => {
-      if (!window.matchMedia) return null;
+      if (!window.matchMedia) return null
       const mql = window.matchMedia(query)
       const onChange = () => setState(!!mql.matches)
       mql.addListener(onChange)

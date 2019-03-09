@@ -6,6 +6,15 @@ exports[`renders correctly 1`] = `
     class="image-container"
     id="home"
   >
+    <img
+      class="bg-image cover"
+      src="/static/home-bg.jpg"
+      style="display: none;"
+    />
+    <div
+      class="bg-image cover"
+      style="background-image: url(/static/home-bg.jpg);"
+    />
     <div
       class="content-above home-bg"
     >

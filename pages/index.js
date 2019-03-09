@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic'
 import About from 'components/About'
 import Home from 'components/Home'
+import ProductList from 'components/products/List'
 import Layout from 'components/Layout'
 import Loading from 'components/Loading'
 
@@ -11,6 +12,7 @@ const People = dynamic(() => import('components/People'), {
 export default () => (
   <Layout>
     <Home />
+    <ProductList />
     <About excerpt />
     <People />
   </Layout>
