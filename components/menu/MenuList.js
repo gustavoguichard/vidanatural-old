@@ -13,12 +13,12 @@ const InnerLink = pose.span({
 
 const MenuLink = ({ href, onClick, children, ...props }) => {
   const clickHandler = event => {
-    const href = get(event, 'currentTarget.href', '')
-    const urlArray = href.split('#')
+    const target = get(event, 'currentTarget.href', '')
+    const urlArray = target.split('#')
     const [, hash] = urlArray
     onClick(event)
-    if (!hash && !href.includes('#')) {
-      Router.push(href)
+    if (!hash && !target.includes('#')) {
+      Router.push(target)
     }
     scrollToId(hash)
   }
@@ -38,8 +38,6 @@ const links = {
   Sobre: '/sobre',
   'Eu uso': '/eu-uso',
   Produtos: '/produtos',
-  // Conceito: '/conceito',
-  // 'Onde encontrar': '/onde-encontrar',
   Contato: '#contato',
 }
 

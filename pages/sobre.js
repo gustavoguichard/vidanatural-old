@@ -32,6 +32,11 @@ export default () => (
                 equilíbrio com a natureza e com respeito ao bem estar e saúde
                 das pessoas.
               </p>
+              <img
+                className="is-hidden-tablet"
+                src="/static/historia.jpg"
+                alt="Equipe VN"
+              />
             </Content>
           </Tile>
         </Tile>
