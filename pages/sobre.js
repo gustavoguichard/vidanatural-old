@@ -79,9 +79,9 @@ export default () => (
             Cosmética Consciente.
           </p>
           <p>
-            O resultado desta "aventura" e esforço agora está aqui, ao alcance
+            {`O resultado desta "aventura" e esforço agora está aqui, ao alcance
             de todos que buscam uma relação + equilibrada entre o uso de
-            cosméticos para higiene e cuidados com o corpo e o meio ambiente.
+            cosméticos para higiene e cuidados com o corpo e o meio ambiente.`}
           </p>
           <p>
             Um desejo único de mudança materializado em desodorantes (rollon e

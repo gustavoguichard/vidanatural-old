@@ -44,21 +44,19 @@ const links = {
 }
 
 const MenuList = ({ onClick, router }) => {
-  const showLinks =
-    router.pathname === '/'
-      ? {
-          ...links,
-          Home: '#',
-          Sobre: '#sobre',
-          'Eu uso': '#eu-uso',
-        }
-      : links
+  if (router.pathname === '/') {
+    links.Home = '#'
+    links.Sobre = '#sobre'
+    links['Eu uso'] = '#eu-uso'
+  }
   return (
     <>
       <nav className="menu-list-wrapper">
         <PoseGroup>
-          {map(showLinks, (path, key) => (
-            <MenuLink key={key} href={path} onClick={onClick} children={key} />
+          {map(links, (path, key) => (
+            <MenuLink key={key} href={path} onClick={onClick}>
+              {key}
+            </MenuLink>
           ))}
         </PoseGroup>
       </nav>
