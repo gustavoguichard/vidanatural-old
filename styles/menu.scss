@@ -1,5 +1,4 @@
 @import './colors';
-
 html.is-menu-open {
   overflow: hidden !important;
 }
@@ -14,7 +13,6 @@ html.is-menu-open {
   top: 0;
   width: 50%;
   z-index: 20;
-
   @media (max-device-width: 991px) {
     width: 100%;
   }
@@ -23,11 +21,9 @@ html.is-menu-open {
 .main-menu-left {
   left: 0;
   background: $green;
-
   .image-container {
     height: 100vh;
   }
-
   .content-above {
     flex: 1;
     display: flex;
@@ -43,7 +39,6 @@ html.is-menu-open {
   justify-content: center;
   padding: 2rem;
   right: 0;
-
   .menu-list-wrapper {
     display: flex;
     flex-direction: column;
@@ -53,26 +48,21 @@ html.is-menu-open {
     font-weight: bold;
     font-size: 1.4rem;
     color: black;
-
     &,
     & * {
       color: black;
     }
-
     a {
       color: inherit;
-
       &:hover {
         color: #838383;
       }
     }
   }
-
   @media (min-device-width: 992px) {
     flex-direction: row;
     justify-content: start;
     padding: 2rem 6rem;
-
     .menu-list-wrapper {
       margin-bottom: 0;
       order: 2;
@@ -97,41 +87,33 @@ html.is-menu-open {
   transition: all 0.15s;
   transition-delay: 0.2s;
   z-index: 1000;
-
   .menu-icon-dash {
     background-color: white;
     border-radius: 3px;
     width: 100%;
     height: 3px;
     transition: all 0.3s;
-
     &.outer {
       width: 60%;
     }
   }
-
   &:hover {
     transform: rotate(0deg);
-
     .menu-icon-dash {
       width: 100%;
     }
   }
-
   &.is-open {
     justify-content: center;
-
     .menu-icon-dash {
       background-color: black;
       margin-bottom: -3px;
       transition: all 0.15s;
       transition-delay: 0.2s;
-
       &:last-child {
         transform: rotate(90deg);
       }
     }
-
     &:hover {
       .menu-icon-dash:last-child {
         transform: rotate(0deg);
@@ -140,20 +122,19 @@ html.is-menu-open {
   }
 }
 
-.social-icons {
-  position: fixed;
-  top: 1.5rem;
-  left: 2rem;
-  z-index: 1000;
-
-  a {
-    margin-right: 0.6em;
-
-    &:hover svg {
-      fill: black;
-    }
+.theme-light {
+  .menu-icon-dash {
+    background-color: black;
   }
+  .social-icons svg {
+    fill: black;
+  }
+}
 
+.social-icons {
+  a:hover svg {
+    fill: black;
+  }
   svg {
     transition: all 0.3s;
   }
