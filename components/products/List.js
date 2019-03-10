@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Button } from 'react-bulma-components'
 import take from 'lodash/take'
-import { useWindowDimensions } from 'utils/hooks'
+import { useColumns } from 'utils/hooks'
 
 import Masonry from 'components/Masonry'
 
@@ -59,8 +59,7 @@ const MoreColumn = ({ href, children }) => (
 )
 
 export default ({ short = false }) => {
-  const { width } = useWindowDimensions()
-  const columns = width ? Math.round(width / 365) : 2
+  const columns = useColumns()
   return short ? (
     <Masonry columns={columns} adjust={2}>
       {take(products, 3).map((product, index) => (

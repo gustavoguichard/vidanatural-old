@@ -15,13 +15,18 @@ const Children = pose.div({
   closed: { opacity: 0, y: 300 },
 })
 
-const Testimonial = props => {
+const Testimonial = ({ square, ...props }) => {
   const [isOpen, toggleOpen] = useToggle(false)
   const { name, picture } = props
   const path = '/static/testimonials'
   return process.browser ? (
     <div className="testimonial-item" onClick={toggleOpen}>
-      <TestimonialImage src={picture} alt={name} path={path} />
+      <TestimonialImage
+        square={square && !!props.ratio}
+        src={picture}
+        alt={name}
+        path={path}
+      />
       <Content
         pose={isOpen ? 'open' : 'closed'}
         className="testimonial-content-wrapper"

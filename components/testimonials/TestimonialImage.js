@@ -1,6 +1,11 @@
-const TestimonialImage = ({ src, path, ...props }) => (
+import compact from 'lodash/compact'
+
+const TestimonialImage = ({ square, src, path, ...props }) => (
   <figure className="testimonial-img">
-    <img src={[path, src].join('/')} {...props} />
+    <img
+      src={compact([path, square ? 'square' : '', src]).join('/')}
+      {...props}
+    />
   </figure>
 )
 

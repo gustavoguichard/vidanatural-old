@@ -10,6 +10,7 @@ export default memo(props => {
     className,
     contentClass,
     children,
+    column = false,
     contentStyle,
     isBg = true,
     center = false,
@@ -26,7 +27,7 @@ export default memo(props => {
           <img
             className={bgClasses}
             src={src}
-            style={isBg ? { display: 'none' } : {}}
+            style={isBg ? { display: 'none' } : null}
           />
           {isBg && (
             <div
@@ -39,6 +40,7 @@ export default memo(props => {
       <div
         css={{
           display: 'flex',
+          flexDirection: column ? 'column' : 'row',
           zIndex: 1,
           flex: 1,
           alignSelf: 'stretch',

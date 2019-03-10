@@ -16,6 +16,11 @@ export const useWindowDimensions = (throttle = 300) => {
   return dimensions
 }
 
+export const useColumns = (splitFactor = 365) => {
+  const { width } = useWindowDimensions()
+  return width ? Math.round(width / splitFactor) : 2
+}
+
 export const useMedia = (media, defaultState = false) => {
   const [state, setState] = useState(defaultState)
   const query = get(
