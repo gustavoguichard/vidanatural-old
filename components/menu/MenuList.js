@@ -1,4 +1,3 @@
-import { memo } from 'react'
 import Router, { withRouter } from 'next/router'
 import Link from 'next/link'
 import get from 'lodash/get'
@@ -63,4 +62,4 @@ const MenuList = ({ onClick, router }) => {
   )
 }
 
-export default memo(withRouter(MenuList))
+export default withRouter(MenuList)

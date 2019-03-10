@@ -36,7 +36,7 @@ const Menu = () => {
   const preventer = event => event && event.preventDefault()
   const toggleMenu = flow(
     preventer,
-    toggler
+    toggler,
   )
   useHtmlClass('is-menu-open', isOpen)
 
@@ -52,8 +52,8 @@ const Menu = () => {
                   <MenuList onClick={toggleMenu} />
                 </Right>,
                 <Left key="left" className="main-menu-left">
-                  <ImageContainer key="left" src="/static/menu-bg.jpg">
-                    <Appear key="content">
+                  <ImageContainer center key="left" src="/static/menu-bg.jpg">
+                    <Appear key="content" css={{ alignSelf: 'center' }}>
                       <Logo clickable onClick={toggleMenu} />
                       <PageBreadCrumb title="menu" />
                     </Appear>

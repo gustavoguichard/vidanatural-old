@@ -12,7 +12,7 @@ const People = dynamic(() => import('components/People'), {
 export default () => (
   <Layout>
     <Home />
-    <ProductList />
+    <ProductList short />
     <About />
     <People />
   </Layout>

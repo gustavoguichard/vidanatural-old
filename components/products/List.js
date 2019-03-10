@@ -1,6 +1,11 @@
 import Link from 'next/link'
-import { Button, Columns } from 'react-bulma-components'
-import { FaPlus } from 'react-icons/fa'
+import { Button } from 'react-bulma-components'
+import take from 'lodash/take'
+import { useWindowDimensions } from 'utils/hooks'
+
+import Masonry from 'components/Masonry'
+
+import products from 'content/products'
 
 import {
   appearOnHover,
@@ -10,10 +15,10 @@ import {
   saturateOnHover,
 } from 'utils/css'
 
-const Product = ({ name, src }) => (
-  <Columns.Column
+const Product = ({ name, path }) => (
+  <div
     css={{
-      ...bgCover(`/static/products/thumbs/${src}.jpg`),
+      ...bgCover(`/static/products/thumbs/${path}.jpg`),
       ...saturateOnHover('1s'),
       minHeight: 300,
       minWidth: 240,
@@ -21,9 +26,9 @@ const Product = ({ name, src }) => (
       overflow: 'hidden',
     }}
   >
-    <Link href={`/produto/${src}`}>
+    <Link href={`/produto/${path}`}>
       <a
-        href={`/produto/${src}`}
+        href={`/produto/${path}`}
         css={{
           ...absoluteCover(),
           ...appearOnHover(),
@@ -36,39 +41,54 @@ const Product = ({ name, src }) => (
         </Button>
       </a>
     </Link>
-  </Columns.Column>
+  </div>
 )
 
-const MoreColumn = ({ href, children, title }) => (
-  <Columns.Column
-    css={{
-      position: 'relative',
-      minWidth: 240,
-      minHeight: 200,
-    }}
-  >
+const MoreColumn = ({ href, children }) => (
+  <div css={{ position: 'relative', minWidth: 240 }}>
     <Link href={href}>
       <a
         href={href}
         className="tile-content center"
-        css={{ ...absoluteCover(), minHeight: '100px !important' }}
+        css={{ ...absoluteCover(), padding: '15px 30px' }}
       >
-        <p>{children}</p>
-        <button title={title} className="plus-bt">
-          <FaPlus />
-        </button>
+        {children}
       </a>
     </Link>
-  </Columns.Column>
+  </div>
 )
 
-export default () => (
-  <Columns css={{ margin: '0 !important' }}>
-    <Product name="Desodorante Rollon" src="rollon" />
-    <Product name="Desodorante Pasta" src="desodorante-pasta" />
-    <Product name="Óleo Hidratante" src="oleo-hidratante" />
-    <MoreColumn href="/produtos" title="Mais produtos">
-      Conheça nossos produtos
-    </MoreColumn>
-  </Columns>
-)
+export default ({ short = false }) => {
+  const { width } = useWindowDimensions()
+  const columns = width ? Math.round(width / 365) : 2
+  return short ? (
+    <Masonry columns={columns} adjust={2}>
+      {take(products, 3).map((product, index) => (
+        <Product key={`product-${index}`} {...product} />
+      ))}
+      <MoreColumn href="/produtos">
+        <p>
+          Substancias sintéticas são absorvidas pelo nosso organismo{' '}
+          <strong>TODOS</strong> os dias.
+          <br />
+          <strong>Nós podemos fazer melhor que isso!</strong>
+        </p>
+        <Button
+          color="light"
+          rounded
+          outlined
+          css={{ marginTop: 20, alignSelf: 'flex-start' }}
+          title="Mais produtos"
+        >
+          Quer ver?
+        </Button>
+      </MoreColumn>
+    </Masonry>
+  ) : (
+    <Masonry columns={columns} adjust={0}>
+      {products.map((product, index) => (
+        <Product key={`product-${index}`} {...product} />
+      ))}
+    </Masonry>
+  )
+}

@@ -6,6 +6,4 @@ Produzimos **desodorantes, shampoos, cremes, óleos hidratantes, pó dental e pr
 
 Com a nossa linha de cosméticos queremos incentivar um movimento para **desconstruir ideias**, propor **mudanças no comportamento** e nos **valores** para favorecer um consumo mais simples, **consciente** e em maior **equilíbrio** com a saúde do seu corpo e a **natureza**.
 Acreditamos na força deste **movimento** e convidamos todos a participar adotando um **consumo mais consciente** de produtos para higiene e cuidados com o corpo.
-
-Nossos cosméticos são elaborados em um processo de produção **totalmente artesanal**, feitos com **produtos naturais** e **sustentáveis**, com fórmulas minimalistas e **livres de testes em animais**, **conservantes** sintéticos, **parabenos**, fragrâncias **artificiais**, derivados de **petróleo** ou origem **animal**. Nada disso faz parte da nossa **cultura produtiva**.
 `

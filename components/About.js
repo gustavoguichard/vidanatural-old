@@ -2,7 +2,6 @@ import { memo } from 'react'
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import { Button, Columns, Content } from 'react-bulma-components'
-import Logo from 'components/Logo'
 import PageBreadCrumb from 'components/menu/PageBreadCrumb'
 import ImageContainer from 'components/ImageContainer'
 import { useMedia } from 'utils/hooks'
@@ -13,20 +12,20 @@ import 'styles/about.scss'
 export default memo(() => {
   const isDesktop = useMedia('desktop')
   return (
-    <Columns id="sobre" className="about-section is-fullheight" gapless>
+    <Columns id="sobre" className="about-section" gapless>
       <Columns.Column
         key="design"
         className="about-header"
         style={{ display: 'flex' }}
       >
         <ImageContainer
-          src="/static/about-bg.jpg"
+          src="/static/home-bg.jpg"
           key="about-bg"
           className="about-bg"
           contentClass="about-bg-content"
+          center
           fixed
         >
-          <Logo clickable key="logo" />
           {isDesktop && <PageBreadCrumb key="breadcrumb" title="sobre" />}
         </ImageContainer>
       </Columns.Column>

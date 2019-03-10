@@ -12,13 +12,12 @@ export default memo(props => {
     children,
     contentStyle,
     isBg = true,
-    cover = true,
+    center = false,
     fixed,
     ...wrapperProps
   } = props
   const classes = classnames('image-container', className)
-  const bgClasses = classnames('bg-image', { cover, fixed })
-  const contentClasses = classnames('content-above', contentClass)
+  const bgClasses = classnames('bg-image', { fixed })
   const isMounted = useMounted()
   return (
     <div {...wrapperProps} className={classes}>
@@ -37,7 +36,16 @@ export default memo(props => {
           )}
         </>
       )}
-      <div className={contentClasses} style={contentStyle}>
+      <div
+        css={{
+          display: 'flex',
+          zIndex: 1,
+          flex: 1,
+          alignSelf: 'stretch',
+          justifyContent: center ? 'center' : undefined,
+        }}
+        style={contentStyle}
+      >
         {children}
       </div>
     </div>

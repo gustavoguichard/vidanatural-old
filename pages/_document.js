@@ -26,6 +26,10 @@ export default class extends Document {
             type="image/x-icon"
             href="/static/favicon.ico"
           />
+          <link
+            href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />
