@@ -11,7 +11,7 @@ export default ({ product }) => (
             <h4 style={{ color: 'white' }}>Benefícios</h4>
             <p>
               {map(product.benefits, words => (
-                <Fragment>
+                <Fragment key={`benefit-${words}`}>
                   {words}
                   <br />
                 </Fragment>

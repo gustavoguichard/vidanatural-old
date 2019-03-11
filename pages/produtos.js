@@ -19,8 +19,8 @@ export default () => (
       <Hero.Body>
         <Heading>Por que mudar?</Heading>
       </Hero.Body>
-      <Columns css={{ paddingBottom: '4rem' }}>
-        <Columns.Column css={{ padding: '0 3rem', textAlign: 'center' }}>
+      <Columns>
+        <Columns.Column css={{ padding: '0 3rem 4rem', textAlign: 'center' }}>
           <Content>
             <img
               css={{ width: 200, height: 200, borderRadius: '50%' }}
@@ -35,7 +35,7 @@ export default () => (
             </p>
           </Content>
         </Columns.Column>
-        <Columns.Column css={{ padding: '0 3rem', textAlign: 'center' }}>
+        <Columns.Column css={{ padding: '0 3rem 4rem', textAlign: 'center' }}>
           <Content>
             <img
               css={{ width: 200, height: 200, borderRadius: '50%' }}
@@ -48,7 +48,7 @@ export default () => (
             </p>
           </Content>
         </Columns.Column>
-        <Columns.Column css={{ padding: '0 3rem', textAlign: 'center' }}>
+        <Columns.Column css={{ padding: '0 3rem 4rem', textAlign: 'center' }}>
           <Content>
             <img
               css={{ width: 200, height: 200, borderRadius: '50%' }}

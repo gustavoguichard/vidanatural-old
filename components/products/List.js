@@ -50,7 +50,7 @@ const MoreColumn = ({ href, children }) => (
       <a
         href={href}
         className="tile-content center"
-        css={{ ...absoluteCover(), padding: '15px 30px' }}
+        css={{ flex: 1, padding: '15px 30px' }}
       >
         {children}
       </a>
