@@ -9,6 +9,7 @@ import Testimonial from 'components/testimonials/Testimonial'
 import Slogan from 'components/Slogan'
 import Masonry from 'components/Masonry'
 import { useWindowDimensions, useProcessOnce, useMedia } from 'utils/hooks'
+import { centralize } from 'utils/css'
 
 import testimonials from 'content/testimonials'
 import 'styles/banner.scss'
@@ -107,7 +108,15 @@ const People = () => {
                   <p>Ver mais depoimentos</p>
                   <button
                     title="Mais depoimentos"
-                    className="plus-bt"
+                    css={{
+                      ...centralize(),
+                      height: 30,
+                      width: 30,
+                      background: 'none',
+                      border: '1px solid white',
+                      borderRadius: '50%',
+                      margin: '1rem',
+                    }}
                     onClick={loadMoreFaces}
                   >
                     <FaPlus />

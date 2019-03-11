@@ -30,7 +30,7 @@ export const centralize = () => ({
 
 export const saturateOnHover = (time = TRANSITION_SPEED) => ({
   filter: 'saturate(0)',
-  transition: `${time} all`,
+  transition: `${time} filter`,
   '&:hover': {
     filter: 'saturate(1)',
   },

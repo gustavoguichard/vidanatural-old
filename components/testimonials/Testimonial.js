@@ -1,6 +1,7 @@
 import { memo } from 'react'
 import pose from 'react-pose'
 import { useToggle } from 'utils/hooks'
+import { absoluteCover } from 'utils/css'
 import TestimonialContent from './TestimonialContent'
 import TestimonialImage from './TestimonialImage'
 
@@ -29,7 +30,12 @@ const Testimonial = ({ square, ...props }) => {
       />
       <Content
         pose={isOpen ? 'open' : 'closed'}
-        className="testimonial-content-wrapper"
+        css={{
+          background: 'rgba(98, 159, 129, 0.8)',
+          overflowY: 'auto',
+          ...absoluteCover(),
+          bottom: 1,
+        }}
       >
         <Children>
           <TestimonialContent {...props} />
