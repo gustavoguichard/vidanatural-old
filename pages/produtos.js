@@ -59,8 +59,9 @@ export default () => (
               Não adianta ser só natural e sustentável, tem que ser prático e
               eficiente.
               <br />
-              Veja o que as pessoas <Link href="/eu-uso">
-                estão falando
+              Veja o que as pessoas{' '}
+              <Link href="/eu-uso">
+                <a>estão falando</a>
               </Link>{' '}
               dos nossos produtos.
             </p>

@@ -64,16 +64,8 @@ export default () => (
           </Content>
         </Tile>
         <Tile size={4}>
-          <ImageContainer
-            src="/static/bg.jpg"
-            fixed
-            css={{
-              justifyContent: 'center',
-              alignItems: 'flex-end',
-              padding: 20,
-            }}
-          >
-            <Logo clickable key="logo" />
+          <ImageContainer src="/static/bg.jpg" center css={{ padding: 20 }}>
+            <Logo css={{ alignSelf: 'center' }} clickable key="logo" />
           </ImageContainer>
         </Tile>
       </Tile>

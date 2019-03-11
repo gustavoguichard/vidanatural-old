@@ -17,7 +17,7 @@ export default memo(({ tag = 'all' }) => {
   const genericTestimonials = filter(shuffled, filterByTag('all'))
   const testimonialsToShow = [...filteredTestimonials, ...genericTestimonials]
   return (
-    <div className="tile">
+    <div className="tile" key="product-testimonials">
       <Masonry columns={columns}>
         {take(testimonialsToShow, 4).map((testimonial, index) => (
           <Testimonial square key={index} {...testimonial} />

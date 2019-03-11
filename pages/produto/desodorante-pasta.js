@@ -1,15 +1,14 @@
-import { Fragment } from 'react'
-import { Heading, Hero, Content } from 'react-bulma-components'
+import { Content } from 'react-bulma-components'
 import Layout from 'components/Layout'
 import buildProduct from 'utils/buildProduct'
 
-const { Banner, Ingredients, Testimonials } = buildProduct('desodorante-rollon')
+const { Banner, Ingredients, Testimonials } = buildProduct('desodorante-pasta')
 
 const noIngredient = word => (
-  <Fragment key={word}>
+  <>
     <strong css={{ color: 'black' }}>SEM {word}</strong>
     <br />
-  </Fragment>
+  </>
 )
 
 export default () => (
@@ -48,10 +47,5 @@ export default () => (
     </div>
     <Ingredients />
     <Testimonials />
-    <Hero css={{ backgroundColor: '#2b4135' }}>
-      <Hero.Body>
-        <Heading>Um leite de magnésia para chamar de nosso!</Heading>
-      </Hero.Body>
-    </Hero>
   </Layout>
 )
