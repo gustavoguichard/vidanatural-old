@@ -33,24 +33,23 @@ const MenuLink = ({ href, onClick, children, ...props }) => {
 }
 
 const links = {
-  Home: '/',
-  Sobre: '/sobre',
-  'Eu uso': '/eu-uso',
   Produtos: '/produtos',
   Contato: '#contato',
 }
 
 const MenuList = ({ onClick, router }) => {
-  if (router.pathname === '/') {
-    links.Home = '#'
-    links.Sobre = '#sobre'
-    links['Eu uso'] = '#eu-uso'
+  const prefix = router.pathname === '/' ? '#' : '/'
+  const menuLinks = {
+    Home: `${prefix}`,
+    Sobre: `${prefix}sobre`,
+    'Eu uso': `${prefix}eu-uso`,
+    ...links,
   }
   return (
     <>
       <nav className="menu-list-wrapper">
         <PoseGroup>
-          {map(links, (path, key) => (
+          {map(menuLinks, (path, key) => (
             <MenuLink key={key} href={path} onClick={onClick}>
               {key}
             </MenuLink>
