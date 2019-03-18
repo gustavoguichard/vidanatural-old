@@ -31,11 +31,11 @@ export default memo(() => {
               textTransform: 'uppercase',
             }}
           >
-            Da pele
+            Proteja
             <br />
-            para
+            sua
             <br />
-            dentro
+            pele
           </Heading>
           <p style={{ fontSize: '1.2em', lineHeight: 1.7 }}>
             Nossos <strong>cosméticos 100% naturais</strong> são{' '}

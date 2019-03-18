@@ -52,8 +52,8 @@ const Intro = memo(({ isSidebar, children }) => (
   </div>
 ))
 
-const People = () => {
-  const [faceCount, setFaceCount] = useState(6)
+const People = props => {
+  const [faceCount, setFaceCount] = useState(8)
   const [isOpen, setIsOpen] = useState(false)
   const [wrapperWidth, setWrapperWidth] = useState(0)
   const shuffledTestimonials = useProcessOnce(shuffle, testimonials)
@@ -100,7 +100,7 @@ const People = () => {
           <Masonry columns={columns}>
             {isDesktop || <Intro />}
             {testimonialsToShow.map((testimonial, index) => (
-              <Testimonial key={index} {...testimonial} />
+              <Testimonial {...props} key={index} {...testimonial} />
             ))}
             {showMoreTile && (
               <div className="testimonial-item">

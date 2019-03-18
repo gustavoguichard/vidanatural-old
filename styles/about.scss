@@ -6,23 +6,20 @@
   justify-content: center;
   margin-bottom: 0 !important;
   position: relative;
-
+  min-height: 100vh;
   .column {
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
-
   .content-wrapper {
     flex: 100%;
     justify-content: space-around;
     align-items: center;
-
     @media (min-device-width: 992px) {
       flex: 1;
     }
   }
-
   .md-content {
     margin-bottom: 2rem;
   }

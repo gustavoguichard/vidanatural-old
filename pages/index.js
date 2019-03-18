@@ -14,6 +14,6 @@ export default () => (
     <Home />
     <ProductList short />
     <About />
-    <People />
+    <People square />
   </Layout>
 )

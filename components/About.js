@@ -24,7 +24,6 @@ export default memo(() => {
           className="about-bg"
           contentClass="about-bg-content"
           center
-          fixed
         >
           {isDesktop && <PageBreadCrumb key="breadcrumb" title="sobre" />}
         </ImageContainer>
