@@ -9,7 +9,7 @@ export default memo(() => {
   return (
     <>
       <ImageContainer
-        src="/static/about-bg.jpg"
+        src="/static/home-bg.jpg"
         id="home"
         column={!isDesktop}
         css={{ height: '100vh' }}

@@ -19,7 +19,7 @@ export default memo(() => {
         style={{ display: 'flex' }}
       >
         <ImageContainer
-          src="/static/home-bg.jpg"
+          src="/static/about-bg.jpg"
           key="about-bg"
           className="about-bg"
           contentClass="about-bg-content"
