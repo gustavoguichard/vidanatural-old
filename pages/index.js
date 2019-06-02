@@ -1,9 +1,11 @@
 import dynamic from 'next/dynamic'
 
 import Box from 'components/home/Box'
+import ProductBox from 'components/home/ProductBox'
 import ImageContainer from 'components/ImageContainer'
 import Layout from 'components/Layout'
 import Loading from 'components/Loading'
+import products from 'content/products'
 
 import { absoluteCover } from 'utils/css'
 
@@ -30,14 +32,26 @@ export default () => (
       css={{ minHeight: '100vh' }}
     >
       <Box
-        title="Você se importa com o que sua pele absorve todos os dias? Nós nos importamos!
-"
+        title="Você se importa com o que sua pele absorve todos os dias? Nós nos importamos!"
         to="/produtos"
       >
         Por isso, preferimos ingredientes que são seguros para a saúde do seu
         corpo e do planeta.
       </Box>
     </ImageContainer>
+    {products
+      .filter(product => product.showHome)
+      .map(product => (
+        <ImageContainer
+          key={product.path}
+          css={{ backgroundColor: `#${product.tone}`, minHeight: '100vh' }}
+          src={`/static/home_bg/${product.tone}.jpg`}
+        >
+          <ProductBox
+            product={product}
+          />
+        </ImageContainer>
+      ))}
     <People square dark faceCount={12}>
       <div
         css={{

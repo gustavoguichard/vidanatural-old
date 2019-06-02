@@ -1,6 +1,6 @@
 @import "node_modules/bulma/sass/utilities/initial-variables";
 
-@import url("https://fonts.googleapis.com/css?family=Montserrat:600|Muli&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700|Muli&display=swap");
 
 $body-color: #333;
 $black: #2b2523;
@@ -23,7 +23,7 @@ html {
 
 .title, h1, h2, h3, h4, h5 {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 html, body {

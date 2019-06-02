@@ -5,7 +5,7 @@ const style = {
   box: {
     background: 'white',
     maxWidth: 390,
-    padding: 40,
+    padding: '2.5rem',
     boxShadow: '0 10px 60px 0 rgba(59, 59, 59, 0.14)',
     '*': {
       color: '#1a1a1a',
@@ -26,7 +26,9 @@ const Box = ({ to, title, children }) => (
       <p>{children}</p>
       {to && (
         <Link href={to}>
-          <Button rounded>Saiba +</Button>
+          <Button rounded css={{ margin: '1rem 0' }}>
+            Saiba +
+          </Button>
         </Link>
       )}
     </div>
