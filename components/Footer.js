@@ -1,43 +1,66 @@
-import { Container, Content, Footer } from 'react-bulma-components'
-import { FaWhatsapp } from 'react-icons/fa'
-import { TiSocialFacebook, TiSocialInstagram } from 'react-icons/ti'
-import { IoIosAt } from 'react-icons/io'
+import React from 'react'
+import { FaFacebookF, FaInstagram } from 'react-icons/fa'
 
-// import 'styles/contact.scss'
+const year = new Date().getFullYear()
 
-const Contact = () => (
-  <Footer id="contato" className="black-content">
-    <Container>
-      <Content style={{ textAlign: 'center' }}>
-        <p>
-          <strong>Vida Natural</strong> cosmética consciente
-          <br /> <FaWhatsapp /> (48) 99103.9557
-          <br />{' '}
+const styles = {
+  social: {
+    display: 'flex',
+    padding: 8,
+    border: '1px solid white',
+    borderRadius: '50%',
+    margin: 5,
+    color: 'white',
+    '&:hover': {
+      borderColor: '#3273dc',
+      color: '#3273dc',
+    },
+    '&:hover svg': {
+      fill: '#3273dc',
+    },
+  },
+}
+
+const Footer = () => (
+  <footer
+    className="footer"
+    css={{
+      backgroundImage: `url(/static/footer_bg.png)`,
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+    }}
+  >
+    <div className="container">
+      <nav className="level">
+        <p className="level-item" css={{ flex: 1 }}>
           <a
-            href="https://facebook.com/vidanatural.eco/"
-            title="Facebook"
+            css={styles.social}
             target="blank"
+            href="https://www.facebook.com/vidanatural.eco/"
           >
-            <TiSocialFacebook />
+            <FaFacebookF />
           </a>
           <a
-            href="https://www.instagram.com/vidanatural.eco/"
-            title="Instagram"
+            css={styles.social}
             target="blank"
+            href="https://www.instagram.com/vidanatural.eco/"
           >
-            <TiSocialInstagram />
-          </a>{' '}
-          vidanatural.eco
-          <br />{' '}
-          <a href="mailto:falecom@vidanatural.eco.br" target="blank">
-            falecom
-            <IoIosAt />
-            vidanatural.eco.br
+            <FaInstagram />
           </a>
         </p>
-      </Content>
-    </Container>
-  </Footer>
+        <p className="level-item" css={{ flex: 1 }}>
+          <a href="#">
+            <img
+              src="/static/logo.svg"
+              alt="Vida Natural"
+              style={{ display: 'block', width: 90, height: 90 }}
+            />
+          </a>
+        </p>
+        <p css={{ flex: 1 }}>Vida Natural | Cosmética __nsciente © {year}.</p>
+      </nav>
+    </div>
+  </footer>
 )
 
-export default Contact
+export default Footer
