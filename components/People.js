@@ -24,7 +24,7 @@ const People = ({ children, dark, faceCount = Infinity, ...props }) => {
   const columns = wrapperWidth ? Math.round(wrapperWidth / 365) : 2
 
   return (
-    <div id="eu-uso">
+    <div id="eu-uso" css={{ position: 'relative' }}>
       <div className="tile">
         <div className="tile" ref={wrapper}>
           <Masonry

@@ -1,13 +1,11 @@
 import dynamic from 'next/dynamic'
 
-import About from 'components/About'
 import Box from 'components/home/Box'
-import Home from 'components/Home'
-import ProductList from 'components/products/List'
+import ImageContainer from 'components/ImageContainer'
 import Layout from 'components/Layout'
 import Loading from 'components/Loading'
 
-import { absoluteCover, homeBox } from 'utils/css'
+import { absoluteCover } from 'utils/css'
 
 const People = dynamic(() => import('components/People'), {
   loading: () => <Loading size={80} />,
@@ -15,9 +13,31 @@ const People = dynamic(() => import('components/People'), {
 
 export default () => (
   <Layout>
-    <Home />
-    <ProductList short />
-    <About />
+    <ImageContainer
+      src="/static/vn_capa.png"
+      id="home"
+      css={{ minHeight: '100vh' }}
+    >
+      <Box title="Proteja sua pele!" to="/produtos">
+        Nossos cosméticos são 100% naturais e livres de substâncias sintéticas
+        porque nós acreditamos que você só deve colocar coisas boas no seu maior
+        orgão de absorção - a pele.
+      </Box>
+    </ImageContainer>
+    <ImageContainer
+      src="/static/oleo-background.png"
+      id="ingredients"
+      css={{ minHeight: '100vh' }}
+    >
+      <Box
+        title="Você se importa com o que sua pele absorve todos os dias? Nós nos importamos!
+"
+        to="/produtos"
+      >
+        Por isso, preferimos ingredientes que são seguros para a saúde do seu
+        corpo e do planeta.
+      </Box>
+    </ImageContainer>
     <People square dark faceCount={12}>
       <div
         css={{

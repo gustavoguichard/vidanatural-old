@@ -11,12 +11,18 @@ const style = {
       color: '#1a1a1a',
     },
   },
+  title: {
+    color: '#111',
+  },
 }
 
 const Box = ({ to, title, children }) => (
-  <div className="container content">
+  <div
+    className="container content"
+    css={{ display: 'flex', alignItems: 'center' }}
+  >
     <div css={style.box}>
-      <h2>{title}</h2>
+      <h2 css={style.title}>{title}</h2>
       <p>{children}</p>
       {to && (
         <Link href={to}>

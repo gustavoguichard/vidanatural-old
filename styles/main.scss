@@ -1,5 +1,6 @@
 @import "node_modules/bulma/sass/utilities/initial-variables";
-@import url('https://fonts.googleapis.com/css?family=Montserrat:600|Muli&display=swap');
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:600|Muli&display=swap");
 
 $body-color: #333;
 $black: #2b2523;
@@ -17,6 +18,7 @@ $footer-color: white;
 
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
 }
 
 .title, h1, h2, h3, h4, h5 {
@@ -26,126 +28,55 @@ html {
 
 html, body {
   * {
-      color: white;
+    color: white;
   }
 
   a {
-      color: $green;
-  }
-}
-
-.hero {
-    &.is-primary {
-        background-color: black;
-    }
-
-    .hero-head {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 8rem;
-
-        .title {
-            color: white;
-            margin-top: 2rem;
-        }
-    }
-
-    .hero-body {
-        margin: 0 auto;
-        max-width: 40rem;
-        text-align: center;
-
-        .title {
-            font-weight: 400;
-            color: white;
-
-            @media (min-width: 769px) {
-                font-size: 2.7rem;
-                line-height: 1.4;
-            }
-
-            strong {
-                font-weight: bold;
-            }
-        }
-    }
-}
-
-.tile {
-  .tile-copy {
-      padding: 2rem 2rem 4rem;
-      justify-content: space-around;
-      background-color: white;
-
-      @media (min-width: 769px) {
-          padding: 2rem 5rem 4rem;
-      }
-
-      * {
-          color: black !important;
-      }
+    color: $green;
   }
 }
 
 .black-content {
-    background: black;
+  background: black;
 
-    *,
-    .title,
-    a {
-        color: white;
-    }
+  *,
+  .title,
+  a {
+      color: white;
+  }
 
-    blockquote {
-        background: none;
-        font-style: italic;
-    }
+  blockquote {
+    background: none;
+    font-style: italic;
+  }
 }
 
 .app-wrapper {
-    background: black;
-    display: flex;
-    flex-direction: column;
+  background: black;
+  display: flex;
+  flex-direction: column;
 }
 
 .spinning {
-    animation: spin 2s infinite linear;
-    display: inline-block;
+  animation: spin 2s infinite linear;
+  display: inline-block;
 
-    svg {
-        width: 100%;
-        height: 100%;
-    }
+  svg {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .is-fullheight {
-    min-height: 100vh;
-}
-
-#eu-uso {
-    position: relative;
-}
-
-#contato {
-    width: 100%;
-    padding: 2rem 1.5rem 2rem;
-    margin-top: 0;
-    position: relative;
-    z-index: 2;
-
-    svg {
-        position: relative;
-        bottom: -2px;
-    }
+  min-height: 100vh;
 }
 
 @keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
 
-    to {
-        transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
 }
