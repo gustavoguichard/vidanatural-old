@@ -6,7 +6,7 @@ export default [
     slogan: 'Você sem Alumínio',
     showHome: true,
     ingredients:
-      'WATER (Água purificada), MAGNESIUM HYDROXIDE (Hidróxido de Magnésio em suspenção), MELALEUCA ALTERNIFOLIA OIL (Óleo Essencial de Tea Tree), LAVANDULA ANGUSTIFOLIA OIL (Óleo Essencial de Lavanda).',
+      'WATER (Água purificada), MAGNESIUM HYDROXIDE (Hidróxido de Magnésio em suspensão), MELALEUCA ALTERNIFOLIA OIL (Óleo Essencial de Tea Tree), LAVANDULA ANGUSTIFOLIA OIL (Óleo Essencial de Lavanda).',
     benefits: [
       'Desodorante suave',
       'Indicado para peles sensíveis',
