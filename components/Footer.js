@@ -23,6 +23,7 @@ const styles = {
 
 const Footer = () => (
   <footer
+    id="contato"
     className="footer"
     css={{
       backgroundImage: `url(/static/footer_bg.png)`,

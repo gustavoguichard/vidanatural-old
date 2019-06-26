@@ -30,6 +30,7 @@ export default class extends Document {
             href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700"
             rel="stylesheet"
           />
+          <script src="https://wchat.freshchat.com/js/widget.js" />
         </Head>
         <body>
           <Main />

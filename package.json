@@ -12,8 +12,7 @@
     "lint": "kcd-scripts lint --config .eslintrc.js",
     "test": "kcd-scripts test",
     "test:update": "npm test -- --updateSnapshot --coverage",
-    "validate": "kcd-scripts validate",
-    "production": "now --public && now alias"
+    "validate": "kcd-scripts validate"
   },
   "keywords": [
     "Vida Natural"

@@ -56,6 +56,16 @@ export const useProcessOnce = (fn, ...args) => {
   return ref.current
 }
 
+export const useOnMount = callback => {
+  useEffect(() => {
+    callback()
+  }, [])
+}
+
+export const useOnUnmount = callback => {
+  useEffect(() => callback, [])
+}
+
 export const useMounted = () => {
   const [isMounted, setIsMounted] = useState(false)
   useEffect(() => setIsMounted(true), [])

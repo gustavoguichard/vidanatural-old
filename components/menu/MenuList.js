@@ -1,8 +1,10 @@
+import { useContext } from 'react'
 import Router, { withRouter } from 'next/router'
 import Link from 'next/link'
 import get from 'lodash/get'
 import map from 'lodash/map'
 import { scrollToId } from 'utils/helpers'
+import { Context } from 'utils/CustomerChat'
 import pose, { PoseGroup } from 'react-pose'
 
 const InnerLink = pose.span({
@@ -11,12 +13,15 @@ const InnerLink = pose.span({
 })
 
 const MenuLink = ({ href, onClick, children, ...props }) => {
+  const chat = useContext(Context)
   const clickHandler = event => {
     const target = get(event, 'currentTarget.href', '')
     const urlArray = target.split('#')
     const [, hash] = urlArray
     onClick(event)
-    if (!hash && !target.includes('#')) {
+    if (hash === 'contato') {
+      chat.initConversation()
+    } else if (!hash && !target.includes('#')) {
       Router.push(target)
     }
     scrollToId(hash)
