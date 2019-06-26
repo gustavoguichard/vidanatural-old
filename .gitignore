@@ -11,7 +11,8 @@ out/
 .vscode/
 
 # hidden
-env-config.js
+.env
+.env-config.js
 .eslintcache
 
 s3/
