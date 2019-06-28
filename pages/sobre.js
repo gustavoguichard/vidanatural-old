@@ -1,6 +1,7 @@
 import ImageContainer from 'components/ImageContainer'
 import Layout from 'components/Layout'
 import Logo from 'components/Logo'
+import Img from 'components/Img'
 import { Content, Heading, Hero, Tile } from 'react-bulma-components'
 
 export default () => (
@@ -86,9 +87,11 @@ export default () => (
           </Tile>
           <Tile size={8} vertical className="tile-copy">
             <Content>
-              <img
+              <Img
                 className="is-hidden-tablet"
-                src="/static/historia.jpg"
+                src={require('/static/historia.jpg')}
+                webp={require('/static/historia.jpg?webp')}
+                low={require('/static/historia.jpg?lqip')}
                 alt="Equipe VN"
               />
               <p>

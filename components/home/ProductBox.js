@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Button } from 'react-bulma-components'
 import map from 'lodash/map'
+import Img from 'components/Img'
 
 const style = {
   box: {
@@ -46,16 +47,20 @@ const Box = ({ product }) => (
         flexWrap: 'wrap',
       }}
     >
-      <img
-        src={`/static/products/transparent/${product.path}.png`}
+      <Img
+        src={require(`../../static/products/transparent/${product.path}.png`)}
+        low={require(`../../static/products/transparent/${product.path}.png?lqip`)}
+        webp={require(`../../static/products/transparent/${product.path}.png?webp`)}
         css={{ maxWidth: 320, maxHeight: 480 }}
         alt={product.name}
       />
       {map(product.stamps, (value, key) => (
-        <img
+        <Img
           css={{ maxWidth: 80, alignSelf: 'flex-end', margin: 15 }}
           key={product.path + key}
-          src={`/static/${key}.png`}
+          src={require(`../../static/${key}.png`)}
+          low={require(`../../static/${key}.png?lqip`)}
+          webp={require(`../../static/${key}.png?webp`)}
           alt={value}
         />
       ))}

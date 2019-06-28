@@ -19,7 +19,7 @@ const Children = pose.div({
 const Testimonial = ({ square, ...props }) => {
   const [isOpen, toggleOpen] = useToggle(false)
   const { name, picture } = props
-  const path = '/static/testimonials'
+  const path = 'testimonials'
   return process.browser ? (
     <div className="testimonial-item" onClick={toggleOpen}>
       <TestimonialImage
