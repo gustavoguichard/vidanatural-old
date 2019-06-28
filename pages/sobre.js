@@ -80,18 +80,18 @@ export default () => (
         <Tile>
           <Tile size={4}>
             <ImageContainer
-              src={require('static/historia.jpg')}
-              low={require('static/historia.jpg?lqip')}
-              webp={require('static/historia.jpg?webp')}
+              src={require('../static/historia.jpg')}
+              low={require('../static/historia.jpg?lqip')}
+              webp={require('../static/historia.jpg?webp')}
             />
           </Tile>
           <Tile size={8} vertical className="tile-copy">
             <Content>
               <Img
                 className="is-hidden-tablet"
-                src={require('/static/historia.jpg')}
-                webp={require('/static/historia.jpg?webp')}
-                low={require('/static/historia.jpg?lqip')}
+                src={require('../static/historia.jpg')}
+                webp={require('../static/historia.jpg?webp')}
+                low={require('../static/historia.jpg?lqip')}
                 alt="Equipe VN"
               />
               <p>
