@@ -1,4 +1,4 @@
-import { render } from 'react-testing-library'
+import { render } from '@testing-library/react'
 import Slogan from 'components/Slogan'
 
 it('renders correctly', () => {

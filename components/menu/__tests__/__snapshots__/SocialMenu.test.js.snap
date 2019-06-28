@@ -3,9 +3,10 @@
 exports[`renders correctly 1`] = `
 <div>
   <aside
-    class="social-icons"
+    class="social-icons css-1yng9sw"
   >
     <a
+      class="css-10mlhc4"
       href="https://facebook.com/vidanatural.eco/"
       target="blank"
       title="Facebook"

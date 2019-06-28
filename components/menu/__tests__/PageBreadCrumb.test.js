@@ -1,4 +1,4 @@
-import { render } from 'react-testing-library'
+import { render } from '@testing-library/react'
 import PageBreadCrumb from '../PageBreadCrumb'
 
 it('renders correctly', () => {

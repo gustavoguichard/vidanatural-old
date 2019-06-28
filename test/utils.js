@@ -1,4 +1,4 @@
-import { render, getNodeText, fireEvent } from 'react-testing-library'
+import { render, getNodeText, fireEvent } from '@testing-library/react'
 import flow from 'lodash/flow'
 import toString from 'lodash/toString'
 

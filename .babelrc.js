@@ -7,17 +7,19 @@ const presets = [
 ]
 
 module.exports = {
-  env: {
-    development: { presets },
-    production: { presets },
-    test: {
-      presets: [
-        'next/babel',
-        '@zeit/next-typescript/babel',
-        { 'preset-env': { modules: 'commonjs' } },
-      ],
-    },
-  },
+  // env: {
+  //   development: { presets },
+  //   production: { presets },
+  //   test: {
+  //     presets: [
+  //       'next/babel',
+  //       '@zeit/next-typescript/babel',
+  //       '@zeit/next-typescript/babel',
+  //       { 'preset-env': { modules: 'commonjs' } },
+  //     ],
+  //   },
+  // },
+  presets,
   plugins: [
     ['dynamic-import-node'],
     ['transform-define', env],

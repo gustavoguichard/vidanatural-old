@@ -1,4 +1,4 @@
-import { render } from 'react-testing-library'
+import { render } from '@testing-library/react'
 import Logo from 'components/Logo'
 
 it('renders correctly', () => {

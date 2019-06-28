@@ -1,4 +1,4 @@
-import { render } from 'react-testing-library'
+import { render } from '@testing-library/react'
 import Menu from 'components/Menu'
 
 it('renders correctly', () => {

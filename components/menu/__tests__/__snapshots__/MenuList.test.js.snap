@@ -6,7 +6,7 @@ exports[`renders correctly 1`] = `
     class="menu-list-wrapper"
   >
     <span
-      style="transform: ;transform: none;"
+      style="opacity: 0; transform: none;"
     >
       <a
         _pose="enter"
@@ -16,27 +16,7 @@ exports[`renders correctly 1`] = `
       </a>
     </span>
     <span
-      style="transform: ;transform: none;"
-    >
-      <a
-        _pose="enter"
-        href="#sobre"
-      >
-        Sobre
-      </a>
-    </span>
-    <span
-      style="transform: ;transform: none;"
-    >
-      <a
-        _pose="enter"
-        href="#eu-uso"
-      >
-        Eu uso
-      </a>
-    </span>
-    <span
-      style="transform: ;transform: none;"
+      style="opacity: 0; transform: none;"
     >
       <a
         _pose="enter"
@@ -46,7 +26,27 @@ exports[`renders correctly 1`] = `
       </a>
     </span>
     <span
-      style="transform: ;transform: none;"
+      style="opacity: 0; transform: none;"
+    >
+      <a
+        _pose="enter"
+        href="#sobre"
+      >
+        Sobre
+      </a>
+    </span>
+    <span
+      style="opacity: 0; transform: none;"
+    >
+      <a
+        _pose="enter"
+        href="#eu-uso"
+      >
+        Eu uso
+      </a>
+    </span>
+    <span
+      style="opacity: 0; transform: none;"
     >
       <a
         _pose="enter"

@@ -1,5 +1,5 @@
 import { Img, ImgResource } from 'utils/createResource'
-import { render } from 'react-testing-library'
+import { render } from '@testing-library/react'
 
 jest.mock('react-cache', () => ({
   unstable_createResource: jest.fn(value => ({

@@ -14,26 +14,16 @@ exports[`renders correctly 1`] = `
         class="image-container about-bg"
       >
         <img
-          class="bg-image cover fixed"
+          class="bg-image css-174dvwn-Img"
           src="/static/about-bg.jpg"
-          style="display: none;"
         />
         <div
-          class="bg-image cover fixed"
+          class="bg-image"
           style="background-image: url(/static/about-bg.jpg);"
         />
         <div
-          class="content-above about-bg-content"
-        >
-          <div
-            class="logo"
-            style="display: block; background: url(/static/logo-white.png) no-repeat center; background-size: contain; height: 117px; width: 130px; overflow: hidden; text-indent: -999em; cursor: pointer;"
-          >
-            <h1>
-              Vida Natural
-            </h1>
-          </div>
-        </div>
+          class="css-lzqrzc"
+        />
       </div>
     </div>
     <div
@@ -48,45 +38,97 @@ exports[`renders correctly 1`] = `
           <h2
             class="title is-4"
           >
-            Filosofia
+            Sobre a VN
           </h2>
           <div
             class="md-content"
           >
             <p>
-              Acreditamos que cada um de nós, através de nossas pequenas e
-constantes 
               <strong>
-                ações
+                Consciência
               </strong>
-              , tem o poder de construir grandes coisas.
+               é a palavra mais importante do nosso vocabulário.
+Ela está presente em todas as nossas iniciativas e, também, na forma como nos relacionamos com as pessoas, como produzimos e entregamos os nossos cosméticos.
             </p>
             <p>
-              Somos todos capazes de 
+              Produzimos 
               <strong>
-                transformar
+                desodorantes, shampoos, cremes, óleos hidratantes, pó dental e protetor labial
               </strong>
-              ! De onde estamos, com o que temos
-e a partir do que já somos!
+               elaborados em um processo de  produção totalmente artesanal, 
+              <strong>
+                100% feitos à mão
+              </strong>
+               e em pequenos lotes, o que garante a entrega de cosméticos 
+              <strong>
+                únicos
+              </strong>
+              , 
+              <strong>
+                frescos
+              </strong>
+              , 
+              <strong>
+                eficientes
+              </strong>
+              , em total 
+              <strong>
+                equilíbrio
+              </strong>
+               com o seu corpo e o meio 
+              <strong>
+                ambiente
+              </strong>
+              .
             </p>
             <p>
-              Acreditamos que cada pequena 
+              Com a nossa linha de cosméticos queremos incentivar um movimento para 
               <strong>
-                atitude
+                desconstruir ideias
               </strong>
-               tem o poder de gerar grandes
-transformações.
+              , propor 
+              <strong>
+                mudanças no comportamento
+              </strong>
+               e nos 
+              <strong>
+                valores
+              </strong>
+               para favorecer um consumo mais simples, 
+              <strong>
+                consciente
+              </strong>
+               e em maior 
+              <strong>
+                equilíbrio
+              </strong>
+               com a saúde do seu corpo e a 
+              <strong>
+                natureza
+              </strong>
+              .
+Acreditamos na força deste 
+              <strong>
+                movimento
+              </strong>
+               e convidamos todos a participar adotando um 
+              <strong>
+                consumo mais consciente
+              </strong>
+               de produtos para higiene e cuidados com o corpo.
             </p>
-            <blockquote>
-              <p>
-                A responsabilidade das nossas escolhas vai muito além de nós.
-              </p>
-              <p>
-                Esteja cada vez mais integrado e consciente dessa rede.
-              </p>
-            </blockquote>
           </div>
         </div>
+        <p
+          class="banner-content"
+        >
+          <button
+            class="is-large is-light is-rounded is-outlined button"
+            tabindex="0"
+          >
+            Quero saber mais
+          </button>
+        </p>
       </div>
     </div>
   </div>
