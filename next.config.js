@@ -1,12 +1,29 @@
-// next.config.js
-const { parsed: localEnv } = require('dotenv').config()
-const webpack = require('webpack')
-const withSass = require('@zeit/next-sass')
+const withPlugins = require('next-compose-plugins')
+const purgeCss = require('next-purgecss')
+// const size = require('next-size')
+const offline = require('next-offline')
+const optimizedImages = require('next-optimized-images')
+const nextEnv = require('next-env')
+const dotenvLoad = require('dotenv-load')
+const typescript = require('@zeit/next-typescript')
+const sourceMaps = require('@zeit/next-source-maps')
+const bundleAnalyzer = require('@next/bundle-analyzer')
+const sass = require('@zeit/next-sass')
 
-module.exports = withSass({
-  webpack(config) {
-    config.plugins.push(new webpack.EnvironmentPlugin(localEnv))
+dotenvLoad()
 
-    return config
-  },
-})
+const nextConfig = {}
+module.exports = withPlugins(
+  [
+    nextEnv,
+    // size,
+    [offline, { dontAutoRegisterSw: true }],
+    [optimizedImages, { optimizeImagesInDev: true }],
+    sass,
+    purgeCss,
+    sourceMaps,
+    typescript,
+    [bundleAnalyzer, { enabled: process.env.ANALYZE === 'true' }],
+  ],
+  nextConfig,
+)

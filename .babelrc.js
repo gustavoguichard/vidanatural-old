@@ -1,15 +1,21 @@
 const env = require('./env-config.js')
 
+const presets = [
+  'next/babel',
+  '@emotion/babel-preset-css-prop',
+  '@zeit/next-typescript/babel',
+]
+
 module.exports = {
   env: {
-    development: {
-      presets: ['next/babel', '@emotion/babel-preset-css-prop'],
-    },
-    production: {
-      presets: ['next/babel', '@emotion/babel-preset-css-prop'],
-    },
+    development: { presets },
+    production: { presets },
     test: {
-      presets: [['next/babel', { 'preset-env': { modules: 'commonjs' } }]],
+      presets: [
+        'next/babel',
+        '@zeit/next-typescript/babel',
+        { 'preset-env': { modules: 'commonjs' } },
+      ],
     },
   },
   plugins: [
@@ -22,6 +28,7 @@ module.exports = {
         alias: {
           components: './components',
           pages: './pages',
+          static: './static',
           utils: './utils',
         },
       },

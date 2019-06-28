@@ -1,4 +1,5 @@
 import App, { Container } from 'next/app'
+import { register, unregister } from 'next-offline/runtime'
 import Head from 'next/head'
 import Router from 'next/router'
 import { initGA, logPageView } from 'utils/analytics'
@@ -15,9 +16,18 @@ export default class VidaNatural extends App {
   }
 
   componentDidMount() {
+    if (process.browser) {
+      register()
+    }
     initGA()
     logPageView()
     Router.router.events.on('routeChangeComplete', logPageView)
+  }
+
+  componentWillMount() {
+    if (process.browser) {
+      unregister()
+    }
   }
 
   render() {

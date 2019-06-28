@@ -9,6 +9,7 @@ dist
 out/
 .next/
 .vscode/
+bundle/
 
 # hidden
 .env

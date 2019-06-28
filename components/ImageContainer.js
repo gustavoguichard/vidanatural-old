@@ -1,8 +1,20 @@
 import { memo } from 'react'
 import classnames from 'classnames'
-import { useMounted } from 'utils/hooks'
 
 import 'styles/image-container.scss'
+
+const Img = ({ bgClasses, isBg, src, blur }) => (
+  <>
+    <img
+      css={blur ? { filter: 'blur(25px)' } : {}}
+      className={bgClasses}
+      src={src}
+    />
+    {isBg && (
+      <div className={bgClasses} style={{ backgroundImage: `url(${src})` }} />
+    )}
+  </>
+)
 
 export default memo(props => {
   const {
@@ -17,25 +29,18 @@ export default memo(props => {
     fixed,
     ...wrapperProps
   } = props
+  const isObj = typeof src === 'object'
   const classes = classnames('image-container', className)
   const bgClasses = classnames('bg-image', { fixed })
-  const isMounted = useMounted()
   return (
     <div {...wrapperProps} className={classes}>
-      {isMounted && (
+      {isObj ? (
         <>
-          <img
-            className={bgClasses}
-            src={src}
-            style={isBg ? { display: 'none' } : null}
-          />
-          {isBg && (
-            <div
-              className={bgClasses}
-              style={{ backgroundImage: `url(${src})` }}
-            />
-          )}
+          <Img src={src.preSrc} bgClasses={bgClasses} isBg={isBg} blur />
+          <Img src={src.src} bgClasses={bgClasses} isBg={isBg} />
         </>
+      ) : (
+        <Img src={src} bgClasses={bgClasses} isBg={isBg} />
       )}
       <div
         css={{
