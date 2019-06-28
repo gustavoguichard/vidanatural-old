@@ -3,18 +3,16 @@ import classnames from 'classnames'
 
 import 'styles/image-container.scss'
 
-const Img = ({ bgClasses, isBg, src, blur }) => (
-  <>
+const Img = ({ bgClasses, isBg, src, blur }) =>
+  isBg ? (
+    <div className={bgClasses} style={{ backgroundImage: `url(${src})` }} />
+  ) : (
     <img
       css={blur ? { filter: 'blur(25px)' } : {}}
       className={bgClasses}
       src={src}
     />
-    {isBg && (
-      <div className={bgClasses} style={{ backgroundImage: `url(${src})` }} />
-    )}
-  </>
-)
+  )
 
 export default memo(props => {
   const {
