@@ -22,7 +22,14 @@ export default memo(props => {
   const bgClasses = classnames('bg-image', { fixed })
   return (
     <div {...wrapperProps} className={classes}>
-      <Img webp={webp} low={low} src={src} expand className={bgClasses} />
+      <Img
+        alt="Background"
+        webp={webp}
+        low={low}
+        src={src}
+        expand
+        className={bgClasses}
+      />
       <div
         css={{
           display: 'flex',

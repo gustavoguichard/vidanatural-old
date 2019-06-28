@@ -16,7 +16,7 @@ const Img = ({ src, low, webp, expand, ...props }) => {
     <picture {...props} css={css} ref={ref}>
       {webp && <source css={css} srcSet={webp} type="image/webp" />}
       <source css={css} srcSet={resolution} type="image/jpeg" />
-      <img css={css} src={resolution} />
+      <img css={css} src={resolution} alt={props.alt} />
     </picture>
   )
 }
