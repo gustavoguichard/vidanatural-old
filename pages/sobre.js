@@ -64,7 +64,13 @@ export default () => (
           </Content>
         </Tile>
         <Tile size={4}>
-          <ImageContainer src="/static/bg.jpg" center css={{ padding: 20 }}>
+          <ImageContainer
+            src={require('static/bg.jpg')}
+            low={require('static/bg.jpg?lqip')}
+            webp={require('static/bg.jpg?webp')}
+            center
+            css={{ padding: 20 }}
+          >
             <Logo css={{ alignSelf: 'center' }} clickable key="logo" />
           </ImageContainer>
         </Tile>
@@ -72,7 +78,11 @@ export default () => (
       <Hero.Footer>
         <Tile>
           <Tile size={4}>
-            <ImageContainer src="/static/historia.jpg" />
+            <ImageContainer
+              src={require('static/historia.jpg')}
+              low={require('static/historia.jpg?lqip')}
+              webp={require('static/historia.jpg?webp')}
+            />
           </Tile>
           <Tile size={8} vertical className="tile-copy">
             <Content>

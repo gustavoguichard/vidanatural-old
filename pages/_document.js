@@ -8,7 +8,7 @@ export default class extends Document {
 
   render() {
     return (
-      <html>
+      <html lang="pt-br">
         <Head>
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta

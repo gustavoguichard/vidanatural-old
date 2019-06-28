@@ -6,8 +6,6 @@ import ImageContainer from 'components/ImageContainer'
 import Layout from 'components/Layout'
 import Loading from 'components/Loading'
 import products from 'content/products'
-import homeBgSrc from 'static/vn_capa.png?lqip'
-import oleoSrc from 'static/oleo-background.png?lqip'
 
 import { absoluteCover } from 'utils/css'
 
@@ -18,7 +16,13 @@ const People = dynamic(() => import('components/People'), {
 export default () => {
   return (
     <Layout>
-      <ImageContainer src={homeBgSrc} id="home" css={{ minHeight: '100vh' }}>
+      <ImageContainer
+        src={require('static/vn_capa.png')}
+        low={require('static/vn_capa.png?lqip')}
+        webp={require('static/vn_capa.png?webp')}
+        id="home"
+        css={{ minHeight: '100vh' }}
+      >
         <Box title="Proteja sua pele!" to="/produtos">
           Nossos cosméticos são 100% naturais e livres de substâncias sintéticas
           porque nós acreditamos que você só deve colocar coisas boas no seu
@@ -26,7 +30,8 @@ export default () => {
         </Box>
       </ImageContainer>
       <ImageContainer
-        src={oleoSrc}
+        src={require('static/oleo-background.png')}
+        low={require('static/oleo-background.png?lqip')}
         id="ingredients"
         css={{ minHeight: '100vh' }}
       >
@@ -44,7 +49,9 @@ export default () => {
           <ImageContainer
             key={product.path}
             css={{ backgroundColor: `#${product.tone}`, minHeight: '100vh' }}
-            src={`/static/home_bg/${product.tone}.jpg`}
+            src={require(`../static/home_bg/${product.tone}.jpg`)}
+            low={require(`../static/home_bg/${product.tone}.jpg?lqip`)}
+            webp={require(`../static/home_bg/${product.tone}.jpg?webp`)}
           >
             <ProductBox product={product} />
           </ImageContainer>

@@ -52,7 +52,13 @@ const Menu = () => {
                   <MenuList onClick={toggleMenu} />
                 </Right>,
                 <Left key="left" className="main-menu-left">
-                  <ImageContainer center key="left" src="/static/menu-bg.jpg">
+                  <ImageContainer
+                    src={`/static/menu-bg.jpg`}
+                    low={`/static/menu-bg.jpg?lqip`}
+                    webp={`/static/menu-bg.jpg?webp`}
+                    center
+                    key="left"
+                  >
                     <Appear key="content" css={{ alignSelf: 'center' }}>
                       <Logo clickable onClick={toggleMenu} />
                       <PageBreadCrumb title="menu" />

@@ -12,7 +12,7 @@ export const useWindowDimensions = (throttle = 300) => {
     window.addEventListener('resize', handleResize)
     update()
     return () => window.removeEventListener('resize', handleResize)
-  }, [])
+  }, [throttle])
   return dimensions
 }
 
@@ -32,18 +32,15 @@ export const useMedia = (media, defaultState = false) => {
     media,
     media,
   )
-  useEffect(
-    () => {
-      if (!window.matchMedia) return null
-      const mql = window.matchMedia(query)
-      const onChange = () => setState(!!mql.matches)
-      mql.addListener(onChange)
-      setState(mql.matches)
+  useEffect(() => {
+    if (!window.matchMedia) return null
+    const mql = window.matchMedia(query)
+    const onChange = () => setState(!!mql.matches)
+    mql.addListener(onChange)
+    setState(mql.matches)
 
-      return () => mql.removeListener(onChange)
-    },
-    [media],
-  )
+    return () => mql.removeListener(onChange)
+  }, [media, query])
 
   return state
 }
@@ -52,18 +49,18 @@ export const useProcessOnce = (fn, ...args) => {
   const ref = useRef()
   useEffect(() => {
     ref.current = fn(...args)
-  }, [])
+  }, [args, fn])
   return ref.current
 }
 
 export const useOnMount = callback => {
   useEffect(() => {
     callback()
-  }, [])
+  }, [callback])
 }
 
 export const useOnUnmount = callback => {
-  useEffect(() => callback, [])
+  useEffect(() => callback, [callback])
 }
 
 export const useMounted = () => {
@@ -79,14 +76,11 @@ export const useToggle = (initial = false) => {
 }
 
 export const useHtmlClass = (className, condition) => {
-  useEffect(
-    () => {
-      const { classList } = document.documentElement
-      const method = condition ? 'add' : 'remove'
-      classList[method](className)
-    },
-    [condition],
-  )
+  useEffect(() => {
+    const { classList } = document.documentElement
+    const method = condition ? 'add' : 'remove'
+    classList[method](className)
+  }, [className, condition])
 }
 
 export const useSetState = initialState => {
@@ -127,4 +121,31 @@ export const useDeepDiffEffect = (callback, values) => {
     return cleanup.current
   })
   const previousValues = usePrevious(values)
+}
+
+export const useOnScreen = (ref, rootMargin = '0px', once) => {
+  const [loaded, setLoaded] = useState(false)
+  const [isIntersecting, setIntersecting] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (once && !loaded && entry.isIntersecting) {
+          setLoaded(true)
+        }
+        setIntersecting(loaded || entry.isIntersecting)
+      },
+      {
+        rootMargin,
+      },
+    )
+    if (ref.current) {
+      observer.observe(ref.current)
+    }
+    return () => {
+      observer.unobserve(ref.current)
+    }
+  }, [loaded, once, ref, rootMargin])
+
+  return isIntersecting
 }

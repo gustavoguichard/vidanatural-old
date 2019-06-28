@@ -4,7 +4,12 @@ import ImageContainer from 'components/ImageContainer'
 import Stamps from 'components/products/Stamps'
 
 export default ({ product, children }) => (
-  <ImageContainer column src={`/static/products/${product.path}.jpg`}>
+  <ImageContainer
+    column
+    src={`/static/products/${product.path}.jpg`}
+    low={`/static/products/${product.path}.jpg?lqip`}
+    webp={`/static/products/${product.path}.jpg?webp`}
+  >
     <Content
       css={{
         backgroundColor: 'rgba(255,255,255,.8)',

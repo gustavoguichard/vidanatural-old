@@ -38,15 +38,17 @@ const Footer = () => (
             css={styles.social}
             target="blank"
             href="https://www.facebook.com/vidanatural.eco/"
+            title="Facebook da VN"
           >
-            <FaFacebookF />
+            <FaFacebookF alt="Facebook da VN" />
           </a>
           <a
             css={styles.social}
             target="blank"
+            title="Instagram da VN"
             href="https://www.instagram.com/vidanatural.eco/"
           >
-            <FaInstagram />
+            <FaInstagram alt="Instagram da VN" />
           </a>
         </p>
         <p className="level-item" css={{ flex: 1 }}>

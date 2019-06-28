@@ -1,18 +1,28 @@
-import { memo } from 'react'
+import { memo, useRef, useState } from 'react'
 import classnames from 'classnames'
+import { useOnScreen } from 'utils/hooks'
 
 import 'styles/image-container.scss'
 
-const Img = ({ bgClasses, isBg, src, blur }) =>
-  isBg ? (
-    <div className={bgClasses} style={{ backgroundImage: `url(${src})` }} />
-  ) : (
-    <img
-      css={blur ? { filter: 'blur(25px)' } : {}}
-      className={bgClasses}
-      src={src}
-    />
+const Img = ({ src, low, webp, expand, ...props }) => {
+  const ref = useRef()
+  const onScreen = useOnScreen(ref, '-100px', true)
+  const css = expand
+    ? {
+        height: '100%',
+        width: '100%',
+        objectFit: 'cover',
+      }
+    : {}
+  const resolution = (!onScreen && low) || src
+  return (
+    <picture {...props} css={css} ref={ref}>
+      {webp && <source css={css} srcSet={webp} type="image/webp" />}
+      <source css={css} srcSet={resolution} type="image/jpeg" />
+      <img css={css} src={resolution} />
+    </picture>
   )
+}
 
 export default memo(props => {
   const {
@@ -22,24 +32,17 @@ export default memo(props => {
     children,
     column = false,
     contentStyle,
-    isBg = true,
     center = false,
     fixed,
+    low,
+    webp,
     ...wrapperProps
   } = props
-  const isObj = typeof src === 'object'
   const classes = classnames('image-container', className)
   const bgClasses = classnames('bg-image', { fixed })
   return (
     <div {...wrapperProps} className={classes}>
-      {isObj ? (
-        <>
-          <Img src={src.preSrc} bgClasses={bgClasses} isBg={isBg} blur />
-          <Img src={src.src} bgClasses={bgClasses} isBg={isBg} />
-        </>
-      ) : (
-        <Img src={src} bgClasses={bgClasses} isBg={isBg} />
-      )}
+      <Img webp={webp} low={low} src={src} expand className={bgClasses} />
       <div
         css={{
           display: 'flex',
