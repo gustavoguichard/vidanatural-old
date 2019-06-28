@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaFacebookF, FaInstagram } from 'react-icons/fa'
+import Img from 'components/Img'
 
 const year = new Date().getFullYear()
 
@@ -22,15 +23,15 @@ const styles = {
 }
 
 const Footer = () => (
-  <footer
-    id="contato"
-    className="footer"
-    css={{
-      backgroundImage: `url(/static/footer_bg.png)`,
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
-    }}
-  >
+  <footer id="contato" className="footer" css={{ position: 'relative' }}>
+    <Img
+      alt="Background"
+      expand
+      css={{ position: 'absolute', top: 0, left: 0 }}
+      src={require('../static/footer_bg.png')}
+      webp={require('../static/footer_bg.png?webp')}
+      low={require('../static/footer_bg.png?lqip')}
+    />
     <div className="container">
       <nav className="level">
         <p className="level-item" css={{ flex: 1 }}>
